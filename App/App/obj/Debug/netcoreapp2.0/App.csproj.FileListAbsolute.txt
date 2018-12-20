@@ -1,0 +1,11 @@
+C:\developer\git\RiskWeb\App\App\bin\Debug\netcoreapp2.0\App.deps.json
+C:\developer\git\RiskWeb\App\App\bin\Debug\netcoreapp2.0\App.runtimeconfig.json
+C:\developer\git\RiskWeb\App\App\bin\Debug\netcoreapp2.0\App.runtimeconfig.dev.json
+C:\developer\git\RiskWeb\App\App\bin\Debug\netcoreapp2.0\App.dll
+C:\developer\git\RiskWeb\App\App\bin\Debug\netcoreapp2.0\App.pdb
+C:\developer\git\RiskWeb\App\App\obj\Debug\netcoreapp2.0\App.csprojResolveAssemblyReference.cache
+C:\developer\git\RiskWeb\App\App\obj\Debug\netcoreapp2.0\App.csproj.CoreCompileInputs.cache
+C:\developer\git\RiskWeb\App\App\obj\Debug\netcoreapp2.0\App.AssemblyInfoInputs.cache
+C:\developer\git\RiskWeb\App\App\obj\Debug\netcoreapp2.0\App.AssemblyInfo.cs
+C:\developer\git\RiskWeb\App\App\obj\Debug\netcoreapp2.0\App.dll
+C:\developer\git\RiskWeb\App\App\obj\Debug\netcoreapp2.0\App.pdb

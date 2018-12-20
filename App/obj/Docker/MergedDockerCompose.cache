@@ -1,0 +1,15 @@
+networks:
+  default:
+    external:
+      name: nat
+services:
+  app:
+    build:
+      context: C:\developer\git\RiskWeb\App
+      dockerfile: App\Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: app
+    ports:
+    - 80/tcp
+version: '3.0'

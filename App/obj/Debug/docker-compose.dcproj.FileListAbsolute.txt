@@ -1,0 +1,1 @@
+C:\developer\git\RiskWeb\App\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache

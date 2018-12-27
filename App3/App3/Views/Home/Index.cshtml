@@ -2,12 +2,57 @@
     ViewData["Title"] = "Home Page";
 }
 
+<script>
+    $("#myAnc").click(function () {
+        alert("Handler for .click() called.");
+    });
+</script>
+
+<script>
+    $("#settingsId").click(function () {
+        document.getElementById("div_1").innerHTML = 5000;
+    });
+</script>
+
+<script>
+    $("#settingsId3").click(function () {
+        document.getElementById("div_1").innerHTML = 7000;
+    });
+</script>
+
+<script>
+    function myFunction() {
+        let d = new Date();
+        document.getElementById("div_1").innerHTML = 1000;
+        return true
+    }
+</script>
+
+<script>
+    function move() {
+        var elem = document.getElementById("myBar");
+        var msg = document.getElementById("progressbar");
+        var width = 1;
+        var id = setInterval(frame, 100);
+        function frame() {
+            if (width >= 100) {
+                clearInterval(id);
+            } else {
+                width++;
+                elem.style.width = width + '%';
+                msg.innerHTML = width + '%';
+            }
+        }
+    }
+</script>
+
 <div class="right_col" role="main">
+
     <!-- top tiles -->
     <div class="row tile_count">
         <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
             <span class="count_top"><i class="fa fa-user"></i> Total Users</span>
-            <div class="count">2500</div>
+            <div id="div_1" class="count">2500</div>
             <span class="count_bottom"><i class="green">4% </i> From last Week</span>
         </div>
         <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
@@ -124,7 +169,7 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
                             <ul class="dropdown-menu" role="menu">
                                 <li>
-                                    <a href="#">Settings 1</a>
+                                    <a id="settingsId2" href="#">Settings 1</a>
                                 </li>
                                 <li>
                                     <a href="#">Settings 2</a>

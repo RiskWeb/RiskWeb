@@ -1,0 +1,56 @@
+﻿@using App.Models
+
+@model App.Models.AppConsole
+
+@{
+    ViewBag.Title = "Engine";
+}
+
+<div class="right_col" role="main">
+
+    <h2>Risk Engine</h2>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="x_panel">
+                <div class="x_title">            
+                    <ul class="nav navbar-right panel_toolbox">
+                        <li>
+                            <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="#">Settings 1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Settings 2</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="close-link"><i class="fa fa-close"></i></a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">                   
+
+                    <a href="@Url.Action("Console", "Run")" onclick="move()"><i class="fa fa-play"></i> <span>Run</span></a>
+
+                    <a><i class="fa fa-pause pull-right"></i> <span>Pause</span></a>
+
+                    <a><i class="fa fa-stop pull-right"></i> <span>Stop</span></a>
+                </div>
+
+                <div id="progressbar"> 0% </div>
+                <div class="progress progress_sm" style="width: 100%;">
+                    <div id="myBar" class="progress-bar bg-green" role="progressbar" data-transitiongoal="0"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>    
+</div>
+

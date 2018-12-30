@@ -15,7 +15,12 @@ namespace App3.Controllers
         public ActionResult Index()
         {
             return View();
-        }        
+        }
+
+        public ActionResult Upload()
+        {
+            return View();
+        }
 
         public ActionResult Run()
         {

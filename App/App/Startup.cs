@@ -11,22 +11,29 @@ namespace App
 {
     public class Startup
     {
+        public IConfiguration Configuration { get; }
+
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
-        }
-
-        public IConfiguration Configuration { get; }
+            // TODO: Add appsettings.json content to config
+            Configuration = configuration;           
+        }               
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            //// Add functionality to inject IOptions<T>
+            //services.AddOptions();
+
+            //// Add our Config object so it can be injected            
+            //services.Configure<Config>(Configuration.GetSection("Config"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
-        {
+        {            
             if (env.IsDevelopment())
             {
                 app.UseBrowserLink();
@@ -43,7 +50,7 @@ namespace App
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Startup}/{action=Login}/{id?}");
             });
         }
     }

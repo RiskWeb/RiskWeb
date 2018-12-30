@@ -1,0 +1,24 @@
+﻿@using App3.Models
+
+@model App3.Models.AppConsole
+
+@{
+    ViewBag.Title = "Engine";
+}
+
+<div class="right_col" role="main">
+
+    <h2>Risk Engine</h2>
+
+    <div class="row">
+        <div class="navbar nav_title" style="border: 0;">
+            <a href="@Url.Action("Console", "Run")" onclick="move()" class="site_title"><i class="fa fa-play"></i> <span>Run</span></a>
+        </div>
+
+        <div id="progressbar"> 0% </div>
+        <div class="progress progress_sm" style="width: 100%;">
+            <div id="myBar" class="progress-bar bg-green" role="progressbar" data-transitiongoal="0"></div>
+        </div>
+    </div>    
+
+</div>

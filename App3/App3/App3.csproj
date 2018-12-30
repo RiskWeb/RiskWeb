@@ -144,6 +144,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\RunController.cs" />
     <Compile Include="Controllers\StartupController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -243,6 +244,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\misc.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
@@ -3665,7 +3667,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Run.cshtml" />
+    <Content Include="Views\Run\Engine.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="src\scss\custom.scss" />
     <Content Include="src\scss\daterangepicker.scss" />
@@ -4507,6 +4509,8 @@
     <Content Include="vendors\validator\validator.jquery.json" />
     <Content Include="Views\Startup\Login.cshtml" />
     <Content Include="Views\Shared\_loginLayout.cshtml" />
+    <Content Include="Views\Home\Upload.cshtml" />
+    <Content Include="Views\Run\Console.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using App.Models;
 
 namespace App
 {
@@ -23,6 +25,9 @@ namespace App
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            services.AddDbContext<PortfolioUploadContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("PortfolioUploadContext")));
 
             //// Add functionality to inject IOptions<T>
             //services.AddOptions();

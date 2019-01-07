@@ -15,11 +15,21 @@ namespace App
     {
         public IConfiguration Configuration { get; }
 
-        public Startup(IConfiguration configuration)
+        //public Startup(IConfiguration configuration)
+        //{
+        //    // TODO: Add appsettings.json content to config
+        //    Configuration = configuration;           
+        //}
+
+        public Startup(IHostingEnvironment env)
         {
-            // TODO: Add appsettings.json content to config
-            Configuration = configuration;           
-        }               
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(env.ContentRootPath)
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true, reloadOnChange: true)
+                .AddEnvironmentVariables();
+            Configuration = builder.Build();
+        }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)

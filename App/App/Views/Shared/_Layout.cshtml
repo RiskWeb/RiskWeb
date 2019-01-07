@@ -77,9 +77,24 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a><i class="fa fa-edit"></i> Portfolio Upload <span class="fa fa-chevron-down"></span></a>
+                                    <a><i class="fa fa-edit"></i> Portfolio <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
+                                        <li>@Html.ActionLink("Current portfolios", "Index2", "PortfolioUploads")</li>
                                         <li>@Html.ActionLink("Upload Area", "Upload", "Home")</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a><i class="fa fa-edit"></i> Market Data <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li>@Html.ActionLink("View & manage", "Upload", "Home")</li>
+                                        <li>@Html.ActionLink("Configuration", "Upload", "Home")</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a><i class="fa fa-edit"></i> Settings <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li>@Html.ActionLink("Simulation Settings", "Upload", "Home")</li>
+                                        <li>@Html.ActionLink("Pricing Engine", "Upload", "Home")</li>
                                     </ul>
                                 </li>
                                 <li>

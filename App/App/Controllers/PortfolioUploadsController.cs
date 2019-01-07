@@ -24,6 +24,11 @@ namespace App.Controllers
             return View(await _context.PortfolioUpload.ToListAsync());
         }
 
+        public async Task<IActionResult> Index2()
+        {
+            return View(await _context.PortfolioUpload.ToListAsync());
+        }
+
         // GET: PortfolioUploads/Details/5
         public async Task<IActionResult> Details(int? id)
         {

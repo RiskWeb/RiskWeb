@@ -9,6 +9,9 @@
           "popper.js": "[1.14.0, 2.0.0)"
         }
       },
+      "dropzone/4.2.0": {
+        "type": "package"
+      },
       "jQuery/3.0.0": {
         "type": "package"
       },
@@ -5712,6 +5715,25 @@
         "contentFiles/Scripts/bootstrap.js.map",
         "contentFiles/Scripts/bootstrap.min.js",
         "contentFiles/Scripts/bootstrap.min.js.map"
+      ]
+    },
+    "dropzone/4.2.0": {
+      "sha512": "1xIfBFk6cUuLF7RBSnqXmmtaNFofoBvS7oAdYBCgXi0BTr6P8iAU+FvwRI0MK+GAeMg3gYy1ODtBFBHWW6FqMw==",
+      "type": "package",
+      "path": "dropzone/4.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/Scripts/dropzone/basic.css",
+        "content/Scripts/dropzone/basic.min.css",
+        "content/Scripts/dropzone/dropzone-amd-module.js",
+        "content/Scripts/dropzone/dropzone-amd-module.min.js",
+        "content/Scripts/dropzone/dropzone.css",
+        "content/Scripts/dropzone/dropzone.js",
+        "content/Scripts/dropzone/dropzone.min.css",
+        "content/Scripts/dropzone/dropzone.min.js",
+        "dropzone.4.2.0.nupkg.sha512",
+        "dropzone.nuspec"
       ]
     },
     "jQuery/3.0.0": {
@@ -15211,7 +15233,8 @@
       "Microsoft.AspNetCore.All >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.2.0",
-      "bootstrap >= 4.2.1"
+      "bootstrap >= 4.2.1",
+      "dropzone >= 4.2.0"
     ]
   },
   "packageFolders": {
@@ -15272,6 +15295,10 @@
           "bootstrap": {
             "target": "Package",
             "version": "[4.2.1, )"
+          },
+          "dropzone": {
+            "target": "Package",
+            "version": "[4.2.0, )"
           }
         },
         "imports": [

@@ -52,7 +52,14 @@
                     </div>
                     <div class="x_content">
                         <p>Drag multiple files to the box below for multi upload or click to select files. This is for demonstration purposes only, the files are not uploaded to any server.</p>
-                        <form action="form_upload.html" class="dropzone"></form>
+                        @*<form action="form_upload.html" class="dropzone"></form>*@
+                        <form asp-controller="home" asp-action="FileUpload" asp-antiforgery="false"
+                              class="dropzone" id="UploadForm" enctype="multipart/form-data">
+                            <div class="fallback">
+                                <input name="file" type="file" multiple />
+                                <input type="submit" value="Upload" />
+                            </div>
+                        </form>
                         <br />
                         <br />
                         <br />

@@ -5740,7 +5740,9 @@
       "sha512": "FXANjZia/vux9/ObNiPwh2zNWuzcgHMKXia1OQrviuf0OKPBWB2TBIVAICgtObuzEW+XLyaBEoVuOUlMXy0kNA==",
       "type": "package",
       "path": "jquery/3.0.0",
+      "hasTools": true,
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "Content/Scripts/jquery-3.0.0-vsdoc.js",
         "Content/Scripts/jquery-3.0.0.js",
@@ -9751,6 +9753,7 @@
       "type": "package",
       "path": "popper.js/1.14.0",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "content/Scripts/README.md",
         "content/Scripts/esm/popper-utils.js",
@@ -15279,8 +15282,10 @@
       "netcoreapp2.2": {
         "dependencies": {
           "Microsoft.AspNetCore.All": {
+            "suppressParent": "All",
             "target": "Package",
-            "version": "[2.2.0, )"
+            "version": "[2.2.0, )",
+            "autoReferenced": true
           },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",

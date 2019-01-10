@@ -15,17 +15,10 @@ namespace App
     {
         public IConfiguration Configuration { get; }
 
-        //public Startup(IConfiguration configuration)
-        //{
-        //    // TODO: Add appsettings.json content to config
-        //    Configuration = configuration;           
-        //}
-
         public Startup(IHostingEnvironment env)
         {
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
-                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true, reloadOnChange: true)
                 .AddEnvironmentVariables();
             Configuration = builder.Build();
@@ -39,11 +32,11 @@ namespace App
             services.AddDbContext<PortfolioUploadContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("PortfolioUploadContext")));
 
-            //// Add functionality to inject IOptions<T>
-            //services.AddOptions();
+            // Add functionality to inject IOptions<T>
+            services.AddOptions();
 
-            //// Add our Config object so it can be injected            
-            //services.Configure<Config>(Configuration.GetSection("Config"));
+            // Add our Config object so it can be injected            
+            services.Configure<PathSettings>(Configuration.GetSection("PathSettings"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

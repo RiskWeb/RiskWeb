@@ -9,7 +9,6 @@ using System.IO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Options;
-using System.Web;
 
 namespace App.Controllers
 {
@@ -36,18 +35,17 @@ namespace App.Controllers
 
 
         [HttpGet]
-        public async Task<IActionResult> UploadPortfolio()
+        public IActionResult UploadPortfolio()
         {
             // Run function to read folder content and upload to DB
             return View();
         }
 
         [HttpPost]
-        public async Task<IActionResult> UploadPortfolio(IList<IFormFile> files)//IList<HttpPostedFileBase> files)//IList<IFormFile> files)
+        public async Task<IActionResult> UploadPortfolio(IList<IFormFile> files)//)IList<IFormFile> files)//IList<HttpPostedFileBase> files)//IList<IFormFile> files)
         {
-            //var files2 = HttpContext.Request.Form.Files;
-            var files2 = HttpContext.Request.Form.Files;
-
+            var files2 = HttpContext.Request.Form.Files;  //ugly, cant get input parameter to work with multiple files
+            
             var uploads = Path.Combine(_hostingEnvironment.WebRootPath, _config.Value.PortfolioUploadPath);
             foreach (var file in files2)
             {

@@ -3,9 +3,8 @@
   <Setup>
     <Parameter name="asofDate">2016-02-05</Parameter>
     <Parameter name="inputPath">Input</Parameter>
-    <Parameter name="outputPath">Output</Parameter>
+    <Parameter name="outputPath">Output/portfolio_3</Parameter>
     <Parameter name="logFile">log.txt</Parameter>
-    <Parameter name="logMask">255</Parameter>
     <Parameter name="marketDataFile">../../Input/market_20160205.txt</Parameter>
     <Parameter name="fixingDataFile">../../Input/fixings_20160205.txt</Parameter>
     <Parameter name="implyTodaysFixings">N</Parameter>
@@ -13,8 +12,8 @@
     <Parameter name="conventionsFile">../../Input/conventions.xml</Parameter>
     <Parameter name="marketConfigFile">../../Input/todaysmarket.xml</Parameter>
     <Parameter name="pricingEnginesFile">../../Input/pricingengine.xml</Parameter>
-    <Parameter name="portfolioFile">portfolio.xml</Parameter>
-    <Parameter name="observationModel">Disable</Parameter>
+    <Parameter name="portfolioFile">portfolio_3.xml</Parameter>
+    <Parameter name="observationModel">None</Parameter>
   </Setup>
   <Markets>
     <Parameter name="lgmcalibration">collateral_inccy</Parameter>
@@ -33,7 +32,7 @@
       <Parameter name="outputFileName">flows.csv</Parameter>
     </Analytic>
     <Analytic type="curves">
-      <Parameter name="active">Y</Parameter>
+      <Parameter name="active">N</Parameter>
       <Parameter name="configuration">default</Parameter>
       <Parameter name="grid">240,1M</Parameter>
       <Parameter name="outputFileName">curves.csv</Parameter>
@@ -46,6 +45,7 @@
       <!-- Parameter name="scenariodump">scenariodump.csv</Parameter> -->
       <Parameter name="cubeFile">cube.dat</Parameter>
       <Parameter name="aggregationScenarioDataFileName">scenariodata.dat</Parameter>
+      <Parameter name="disableEvaluationDateObservation">Y</Parameter>
     </Analytic>
     <Analytic type="xva">
       <Parameter name="active">Y</Parameter>
@@ -72,7 +72,7 @@
     </Analytic>
     <Analytic type="initialMargin">
       <Parameter name="active">N</Parameter>
-      <Parameter name="method"/>
+      <Parameter name="method">SIMM</Parameter>
     </Analytic>
   </Analytics>
 </ORE>

@@ -3,6 +3,7 @@ window.onload = function () {
 
     var dropzoneOptions = {
         dictDefaultMessage: 'Drop Here!',
+        autoDiscover: false,
         acceptedFiles: ".xml",
         paramName: "files",
         uploadMultiple: true,
@@ -12,6 +13,11 @@ window.onload = function () {
         init: function () {
             this.on("success", function (file) {
                 console.log("success > " + file.name);
+            });
+        },
+        init: function() {
+            this.on("removedfile", function (file) {
+                //add in your code to delete the file from the database here 
             });
         }
     };

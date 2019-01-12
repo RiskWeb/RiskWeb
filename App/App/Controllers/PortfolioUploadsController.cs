@@ -3,31 +3,73 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using App.Models;
+using System.IO;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Options;
 
 namespace App.Controllers
 {
     public class PortfolioUploadsController : Controller
     {
         private readonly PortfolioUploadContext _context;
+        private readonly IHostingEnvironment _hostingEnvironment;
+        private readonly IOptions<PathSettings> _config;
 
-        public PortfolioUploadsController(PortfolioUploadContext context)
+        public PortfolioUploadsController(PortfolioUploadContext context,
+                                          IHostingEnvironment hostingEnvironment,
+                                          IOptions<PathSettings> config)
         {
             _context = context;
+            _hostingEnvironment = hostingEnvironment;
+            _config = config;
         }
 
-        // GET: PortfolioUploads
         public async Task<IActionResult> Index()
         {
+            // Run function to read folder content and upload to DB
             return View(await _context.PortfolioUpload.ToListAsync());
         }
 
-        public async Task<IActionResult> Index2()
+
+        [HttpGet]
+        public IActionResult UploadPortfolio()
         {
-            return View(await _context.PortfolioUpload.ToListAsync());
+            // Run function to read folder content and upload to DB
+            return View();
         }
+
+        [HttpPost]
+        public async Task<IActionResult> UploadPortfolio(IList<IFormFile> files)//)IList<IFormFile> files)//IList<HttpPostedFileBase> files)//IList<IFormFile> files)
+        {
+            var files2 = HttpContext.Request.Form.Files;  //ugly, cant get input parameter to work with multiple files
+            
+            var uploads = Path.Combine(_hostingEnvironment.WebRootPath, _config.Value.PortfolioUploadPath);
+            foreach (var file in files2)
+            {
+                if (file.Length > 0)
+                {
+                    var filePath = Path.Combine(uploads, file.FileName);
+                    using (var fileStream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await file.CopyToAsync(fileStream);
+                        //TODO: read folder to register with DB context
+                    }
+                }
+            }
+            return View();
+        }
+
+
+        private void syncPortfolioFolder()
+        {
+
+        }
+
+
+
 
         // GET: PortfolioUploads/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -153,5 +195,13 @@ namespace App.Controllers
         {
             return _context.PortfolioUpload.Any(e => e.Id == id);
         }
+
+
+
+
+
+        
+
+
     }
 }

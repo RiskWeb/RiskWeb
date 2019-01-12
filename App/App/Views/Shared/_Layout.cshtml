@@ -70,43 +70,45 @@
                             <h3>General</h3>
                             <ul class="nav side-menu">
                                 <li>
-                                    <a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                                    <a><i class="fa fa-home"></i> Home </a>
+                                </li>
+                                <li>
+                                    <a><i class="fa fa-clone"></i> New Trade <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
-                                        <li>@Html.ActionLink("Risk Engine", "Engine", "Run")</li>
-                                        <li><a href="index2.html">Portfolio</a></li>
+                                        <li>@Html.ActionLink("Interest Rate", "Index", "PortfolioUploads")</li>
+                                        <li>@Html.ActionLink("FX", "Index2", "PortfolioUploads")</li>
+                                        <li>@Html.ActionLink("Credit", "Upload", "Home")</li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a><i class="fa fa-edit"></i> Portfolio <span class="fa fa-chevron-down"></span></a>
+                                    <a><i class="fa fa-sitemap"></i> Portfolios <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
-                                        <li>@Html.ActionLink("Current portfolios", "Index2", "PortfolioUploads")</li>
-                                        <li>@Html.ActionLink("Upload Area", "Upload", "Home")</li>
+                                        <li>@Html.ActionLink("View & manage", "Index", "PortfolioUploads")</li>
+                                        <li>@Html.ActionLink("Upload Area", "UploadPortfolio", "PortfolioUploads")</li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a><i class="fa fa-edit"></i> Market Data <span class="fa fa-chevron-down"></span></a>
+                                    <a><i class="fa fa-table"></i> Market Data <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
                                         <li>@Html.ActionLink("View & manage", "Upload", "Home")</li>
-                                        <li>@Html.ActionLink("Configuration", "Upload", "Home")</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a><i class="fa fa-edit"></i> Settings <span class="fa fa-chevron-down"></span></a>
-                                    <ul class="nav child_menu">
-                                        <li>@Html.ActionLink("Simulation Settings", "Upload", "Home")</li>
-                                        <li>@Html.ActionLink("Pricing Engine", "Upload", "Home")</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a><i class="fa fa-table"></i> Database <span class="fa fa-chevron-down"></span></a>
-                                    <ul class="nav child_menu">
-                                        <li><a href="tables_dynamic.html">Table Dynamic</a></li>
+                                        <li>@Html.ActionLink("Upload Area", "Upload", "Home")</li>
+                                        <li>
+                                            <a> Configuration <span class="fa fa-chevron-down"></span></a>
+                                            <ul class="nav child_menu">
+                                                <li>@Html.ActionLink("Conventions", "Upload", "Home")</li>
+                                                <li>@Html.ActionLink("Fixings", "Upload", "Home")</li>
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </li>
                                 <li>
                                     <a><i class="fa fa-bar-chart-o"></i> Results <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
-                                        <li><a href="echarts.html">ECharts</a></li>
+                                        <li>@Html.ActionLink("Overview", "Upload", "Home")</li>
+                                        <li>@Html.ActionLink("Market Risk", "Upload", "Home")</li>
+                                        <li>@Html.ActionLink("Credit Exposure", "Upload", "Home")</li>
+                                        <li>@Html.ActionLink("XVA", "Upload", "Home")</li>
+                                        <li>@Html.ActionLink("Regulatory", "Upload", "Home")</li>
                                     </ul>
                                 </li>
                             </ul>
@@ -115,10 +117,35 @@
                             <h3>Misc</h3>
                             <ul class="nav side-menu">
                                 <li>
-                                    <a><i class="fa fa-windows"></i> Extras <span class="fa fa-chevron-down"></span></a>
+                                    <a><i class="fa fa-cog"></i> Settings <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
-                                        <li><a href="pricing_tables.html">Pricing Tables</a></li>
+                                        <li>
+                                            <a> Pricing <span class="fa fa-chevron-down"></span></a>
+                                            <ul class="nav child_menu">
+                                                <li>@Html.ActionLink("Pricing Engine", "Upload", "Home")</li>
+                                                <li>@Html.ActionLink("Curve Configuration", "Upload", "Home")</li>
+                                            </ul>
+                                        </li>
+                                        <li>@Html.ActionLink("Simulation", "Upload", "Home")</li>
+                                        <li>@Html.ActionLink("Legal Agreements", "Upload", "Home")</li>
                                     </ul>
+                                </li>
+                                <li>
+                                    <a><i class="fa fa-database"></i> Database <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="tables_dynamic.html">Table Dynamic</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a><i class="fa fa-life-bouy"></i> Support <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li>@Html.ActionLink("Chat", "Upload", "Home")</li>
+                                        <li>@Html.ActionLink("FAQ", "Upload", "Home")</li>
+                                        <li>@Html.ActionLink("Report bug", "Upload", "Home")</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a><i class="fa fa-windows"></i> About</a>
                                 </li>
                             </ul>
                         </div>
@@ -218,7 +245,7 @@
         </div>
     </div>    
 
-    <environment include="Development,Production">        
+    <environment include="Development,Production">
         <!-- jQuery -->
         <script src="~/vendors/jquery/dist/jquery.min.js"></script>
         <!-- Bootstrap -->

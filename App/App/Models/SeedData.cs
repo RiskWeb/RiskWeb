@@ -24,7 +24,7 @@ namespace App.Models
                 context.PortfolioUpload.AddRange(
                     new PortfolioUpload
                     {
-                        Name = "When Harry Met Sally",
+                        Name = "Example 1",
                         TradeCount = 1,
                         Agreements = "N",
                         UploadTime = DateTime.Parse("1989-2-12"),
@@ -34,7 +34,7 @@ namespace App.Models
 
                     new PortfolioUpload
                     {
-                        Name = "Ghostbusters ",
+                        Name = "Example 2",
                         TradeCount = 1,
                         Agreements = "N",
                         UploadTime = DateTime.Parse("2019-2-12"),
@@ -44,7 +44,7 @@ namespace App.Models
 
                     new PortfolioUpload
                     {
-                        Name = "Ghostbusters 2",
+                        Name = "Example 3",
                         TradeCount = 10,
                         Agreements = "y",
                         UploadTime = DateTime.Parse("2013-2-12"),
@@ -54,7 +54,7 @@ namespace App.Models
 
                     new PortfolioUpload
                     {
-                        Name = "Rio Bravo",
+                        Name = "Example 4",
                         TradeCount = 50000,
                         Agreements = "N",
                         UploadTime = DateTime.Parse("2014-2-12"),

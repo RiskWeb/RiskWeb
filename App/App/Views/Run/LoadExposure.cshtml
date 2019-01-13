@@ -1,0 +1,94 @@
+﻿@using App.Models
+
+@model App.Models.Exposure
+
+@{
+    ViewBag.Title = "Exposure";
+}
+
+@*<div id="graphExposure">
+
+</div>*@
+
+<div class="right_col" role="main">
+
+    <h2>Console output</h2>
+
+    @*<script>alert("this dialogue has been invoked through codebehind.");</script>*@
+    @*<script>graphExposure('@(Model.Values)');</script>*@
+    @*<script>graphExposure()</script>*@
+
+    <pre>@Model.Time</pre>
+    <pre>@Model.Values</pre>
+
+
+    <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Line Graph</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="#">Settings 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Settings 2</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+
+                <div id="exposure_graph" style="height:350px;"></div> 
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@*<div id="chartContainer"></div>*@
+
+@*<script type="text/javascript">
+
+            window.onload = function () {
+                var chart = new CanvasJS.Chart("chartContainer", {
+                    theme: "light2",
+                    animationEnabled: true,
+                    title: {
+                        text: "Simple Column Chart in ASP.NET MVC"
+                    },
+                    subtitles: [
+                        { text: "Try Resizing the Browser" }
+                    ],
+                    data: [
+                    {
+                        type: "column", //change type to bar, line, area, pie, etc
+                        dataPoints: [
+                        { x: 10, y: 71 },
+                        { x: 20, y: 55 },
+                        { x: 30, y: 50 },
+                        { x: 40, y: 65 },
+                        { x: 50, y: 95 },
+                        { x: 60, y: 68 },
+                        { x: 70, y: 28 },
+                        { x: 80, y: 34 },
+                        { x: 90, y: 14 }
+                        ]
+                                            //Uncomment below line to add data coming from the controller.
+                        //dataPoints: @Html.Raw(ViewBag.DataPoints),
+                        }
+                        ]
+                        });
+                        chart.render();
+                        };
+    </script>*@

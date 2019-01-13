@@ -3,11 +3,11 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - WebApp</title>    
+    <title>@ViewData["Title"] - WebApp</title>
 
     <environment include="Development,Production">
         @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-        <link rel="stylesheet" href="~/css/site.css" />*@
+            <link rel="stylesheet" href="~/css/site.css" />*@
 
         <!-- Bootstrap -->
         <link href="~/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -35,9 +35,10 @@
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />        
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
 </head>
+
 <body class="nav-md">    
 
     <div class="container body">
@@ -71,6 +72,10 @@
                             <ul class="nav side-menu">
                                 <li>
                                     <a><i class="fa fa-home"></i> Home </a>
+                                    <ul class="nav child_menu">
+                                        <li>@Html.ActionLink("Test Run", "Engine", "Run")</li>
+                                        <li>@Html.ActionLink("Load Exposure", "LoadExposure", "Run")</li>
+                                    </ul>
                                 </li>
                                 <li>
                                     <a><i class="fa fa-clone"></i> New Trade <span class="fa fa-chevron-down"></span></a>
@@ -231,7 +236,7 @@
                 </div>
             </div>
             <!-- /top navigation -->
-            <!-- page content -->
+            <!-- page content -->            
             @RenderBody()
             <!-- /page content -->
             <!-- footer content -->
@@ -246,6 +251,10 @@
     </div>    
 
     <environment include="Development,Production">
+        
+        <!-- ECharts -->
+        <script src="~/vendors/echarts/dist/echarts.min.js"></script>
+        <script src="~/vendors/echarts/map/js/world.js"></script>
         <!-- jQuery -->
         <script src="~/vendors/jquery/dist/jquery.min.js"></script>
         <!-- Bootstrap -->
@@ -294,6 +303,97 @@
 
     </environment>
     <environment exclude="Development,Production">
+
+        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>      
+
+        <script>
+            var echartLine = echarts.init(document.getElementById('test'), theme);
+
+            echartLine.setOption({
+                title: {
+                    text: 'Line Graph',
+                    subtext: 'Subtitle'
+                },
+                tooltip: {
+                    trigger: 'axis'
+                },
+                legend: {
+                    x: 220,
+                    y: 40,
+                    data: ['Intent', 'Pre-order', 'Deal']
+                },
+                toolbox: {
+                    show: true,
+                    feature: {
+                        magicType: {
+                            show: true,
+                            title: {
+                                line: 'Line',
+                                bar: 'Bar',
+                                stack: 'Stack',
+                                tiled: 'Tiled'
+                            },
+                            type: ['line', 'bar', 'stack', 'tiled']
+                        },
+                        restore: {
+                            show: true,
+                            title: "Restore"
+                        },
+                        saveAsImage: {
+                            show: true,
+                            title: "Save Image"
+                        }
+                    }
+                },
+                calculable: true,
+                xAxis: [{
+                    type: 'category',
+                    boundaryGap: false,
+                    data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+                }],
+                yAxis: [{
+                    type: 'value'
+                }],
+                series: [{
+                    name: 'Deal',
+                    type: 'line',
+                    smooth: true,
+                    itemStyle: {
+                        normal: {
+                            areaStyle: {
+                                type: 'default'
+                            }
+                        }
+                    },
+                    data: [10, 12, 21, 54, 260, 830, 710]
+                }, {
+                    name: 'Pre-order',
+                    type: 'line',
+                    smooth: true,
+                    itemStyle: {
+                        normal: {
+                            areaStyle: {
+                                type: 'default'
+                            }
+                        }
+                    },
+                    data: [30, 182, 434, 791, 390, 30, 10]
+                }, {
+                    name: 'Intent',
+                    type: 'line',
+                    smooth: true,
+                    itemStyle: {
+                        normal: {
+                            areaStyle: {
+                                type: 'default'
+                            }
+                        }
+                    },
+                    data: [1320, 1132, 601, 234, 120, 90, 20]
+                }]
+            });
+        </script>
+
         <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
                 asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
                 asp-fallback-test="window.jQuery"
@@ -306,7 +406,7 @@
                 crossorigin="anonymous"
                 integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
         </script>
-        <script src="~/js/site.min.js" asp-append-version="true"></script>        
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
 
     @RenderSection("Scripts", required: false)

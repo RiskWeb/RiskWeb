@@ -5,6 +5,7 @@ namespace App
     {
         public string OrePath { get; set; }
         public string PortfolioUploadPath { get; set; }
+        public string PortfolioDeletePath { get; set; }
 
     }
 }

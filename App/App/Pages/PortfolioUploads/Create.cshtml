@@ -1,0 +1,57 @@
+﻿@page "{id:int}"
+@model App.Pages.PortfolioUploads.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "_Layout";
+}
+
+<h2>Create</h2>
+
+<h4>PortfolioUpload</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PortfolioUpload.Name" class="control-label"></label>
+                <input asp-for="PortfolioUpload.Name" class="form-control" />
+                <span asp-validation-for="PortfolioUpload.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PortfolioUpload.TradeCount" class="control-label"></label>
+                <input asp-for="PortfolioUpload.TradeCount" class="form-control" />
+                <span asp-validation-for="PortfolioUpload.TradeCount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PortfolioUpload.Agreements" class="control-label"></label>
+                <input asp-for="PortfolioUpload.Agreements" class="form-control" />
+                <span asp-validation-for="PortfolioUpload.Agreements" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PortfolioUpload.UploadTime" class="control-label"></label>
+                <input asp-for="PortfolioUpload.UploadTime" class="form-control" />
+                <span asp-validation-for="PortfolioUpload.UploadTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PortfolioUpload.FileName" class="control-label"></label>
+                <input asp-for="PortfolioUpload.FileName" class="form-control" />
+                <span asp-validation-for="PortfolioUpload.FileName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PortfolioUpload.LastRunTime" class="control-label"></label>
+                <input asp-for="PortfolioUpload.LastRunTime" class="form-control" />
+                <span asp-validation-for="PortfolioUpload.LastRunTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+

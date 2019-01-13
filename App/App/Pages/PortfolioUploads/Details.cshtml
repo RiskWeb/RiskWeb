@@ -1,0 +1,56 @@
+﻿@page "{id:int}"
+@model App.Pages.PortfolioUploads.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "_Layout";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PortfolioUpload</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PortfolioUpload.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PortfolioUpload.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PortfolioUpload.TradeCount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PortfolioUpload.TradeCount)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PortfolioUpload.Agreements)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PortfolioUpload.Agreements)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PortfolioUpload.UploadTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PortfolioUpload.UploadTime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PortfolioUpload.FileName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PortfolioUpload.FileName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PortfolioUpload.LastRunTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PortfolioUpload.LastRunTime)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.PortfolioUpload.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

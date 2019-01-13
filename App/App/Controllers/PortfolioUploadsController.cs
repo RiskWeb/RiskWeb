@@ -9,31 +9,29 @@ using System.IO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Options;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace App.Controllers
 {
     public class PortfolioUploadsController : Controller
     {
         private readonly PortfolioUploadContext _context;
-        private readonly IHostingEnvironment _hostingEnvironment;
         private readonly IOptions<PathSettings> _config;
         private readonly IServiceProvider _serviceProvider;
+        private readonly IHostingEnvironment _hostingEnvironment;
 
         public PortfolioUploadsController(PortfolioUploadContext context,
-                                          IHostingEnvironment hostingEnvironment,
                                           IOptions<PathSettings> config,
-                                          IServiceProvider serviceProvider)
+                                          IServiceProvider serviceProvider, 
+                                          IHostingEnvironment hostingEnvironment)
         {
             _context = context;
-            _hostingEnvironment = hostingEnvironment;
             _config = config;
             _serviceProvider = serviceProvider;
+            _hostingEnvironment = hostingEnvironment;
         }
 
         public async Task<IActionResult> Index()
         {
-            syncUploadedPortfolios();
             return View(await _context.PortfolioUpload.ToListAsync());
         }
 
@@ -64,37 +62,7 @@ namespace App.Controllers
             }
             return View();
         }
-                     
-        private void syncUploadedPortfolios()
-        {
-            DirectoryInfo directoryInfo = new DirectoryInfo(@Path.Combine(_hostingEnvironment.WebRootPath, _config.Value.PortfolioUploadPath));
-
-            FileInfo[] files = directoryInfo.GetFiles("*.xml");
-
-            using (var context = new PortfolioUploadContext(_serviceProvider.GetRequiredService<DbContextOptions<PortfolioUploadContext>>()))
-            {
-                // Clear out existing portfolios
-                var itemsToDelete = context.Set<PortfolioUpload>();
-                context.PortfolioUpload.RemoveRange(itemsToDelete);
-
-                //Populate db
-                foreach (var file in files)
-                {
-                    context.PortfolioUpload.AddRange(
-                        new PortfolioUpload
-                        {
-                            Name = file.Name,
-                            TradeCount = 1,
-                            Agreements = "N",
-                            UploadTime = file.LastWriteTime,
-                            FileName = file.Name,
-                            LastRunTime = file.LastAccessTime
-                        });
-                }
-                context.SaveChanges();
-            }
-        }
-               
+                      
         // GET: PortfolioUploads/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -204,25 +172,6 @@ namespace App.Controllers
             return View(portfolioUpload);
         }
 
-
-        [HttpPost]
-        public async Task<IActionResult> RemovePortfolio(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var portfolioUpload = await _context.PortfolioUpload
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (portfolioUpload == null)
-            {
-                return NotFound();
-            }
-
-            return View(portfolioUpload);
-        }
-
         // POST: PortfolioUploads/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
@@ -238,12 +187,6 @@ namespace App.Controllers
         {
             return _context.PortfolioUpload.Any(e => e.Id == id);
         }
-
-
-
-
-
-        
 
 
     }

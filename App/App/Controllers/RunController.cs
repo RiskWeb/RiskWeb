@@ -38,12 +38,21 @@ namespace App.Controllers
             string root = "C:\\developer\\git\\ore\\Engine";
             //string root = _env.ContentRootPath.ToString();
 
+<<<<<<< HEAD
             string runFile = string.Format("{0}\\{1}", root, "Examples\\Example_1\\run.py");
             //string runFile = string.Format("{0}\\{1}", root, "~/developer/git/ore/Engine/Examples/Example_1/run.py");
 
             ProcessStartInfo start = new ProcessStartInfo();
             start.WorkingDirectory = string.Format("{0}\\{1}", root, "Examples\\Example_1");
             //start.WorkingDirectory = string.Format("{0}\\{1}", root, "~/developer/git/ore/Engine/Examples/Example_1");
+=======
+            //string runFile = string.Format("{0}\\{1}", root, "Examples\\Example_1\\run.py");
+            string runFile = string.Format("{0}\\{1}", root, "~/developer/git/ore/Engine/Examples/Example_1/run.py");
+
+            ProcessStartInfo start = new ProcessStartInfo();
+            //start.WorkingDirectory = string.Format("{0}\\{1}", root, "Examples\\Example_1");
+            start.WorkingDirectory = string.Format("{0}\\{1}", root, "~/developer/git/ore/Engine/Examples/Example_1");
+>>>>>>> refs/remotes/origin/master
             start.FileName = "python"; // Assumes path to python.exe in PATH-variable
             start.Arguments = string.Format("{0} {1}", runFile, "");
             start.UseShellExecute = false;

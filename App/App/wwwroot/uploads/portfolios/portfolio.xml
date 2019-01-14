@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <Portfolio>
+<<<<<<< HEAD
   <Trade id="Swap_20">
     <TradeType>Swap</TradeType>
     <Envelope>
@@ -72,6 +73,9 @@
     </SwapData>
   </Trade>
   <Trade id="Swaption_1_19">
+=======
+  <Trade id="SwaptionCash">
+>>>>>>> refs/remotes/origin/master
     <TradeType>Swaption</TradeType>
     <Envelope>
       <CounterParty>CPTY_A</CounterParty>
@@ -86,6 +90,7 @@
         <Settlement>Cash</Settlement>
         <PayOffAtExpiry>false</PayOffAtExpiry>
         <ExerciseDates>
+<<<<<<< HEAD
           <ExerciseDate>20161028</ExerciseDate>
         </ExerciseDates>
       </OptionData>
@@ -119,10 +124,17 @@
         </ScheduleData>
       </LegData>
       <LegData>
+=======
+          <ExerciseDate>2026-03-01</ExerciseDate>
+        </ExerciseDates>
+      </OptionData>
+      <LegData>
+>>>>>>> refs/remotes/origin/master
         <LegType>Floating</LegType>
         <Payer>true</Payer>
         <Currency>EUR</Currency>
         <Notionals>
+<<<<<<< HEAD
           <Notional>10000000.000000</Notional>
         </Notionals>
         <DayCounter>A360</DayCounter>
@@ -143,6 +155,26 @@
             <Calendar>TARGET</Calendar>
             <Convention>MF</Convention>
             <TermConvention>MF</TermConvention>
+=======
+          <Notional>10000000</Notional>
+        </Notionals>
+        <DayCounter>A360</DayCounter>
+        <PaymentConvention>ModifiedFollowing</PaymentConvention>
+        <FloatingLegData>
+          <Index>EUR-EURIBOR-3M</Index>
+          <Spreads>
+            <Spread>0.0</Spread>
+          </Spreads>
+        </FloatingLegData>
+        <ScheduleData>
+          <Rules>
+            <StartDate>2026-03-01</StartDate>
+            <EndDate>2036-03-01</EndDate>
+            <Tenor>3M</Tenor>
+            <Calendar>TARGET</Calendar>
+            <Convention>ModifiedFollowing</Convention>
+            <TermConvention>ModifiedFollowing</TermConvention>
+>>>>>>> refs/remotes/origin/master
             <Rule>Forward</Rule>
             <EndOfMonth/>
             <FirstDate/>
@@ -150,6 +182,7 @@
           </Rules>
         </ScheduleData>
       </LegData>
+<<<<<<< HEAD
     </SwaptionData>
   </Trade>
   <Trade id="Swaption_2_18">
@@ -170,15 +203,24 @@
           <ExerciseDate>20171028</ExerciseDate>
         </ExerciseDates>
       </OptionData>
+=======
+>>>>>>> refs/remotes/origin/master
       <LegData>
         <LegType>Fixed</LegType>
         <Payer>false</Payer>
         <Currency>EUR</Currency>
         <Notionals>
+<<<<<<< HEAD
           <Notional>10000000.000000</Notional>
         </Notionals>
         <DayCounter>30/360</DayCounter>
         <PaymentConvention>F</PaymentConvention>
+=======
+          <Notional>10000000</Notional>
+        </Notionals>
+        <DayCounter>ACT/ACT</DayCounter>
+        <PaymentConvention>Following</PaymentConvention>
+>>>>>>> refs/remotes/origin/master
         <FixedLegData>
           <Rates>
             <Rate>0.02</Rate>
@@ -186,6 +228,7 @@
         </FixedLegData>
         <ScheduleData>
           <Rules>
+<<<<<<< HEAD
             <StartDate>20171028</StartDate>
             <EndDate>20351028</EndDate>
             <Tenor>1Y</Tenor>
@@ -224,6 +267,14 @@
             <Calendar>TARGET</Calendar>
             <Convention>MF</Convention>
             <TermConvention>MF</TermConvention>
+=======
+            <StartDate>2026-03-01</StartDate>
+            <EndDate>2036-03-01</EndDate>
+            <Tenor>1Y</Tenor>
+            <Calendar>TARGET</Calendar>
+            <Convention>Following</Convention>
+            <TermConvention>Following</TermConvention>
+>>>>>>> refs/remotes/origin/master
             <Rule>Forward</Rule>
             <EndOfMonth/>
             <FirstDate/>
@@ -233,7 +284,11 @@
       </LegData>
     </SwaptionData>
   </Trade>
+<<<<<<< HEAD
   <Trade id="Swaption_4_16">
+=======
+  <Trade id="SwaptionPhysical">
+>>>>>>> refs/remotes/origin/master
     <TradeType>Swaption</TradeType>
     <Envelope>
       <CounterParty>CPTY_A</CounterParty>
@@ -245,6 +300,7 @@
         <LongShort>Long</LongShort>
         <OptionType>Call</OptionType>
         <Style>European</Style>
+<<<<<<< HEAD
         <Settlement>Cash</Settlement>
         <PayOffAtExpiry>false</PayOffAtExpiry>
         <ExerciseDates>
@@ -281,10 +337,20 @@
         </ScheduleData>
       </LegData>
       <LegData>
+=======
+        <Settlement>Physical</Settlement>
+        <PayOffAtExpiry>false</PayOffAtExpiry>
+        <ExerciseDates>
+          <ExerciseDate>2026-03-01</ExerciseDate>
+        </ExerciseDates>
+      </OptionData>
+      <LegData>
+>>>>>>> refs/remotes/origin/master
         <LegType>Floating</LegType>
         <Payer>true</Payer>
         <Currency>EUR</Currency>
         <Notionals>
+<<<<<<< HEAD
           <Notional>10000000.000000</Notional>
         </Notionals>
         <DayCounter>A360</DayCounter>
@@ -305,6 +371,26 @@
             <Calendar>TARGET</Calendar>
             <Convention>MF</Convention>
             <TermConvention>MF</TermConvention>
+=======
+          <Notional>10000000</Notional>
+        </Notionals>
+        <DayCounter>A360</DayCounter>
+        <PaymentConvention>ModifiedFollowing</PaymentConvention>
+        <FloatingLegData>
+          <Index>EUR-EURIBOR-3M</Index>
+          <Spreads>
+            <Spread>0.0</Spread>
+          </Spreads>
+        </FloatingLegData>
+        <ScheduleData>
+          <Rules>
+            <StartDate>2026-03-01</StartDate>
+            <EndDate>2036-03-01</EndDate>
+            <Tenor>3M</Tenor>
+            <Calendar>TARGET</Calendar>
+            <Convention>ModifiedFollowing</Convention>
+            <TermConvention>ModifiedFollowing</TermConvention>
+>>>>>>> refs/remotes/origin/master
             <Rule>Forward</Rule>
             <EndOfMonth/>
             <FirstDate/>
@@ -312,6 +398,7 @@
           </Rules>
         </ScheduleData>
       </LegData>
+<<<<<<< HEAD
     </SwaptionData>
   </Trade>
   <Trade id="Swaption_6_14">
@@ -332,15 +419,24 @@
           <ExerciseDate>20211028</ExerciseDate>
         </ExerciseDates>
       </OptionData>
+=======
+>>>>>>> refs/remotes/origin/master
       <LegData>
         <LegType>Fixed</LegType>
         <Payer>false</Payer>
         <Currency>EUR</Currency>
         <Notionals>
+<<<<<<< HEAD
           <Notional>10000000.000000</Notional>
         </Notionals>
         <DayCounter>30/360</DayCounter>
         <PaymentConvention>F</PaymentConvention>
+=======
+          <Notional>10000000</Notional>
+        </Notionals>
+        <DayCounter>ACT/ACT</DayCounter>
+        <PaymentConvention>Following</PaymentConvention>
+>>>>>>> refs/remotes/origin/master
         <FixedLegData>
           <Rates>
             <Rate>0.02</Rate>
@@ -348,6 +444,7 @@
         </FixedLegData>
         <ScheduleData>
           <Rules>
+<<<<<<< HEAD
             <StartDate>20211028</StartDate>
             <EndDate>20351028</EndDate>
             <Tenor>1Y</Tenor>
@@ -386,6 +483,14 @@
             <Calendar>TARGET</Calendar>
             <Convention>MF</Convention>
             <TermConvention>MF</TermConvention>
+=======
+            <StartDate>2026-03-01</StartDate>
+            <EndDate>2036-03-01</EndDate>
+            <Tenor>1Y</Tenor>
+            <Calendar>TARGET</Calendar>
+            <Convention>Following</Convention>
+            <TermConvention>Following</TermConvention>
+>>>>>>> refs/remotes/origin/master
             <Rule>Forward</Rule>
             <EndOfMonth/>
             <FirstDate/>
@@ -395,6 +500,7 @@
       </LegData>
     </SwaptionData>
   </Trade>
+<<<<<<< HEAD
   <Trade id="Swaption_8_12">
     <TradeType>Swaption</TradeType>
     <Envelope>
@@ -478,11 +584,16 @@
   </Trade>
   <Trade id="Swaption_10_10">
     <TradeType>Swaption</TradeType>
+=======
+  <Trade id="Swap">
+    <TradeType>Swap</TradeType>
+>>>>>>> refs/remotes/origin/master
     <Envelope>
       <CounterParty>CPTY_A</CounterParty>
       <NettingSetId>CPTY_A</NettingSetId>
       <AdditionalFields/>
     </Envelope>
+<<<<<<< HEAD
     <SwaptionData>
       <OptionData>
         <LongShort>Long</LongShort>
@@ -523,11 +634,15 @@
           </Rules>
         </ScheduleData>
       </LegData>
+=======
+    <SwapData>
+>>>>>>> refs/remotes/origin/master
       <LegData>
         <LegType>Floating</LegType>
         <Payer>true</Payer>
         <Currency>EUR</Currency>
         <Notionals>
+<<<<<<< HEAD
           <Notional>10000000.000000</Notional>
         </Notionals>
         <DayCounter>A360</DayCounter>
@@ -548,6 +663,26 @@
             <Calendar>TARGET</Calendar>
             <Convention>MF</Convention>
             <TermConvention>MF</TermConvention>
+=======
+          <Notional>10000000</Notional>
+        </Notionals>
+        <DayCounter>A360</DayCounter>
+        <PaymentConvention>ModifiedFollowing</PaymentConvention>
+        <FloatingLegData>
+          <Index>EUR-EURIBOR-3M</Index>
+          <Spreads>
+            <Spread>0.0</Spread>
+          </Spreads>
+        </FloatingLegData>
+        <ScheduleData>
+          <Rules>
+            <StartDate>2026-03-01</StartDate>
+            <EndDate>2036-03-01</EndDate>
+            <Tenor>3M</Tenor>
+            <Calendar>TARGET</Calendar>
+            <Convention>ModifiedFollowing</Convention>
+            <TermConvention>ModifiedFollowing</TermConvention>
+>>>>>>> refs/remotes/origin/master
             <Rule>Forward</Rule>
             <EndOfMonth/>
             <FirstDate/>
@@ -555,6 +690,7 @@
           </Rules>
         </ScheduleData>
       </LegData>
+<<<<<<< HEAD
     </SwaptionData>
   </Trade>
   <Trade id="Swaption_12_8">
@@ -575,15 +711,24 @@
           <ExerciseDate>20271028</ExerciseDate>
         </ExerciseDates>
       </OptionData>
+=======
+>>>>>>> refs/remotes/origin/master
       <LegData>
         <LegType>Fixed</LegType>
         <Payer>false</Payer>
         <Currency>EUR</Currency>
         <Notionals>
+<<<<<<< HEAD
           <Notional>10000000.000000</Notional>
         </Notionals>
         <DayCounter>30/360</DayCounter>
         <PaymentConvention>F</PaymentConvention>
+=======
+          <Notional>10000000</Notional>
+        </Notionals>
+        <DayCounter>ACT/ACT</DayCounter>
+        <PaymentConvention>Following</PaymentConvention>
+>>>>>>> refs/remotes/origin/master
         <FixedLegData>
           <Rates>
             <Rate>0.02</Rate>
@@ -591,6 +736,7 @@
         </FixedLegData>
         <ScheduleData>
           <Rules>
+<<<<<<< HEAD
             <StartDate>20271028</StartDate>
             <EndDate>20351028</EndDate>
             <Tenor>1Y</Tenor>
@@ -629,6 +775,14 @@
             <Calendar>TARGET</Calendar>
             <Convention>MF</Convention>
             <TermConvention>MF</TermConvention>
+=======
+            <StartDate>2026-03-01</StartDate>
+            <EndDate>2036-03-01</EndDate>
+            <Tenor>1Y</Tenor>
+            <Calendar>TARGET</Calendar>
+            <Convention>Following</Convention>
+            <TermConvention>Following</TermConvention>
+>>>>>>> refs/remotes/origin/master
             <Rule>Forward</Rule>
             <EndOfMonth/>
             <FirstDate/>
@@ -636,9 +790,15 @@
           </Rules>
         </ScheduleData>
       </LegData>
+<<<<<<< HEAD
     </SwaptionData>
   </Trade>
   <Trade id="Swaption_14_6">
+=======
+    </SwapData>
+  </Trade>
+  <Trade id="SwaptionCashPremium">
+>>>>>>> refs/remotes/origin/master
     <TradeType>Swaption</TradeType>
     <Envelope>
       <CounterParty>CPTY_A</CounterParty>
@@ -653,6 +813,7 @@
         <Settlement>Cash</Settlement>
         <PayOffAtExpiry>false</PayOffAtExpiry>
         <ExerciseDates>
+<<<<<<< HEAD
           <ExerciseDate>20291028</ExerciseDate>
         </ExerciseDates>
       </OptionData>
@@ -686,10 +847,20 @@
         </ScheduleData>
       </LegData>
       <LegData>
+=======
+          <ExerciseDate>2026-03-01</ExerciseDate>
+        </ExerciseDates>
+	<PremiumAmount>1090000</PremiumAmount>
+	<PremiumCurrency>EUR</PremiumCurrency>
+	<PremiumPayDate>2026-03-01</PremiumPayDate>
+      </OptionData>
+      <LegData>
+>>>>>>> refs/remotes/origin/master
         <LegType>Floating</LegType>
         <Payer>true</Payer>
         <Currency>EUR</Currency>
         <Notionals>
+<<<<<<< HEAD
           <Notional>10000000.000000</Notional>
         </Notionals>
         <DayCounter>A360</DayCounter>
@@ -710,6 +881,26 @@
             <Calendar>TARGET</Calendar>
             <Convention>MF</Convention>
             <TermConvention>MF</TermConvention>
+=======
+          <Notional>10000000</Notional>
+        </Notionals>
+        <DayCounter>A360</DayCounter>
+        <PaymentConvention>ModifiedFollowing</PaymentConvention>
+        <FloatingLegData>
+          <Index>EUR-EURIBOR-3M</Index>
+          <Spreads>
+            <Spread>0.0</Spread>
+          </Spreads>
+        </FloatingLegData>
+        <ScheduleData>
+          <Rules>
+            <StartDate>2026-03-01</StartDate>
+            <EndDate>2036-03-01</EndDate>
+            <Tenor>3M</Tenor>
+            <Calendar>TARGET</Calendar>
+            <Convention>ModifiedFollowing</Convention>
+            <TermConvention>ModifiedFollowing</TermConvention>
+>>>>>>> refs/remotes/origin/master
             <Rule>Forward</Rule>
             <EndOfMonth/>
             <FirstDate/>
@@ -717,6 +908,7 @@
           </Rules>
         </ScheduleData>
       </LegData>
+<<<<<<< HEAD
     </SwaptionData>
   </Trade>
   <Trade id="Swaption_16_4">
@@ -737,15 +929,24 @@
           <ExerciseDate>20311028</ExerciseDate>
         </ExerciseDates>
       </OptionData>
+=======
+>>>>>>> refs/remotes/origin/master
       <LegData>
         <LegType>Fixed</LegType>
         <Payer>false</Payer>
         <Currency>EUR</Currency>
         <Notionals>
+<<<<<<< HEAD
           <Notional>10000000.000000</Notional>
         </Notionals>
         <DayCounter>30/360</DayCounter>
         <PaymentConvention>F</PaymentConvention>
+=======
+          <Notional>10000000</Notional>
+        </Notionals>
+        <DayCounter>ACT/ACT</DayCounter>
+        <PaymentConvention>Following</PaymentConvention>
+>>>>>>> refs/remotes/origin/master
         <FixedLegData>
           <Rates>
             <Rate>0.02</Rate>
@@ -753,6 +954,7 @@
         </FixedLegData>
         <ScheduleData>
           <Rules>
+<<<<<<< HEAD
             <StartDate>20311028</StartDate>
             <EndDate>20351028</EndDate>
             <Tenor>1Y</Tenor>
@@ -791,6 +993,14 @@
             <Calendar>TARGET</Calendar>
             <Convention>MF</Convention>
             <TermConvention>MF</TermConvention>
+=======
+            <StartDate>2026-03-01</StartDate>
+            <EndDate>2036-03-01</EndDate>
+            <Tenor>1Y</Tenor>
+            <Calendar>TARGET</Calendar>
+            <Convention>Following</Convention>
+            <TermConvention>Following</TermConvention>
+>>>>>>> refs/remotes/origin/master
             <Rule>Forward</Rule>
             <EndOfMonth/>
             <FirstDate/>
@@ -800,7 +1010,11 @@
       </LegData>
     </SwaptionData>
   </Trade>
+<<<<<<< HEAD
   <Trade id="Swaption_18_2">
+=======
+  <Trade id="SwaptionPhysicalPremium">
+>>>>>>> refs/remotes/origin/master
     <TradeType>Swaption</TradeType>
     <Envelope>
       <CounterParty>CPTY_A</CounterParty>
@@ -812,6 +1026,7 @@
         <LongShort>Long</LongShort>
         <OptionType>Call</OptionType>
         <Style>European</Style>
+<<<<<<< HEAD
         <Settlement>Cash</Settlement>
         <PayOffAtExpiry>false</PayOffAtExpiry>
         <ExerciseDates>
@@ -848,10 +1063,23 @@
         </ScheduleData>
       </LegData>
       <LegData>
+=======
+        <Settlement>Physical</Settlement>
+        <PayOffAtExpiry>false</PayOffAtExpiry>
+        <ExerciseDates>
+          <ExerciseDate>2026-03-01</ExerciseDate>
+        </ExerciseDates>
+	<PremiumAmount>1090000</PremiumAmount>
+	<PremiumCurrency>EUR</PremiumCurrency>
+	<PremiumPayDate>2026-03-01</PremiumPayDate>
+      </OptionData>
+      <LegData>
+>>>>>>> refs/remotes/origin/master
         <LegType>Floating</LegType>
         <Payer>true</Payer>
         <Currency>EUR</Currency>
         <Notionals>
+<<<<<<< HEAD
           <Notional>10000000.000000</Notional>
         </Notionals>
         <DayCounter>A360</DayCounter>
@@ -872,6 +1100,26 @@
             <Calendar>TARGET</Calendar>
             <Convention>MF</Convention>
             <TermConvention>MF</TermConvention>
+=======
+          <Notional>10000000</Notional>
+        </Notionals>
+        <DayCounter>A360</DayCounter>
+        <PaymentConvention>ModifiedFollowing</PaymentConvention>
+        <FloatingLegData>
+          <Index>EUR-EURIBOR-3M</Index>
+          <Spreads>
+            <Spread>0.0</Spread>
+          </Spreads>
+        </FloatingLegData>
+        <ScheduleData>
+          <Rules>
+            <StartDate>2026-03-01</StartDate>
+            <EndDate>2036-03-01</EndDate>
+            <Tenor>3M</Tenor>
+            <Calendar>TARGET</Calendar>
+            <Convention>ModifiedFollowing</Convention>
+            <TermConvention>ModifiedFollowing</TermConvention>
+>>>>>>> refs/remotes/origin/master
             <Rule>Forward</Rule>
             <EndOfMonth/>
             <FirstDate/>
@@ -879,6 +1127,7 @@
           </Rules>
         </ScheduleData>
       </LegData>
+<<<<<<< HEAD
     </SwaptionData>
   </Trade>
   <Trade id="Swaption_19_1">
@@ -899,15 +1148,24 @@
           <ExerciseDate>20341028</ExerciseDate>
         </ExerciseDates>
       </OptionData>
+=======
+>>>>>>> refs/remotes/origin/master
       <LegData>
         <LegType>Fixed</LegType>
         <Payer>false</Payer>
         <Currency>EUR</Currency>
         <Notionals>
+<<<<<<< HEAD
           <Notional>10000000.000000</Notional>
         </Notionals>
         <DayCounter>30/360</DayCounter>
         <PaymentConvention>F</PaymentConvention>
+=======
+          <Notional>10000000</Notional>
+        </Notionals>
+        <DayCounter>ACT/ACT</DayCounter>
+        <PaymentConvention>Following</PaymentConvention>
+>>>>>>> refs/remotes/origin/master
         <FixedLegData>
           <Rates>
             <Rate>0.02</Rate>
@@ -915,6 +1173,7 @@
         </FixedLegData>
         <ScheduleData>
           <Rules>
+<<<<<<< HEAD
             <StartDate>20341028</StartDate>
             <EndDate>20351028</EndDate>
             <Tenor>1Y</Tenor>
@@ -953,6 +1212,14 @@
             <Calendar>TARGET</Calendar>
             <Convention>MF</Convention>
             <TermConvention>MF</TermConvention>
+=======
+            <StartDate>2026-03-01</StartDate>
+            <EndDate>2036-03-01</EndDate>
+            <Tenor>1Y</Tenor>
+            <Calendar>TARGET</Calendar>
+            <Convention>Following</Convention>
+            <TermConvention>Following</TermConvention>
+>>>>>>> refs/remotes/origin/master
             <Rule>Forward</Rule>
             <EndOfMonth/>
             <FirstDate/>

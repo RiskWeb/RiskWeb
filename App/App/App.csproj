@@ -30,7 +30,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\uploads\portfolios\" />
+    <Folder Include="wwwroot\Uploads\TrashCan\Portfolios\" />
   </ItemGroup>
 
 </Project>

@@ -15,6 +15,7 @@ namespace App.Controllers
     public class PortfolioUploadsController : Controller
     {
         private readonly PortfolioUploadContext _context;
+<<<<<<< HEAD
         private readonly IHostingEnvironment _hostingEnvironment;
         private readonly IOptions<PathSettings> _config;
 
@@ -25,6 +26,21 @@ namespace App.Controllers
             _context = context;
             _hostingEnvironment = hostingEnvironment;
             _config = config;
+=======
+        private readonly IOptions<PathSettings> _config;
+        private readonly IServiceProvider _serviceProvider;
+        private readonly IHostingEnvironment _hostingEnvironment;
+
+        public PortfolioUploadsController(PortfolioUploadContext context,
+                                          IOptions<PathSettings> config,
+                                          IServiceProvider serviceProvider, 
+                                          IHostingEnvironment hostingEnvironment)
+        {
+            _context = context;
+            _config = config;
+            _serviceProvider = serviceProvider;
+            _hostingEnvironment = hostingEnvironment;
+>>>>>>> refs/remotes/origin/master
         }
 
         public async Task<IActionResult> Index()
@@ -37,7 +53,10 @@ namespace App.Controllers
         [HttpGet]
         public IActionResult UploadPortfolio()
         {
+<<<<<<< HEAD
             // Run function to read folder content and upload to DB
+=======
+>>>>>>> refs/remotes/origin/master
             return View();
         }
 
@@ -61,6 +80,7 @@ namespace App.Controllers
             }
             return View();
         }
+<<<<<<< HEAD
 
 
         private void syncPortfolioFolder()
@@ -71,6 +91,9 @@ namespace App.Controllers
 
 
 
+=======
+                      
+>>>>>>> refs/remotes/origin/master
         // GET: PortfolioUploads/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -197,11 +220,14 @@ namespace App.Controllers
         }
 
 
+<<<<<<< HEAD
 
 
 
         
 
 
+=======
+>>>>>>> refs/remotes/origin/master
     }
 }

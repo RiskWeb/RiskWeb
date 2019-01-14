@@ -1,17 +1,19 @@
-﻿@model IEnumerable<App.Models.PortfolioUpload>
+﻿@page
+@model App.Pages.PortfolioUploads.IndexModel
 
 @{
-    ViewData["Title"] = "Index2";
+    ViewData["Title"] = "Index";
+    Layout = "_Layout";
 }
 
-<h2>Index2</h2>
+<h2>Index</h2>
 
 <!-- page content -->
 <div class="right_col" role="main">
     <div class="">
         <div class="page-title">
             <div class="title_left">
-                <h3>Users <small>Some examples to get you started</small></h3>
+                <h3>View & manage porfolios</h3>
             </div>
 
             <div class="title_right">
@@ -32,7 +34,7 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                     <div class="x_title">
-                        <h2>Default Example <small>Users</small></h2>
+                        <h2>User Portfolios<small>Users</small></h2>
                         <ul class="nav navbar-right panel_toolbox">
                             <li>
                                 <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
@@ -61,30 +63,18 @@
                         <table id="datatable" class="table table-striped table-bordered">
                             <thead>
                                 <tr>
-                                    <th>
-                                        @Html.DisplayNameFor(model => model.Name)
-                                    </th>
-                                    <th>
-                                        @Html.DisplayNameFor(model => model.TradeCount)
-                                    </th>
-                                    <th>
-                                        @Html.DisplayNameFor(model => model.Agreements)
-                                    </th>
-                                    <th>
-                                        @Html.DisplayNameFor(model => model.UploadTime)
-                                    </th>
-                                    <th>
-                                        @Html.DisplayNameFor(model => model.FileName)
-                                    </th>
-                                    <th>
-                                        @Html.DisplayNameFor(model => model.LastRunTime)
-                                    </th>
-                                    <th></th>
+                                    <th>@Html.DisplayNameFor(model => model.PortfolioUpload[0].Name)</th>
+                                    <th>@Html.DisplayNameFor(model => model.PortfolioUpload[0].TradeCount)</th>
+                                    <th>@Html.DisplayNameFor(model => model.PortfolioUpload[0].Agreements)</th>
+                                    <th>@Html.DisplayNameFor(model => model.PortfolioUpload[0].UploadTime)</th>
+                                    <th>@Html.DisplayNameFor(model => model.PortfolioUpload[0].FileName)</th>
+                                    <th>@Html.DisplayNameFor(model => model.PortfolioUpload[0].LastRunTime)</th>
+                                    <th>View & manage</th>
                                 </tr>
                             </thead>
 
                             <tbody>
-                                @foreach (var item in Model)
+                                @foreach (var item in Model.PortfolioUpload)
                                 {
                                     <tr>
                                         <td>
@@ -106,9 +96,9 @@
                                             @Html.DisplayFor(modelItem => item.LastRunTime)
                                         </td>
                                         <td>
-                                            <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                                            <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                                            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                                            <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                                            <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                                            <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
                                         </td>
                                     </tr>
                                 }
@@ -120,4 +110,3 @@
         </div>
     </div>
 </div>
-<!-- /page content -->

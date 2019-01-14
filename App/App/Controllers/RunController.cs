@@ -76,17 +76,21 @@ namespace App.Controllers
             string root = "C:\\developer\\git\\ore\\Engine";
             //string root = _env.ContentRootPath.ToString();            
 
-            string csv_name = string.Format("{0}\\{1}", root, "Examples\\Example_1\\Output\\exposure_trade_Swap_20y.csv");
-            int time_colidx = 2;
-            int val_colidx = 3;       
+            string csv_name1 = string.Format("{0}\\{1}", root, "Examples\\Example_1\\Output\\exposure_trade_Swap_20y.csv");
+            string csv_name2 = string.Format("{0}\\{1}", root, "Examples\\Example_1\\Output\\swaption_npv.csv");       
+            
 
-            List<double> time = GetData(csv_name, time_colidx);
-            List<double> values = GetData(csv_name, val_colidx);
+            List<double> time = GetData(csv_name1, 2).Select(t => Math.Round(t, 1)).ToList();
+            List<double> values1 = GetData(csv_name1, 3);
+            List<double> values2 = GetData(csv_name1, 4);
+            //List<double> values3 = GetData(csv_name1, val_colidx_1);
 
             Exposure model = new Exposure()
             {
+                DisplayName = "Swaption",
                 Time = time,
-                Values = values
+                Values1 = values1,
+                Values2 = values2
             };
 
             return View(model);

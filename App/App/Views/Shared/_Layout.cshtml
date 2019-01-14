@@ -71,9 +71,9 @@
                             <h3>General</h3>
                             <ul class="nav side-menu">
                                 <li>
-                                    <a><i class="fa fa-home"></i> Home </a>
+                                    <a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
-                                        <li>@Html.ActionLink("Test Run", "Engine", "Run")</li>
+                                        <li>@Html.ActionLink("Risk Engine", "Engine", "Run")</li>
                                         <li>@Html.ActionLink("Load Exposure", "LoadExposure", "Run")</li>
                                     </ul>                                 
                                 </li>
@@ -327,6 +327,6 @@
         <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
 
-    @*@RenderSection("Scripts", required: false)*@
+    @RenderSection("Scripts", required: false)
 </body>
 </html>

@@ -1,4 +1,5 @@
 ﻿@using App.Models
+@using System.Web
 
 @model App.Models.Exposure
 
@@ -6,26 +7,17 @@
     ViewBag.Title = "Exposure";
 }
 
-@*<div id="graphExposure">
-
-    </div>*@
-
 <div class="right_col" role="main">
 
-    <h2>Console output</h2>
+    <h2>Exposure</h2>
 
-    @*<script>alert("this dialogue has been invoked through codebehind.");</script>*@
-    @*<script>graphExposure('@(Model.Values)');</script>*@
-    @*<script>graphExposure()</script>*@
+    @*<pre>@Model.Time</pre>
+    <pre>@Model.Values1</pre>*@
 
-    <pre>@Model.Time</pre>
-    <pre>@Model.Values</pre>
-
-
-    <div class="col-md-6 col-sm-6 col-xs-12">
+    <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="x_panel">
             <div class="x_title">
-                <h2>Line Graph</h2>
+                <h2>Simulation</h2>
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
                         <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
@@ -49,18 +41,36 @@
             </div>
             <div class="x_content">
 
-                <div id="exposure_graph_dynamic" style="height:350px;"></div>
+                <div id="exposure_graph_dynamic" style="height:450px;"></div>
+                @*<div id="exposure_graph_dynamic" style="height:350px;"></div>*@
 
             </div>
         </div>
     </div>
 </div>
 
-<script>
+@section scripts{
+    <script>
 
-    $(function () {
-        alert('You clicked ' + "me" + "!");
-    });
+        function GetDisplayName() {    
+            
+            return @Html.Raw(Json.Serialize(Model.DisplayName)); 
+        }
 
-</script>
+        function GetYearFrac() {    
+            
+            return @Html.Raw(Json.Serialize(Model.Time)); 
+        }
 
+        function GetExposureValues1() {    
+            
+            return @Html.Raw(Json.Serialize(Model.Values1)); 
+        }
+
+        function GetExposureValues2() {    
+            
+            return @Html.Raw(Json.Serialize(Model.Values2)); 
+        }
+
+    </script>
+}

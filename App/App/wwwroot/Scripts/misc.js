@@ -5,6 +5,8 @@ var theme = {
         '#9B59B6', '#8abb6f', '#759c6a', '#bfd3b7'
     ],
 
+    containLabel: true,
+
     title: {
         itemGap: 8,
         textStyle: {
@@ -212,10 +214,11 @@ var theme = {
 };
 
 // $(function () is shorthand notation for $(document).ready(function ()
+// Exposure graph 1
 $(function () {
-    
     var json;
-    try {
+    try {        
+
         var echartLine = echarts.init(document.getElementById('exposure_graph'), theme);
         echartLine.setOption({
             title: {
@@ -306,30 +309,23 @@ $(function () {
     }
 });
 
-$(document).ready(function () {
-    alert("document ready occurred 1");
-});
-
-$(document).ready(function () {
-    alert("document ready occurred 2");
-});
-
-$(document).ready(function () {
-    alert("document ready occurred 3");
-});
-
-$(window).load(function () {
-    alert("window load occurred!");
-});
-
+// Exposure graph 2
 $(function () {
+
+    var name = GetDisplayName();
+    var x = GetYearFrac();
+    var y1 = GetExposureValues1();
+    var y2 = GetExposureValues2();
+
     var json;
     try {
+        
+
         var echartLine = echarts.init(document.getElementById('exposure_graph_dynamic'), theme);
         echartLine.setOption({
             title: {
-                text: 'Line Graph',
-                subtext: 'Subtitle'
+                text: name,
+                //subtext: 'Subtitle'
             },
             tooltip: {
                 trigger: 'axis'
@@ -337,7 +333,7 @@ $(function () {
             legend: {
                 x: 220,
                 y: 40,
-                data: ['Intent', 'Pre-order', 'Deal']
+                data: ['Swap EPE', 'Swap ENE'] //, 'Deal']
             },
             toolbox: {
                 show: true,
@@ -366,13 +362,13 @@ $(function () {
             xAxis: [{
                 type: 'category',
                 boundaryGap: false,
-                data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+                data: x //['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
             }],
             yAxis: [{
                 type: 'value'
             }],
             series: [{
-                name: 'Deal',
+                name: 'Swap EPE',
                 type: 'line',
                 smooth: true,
                 itemStyle: {
@@ -382,9 +378,9 @@ $(function () {
                         }
                     }
                 },
-                data: [10, 12, 21, 54, 260, 830, 710]
+                data: y1 //[10, 12, 21, 54, 260, 830, 710]
             }, {
-                name: 'Pre-order',
+                name: 'Swap ENE',
                 type: 'line',
                 smooth: true,
                 itemStyle: {
@@ -394,19 +390,19 @@ $(function () {
                         }
                     }
                 },
-                data: [30, 182, 434, 791, 390, 30, 10]
-            }, {
-                name: 'Intent',
-                type: 'line',
-                smooth: true,
-                itemStyle: {
-                    normal: {
-                        areaStyle: {
-                            type: 'default'
-                        }
-                    }
-                },
-                data: [1320, 1132, 601, 234, 120, 90, 20]
+                data: y2 //[30, 182, 434, 791, 390, 30, 10]
+            //}, {
+            //    name: 'Intent',
+            //    type: 'line',
+            //    smooth: true,
+            //    itemStyle: {
+            //        normal: {
+            //            areaStyle: {
+            //                type: 'default'
+            //            }
+            //        }
+            //    },
+            //    data: y //[1320, 1132, 601, 234, 120, 90, 20]
             }]
         });
     } catch (e) {
@@ -415,6 +411,110 @@ $(function () {
     }
 });
 
+// Exposure graph 3
+//function LoadExposure() {
+
+//    //y1 = [10, 12, 21, 54, 260, 830, 710];
+//    //y2 = [30, 182, 434, 791, 390, 30, 10];
+//    //y3 = [1320, 1132, 601, 234, 120, 90, 20];
+
+//    var json;
+//    try {
+
+//        var test = GetData();
+//        var y = [30, 182, 434, 791, 390, 30, 10];
+
+//        var echartLine = echarts.init(document.getElementById('exposure_graph_dynamic'), theme);
+//        echartLine.setOption({
+//            title: {
+//                text: 'Line Graph',
+//                subtext: 'Subtitle'
+//            },
+//            tooltip: {
+//                trigger: 'axis'
+//            },
+//            legend: {
+//                x: 220,
+//                y: 40,
+//                data: ['Intent', 'Pre-order', 'Deal']
+//            },
+//            toolbox: {
+//                show: true,
+//                feature: {
+//                    magicType: {
+//                        show: true,
+//                        title: {
+//                            line: 'Line',
+//                            bar: 'Bar',
+//                            stack: 'Stack',
+//                            tiled: 'Tiled'
+//                        },
+//                        type: ['line', 'bar', 'stack', 'tiled']
+//                    },
+//                    restore: {
+//                        show: true,
+//                        title: "Restore"
+//                    },
+//                    saveAsImage: {
+//                        show: true,
+//                        title: "Save Image"
+//                    }
+//                }
+//            },
+//            calculable: true,
+//            xAxis: [{
+//                type: 'category',
+//                boundaryGap: false,
+//                data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+//            }],
+//            yAxis: [{
+//                type: 'value'
+//            }],
+//            series: [{
+//                name: 'Deal',
+//                type: 'line',
+//                smooth: true,
+//                itemStyle: {
+//                    normal: {
+//                        areaStyle: {
+//                            type: 'default'
+//                        }
+//                    }
+//                },
+//                data: y1 //[10, 12, 21, 54, 260, 830, 710]
+//            }, {
+//                name: 'Pre-order',
+//                type: 'line',
+//                smooth: true,
+//                itemStyle: {
+//                    normal: {
+//                        areaStyle: {
+//                            type: 'default'
+//                        }
+//                    }
+//                },
+//                data: y2 //[30, 182, 434, 791, 390, 30, 10]
+//            }, {
+//                name: 'Intent',
+//                type: 'line',
+//                smooth: true,
+//                itemStyle: {
+//                    normal: {
+//                        areaStyle: {
+//                            type: 'default'
+//                        }
+//                    }
+//                },
+//                data: y3 //[1320, 1132, 601, 234, 120, 90, 20]
+//            }]
+//        });
+//    } catch (e) {
+//        // invalid json input, set to null
+//        json = null;
+//    }
+//};
+
+// jQuery event handlers
 $(document).ready(function () {
     $("#myAnc").click(function () {
         alert("Handler for .click() called.");
@@ -430,12 +530,14 @@ $(document).ready(function () {
     });
 });
 
+// Ordinary js function
 function myFunction() {
     let d = new Date();
     document.getElementById("div_1").innerHTML = 1000;
     return true;
 }
 
+// Progress bar
 function move() {
     var elem = document.getElementById("myBar");
     var msg = document.getElementById("progressbar");
@@ -452,6 +554,7 @@ function move() {
     }
 }
 
+// Misc graphing
 var graphData = [{
     // Visits
     data: [[6, 1300], [7, 1600], [8, 1900], [9, 2100], [10, 2500], [11, 2200], [12, 2000], [13, 1950], [14, 1900], [15, 2000]],
@@ -489,3 +592,20 @@ $.plot($('#exposure_line'), graphData, {
         tickSize: 1000
     }
 });
+
+// Testing page loading
+//$(document).ready(function () {
+//    alert("document ready occurred 1");
+//});
+
+//$(document).ready(function () {
+//    alert("document ready occurred 2");
+//});
+
+//$(document).ready(function () {
+//    alert("document ready occurred 3");
+//});
+
+//$(window).load(function () {
+//    alert("window load occurred!");
+//});

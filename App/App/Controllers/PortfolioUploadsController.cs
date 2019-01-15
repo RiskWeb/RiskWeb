@@ -14,7 +14,7 @@ namespace App.Controllers
 {
     public class PortfolioUploadsController : Controller
     {
-        private readonly PortfolioUploadContext _context;
+        private readonly PortfolioUploadContext _context;    
         private readonly IOptions<PathSettings> _config;
         private readonly IServiceProvider _serviceProvider;
         private readonly IHostingEnvironment _hostingEnvironment;
@@ -32,6 +32,7 @@ namespace App.Controllers
 
         public async Task<IActionResult> Index()
         {
+            // Run function to read folder content and upload to DB
             return View(await _context.PortfolioUpload.ToListAsync());
         }
 
@@ -39,6 +40,7 @@ namespace App.Controllers
         [HttpGet]
         public IActionResult UploadPortfolio()
         {
+            // Run function to read folder content and upload to DB
             return View();
         }
 
@@ -62,7 +64,12 @@ namespace App.Controllers
             }
             return View();
         }
-                      
+
+        private void syncPortfolioFolder()
+        {
+
+        }
+
         // GET: PortfolioUploads/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -187,7 +194,5 @@ namespace App.Controllers
         {
             return _context.PortfolioUpload.Any(e => e.Id == id);
         }
-
-
     }
 }

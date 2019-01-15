@@ -4,6 +4,7 @@
 
 @* Note that charts are built from src="../build/js/custom.min.js" *@
 
+
 <div class="right_col" role="main">
 
     <!-- top tiles -->
@@ -47,7 +48,7 @@
 
                 <div class="row x_title">
                     <div class="col-md-6">
-                        <h3>Network Activities <small>Graph title sub-title</small></h3>
+                        <h3>Cloud Server Activities </h3>
                     </div>
                     <div class="col-md-6">
                         <div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
@@ -57,18 +58,51 @@
                     </div>
                 </div>
 
+                @*<div class="col-md-9 col-sm-9 col-xs-12">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>Line Graph</h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li>
+                                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li>
+                                            <a href="#">Settings 1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Settings 2</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="close-link"><i class="fa fa-close"></i></a>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+
+                            <div id="exposure_graph" style="height:350px;"></div>
+
+                        </div>
+                    </div>
+                </div>*@
                 <div class="col-md-9 col-sm-9 col-xs-12">
-                    <div id="chart_plot_01" class="demo-placeholder"></div>
+                    <div id="exposure_graph" style="height:350px;"></div>
+                    @*<div id="chart_plot_01" class="demo-placeholder"></div>*@
                 </div>
                 <div class="col-md-3 col-sm-3 col-xs-12 bg-white">
                     <div class="x_title">
-                        <h2>Top Campaign Performance</h2>
+                        <h2>Risk Contribution</h2>
                         <div class="clearfix"></div>
                     </div>
 
                     <div class="col-md-12 col-sm-12 col-xs-6">
                         <div>
-                            <p>Facebook Campaign</p>
+                            <p>IRS</p>
                             <div class="">
                                 <div class="progress progress_sm" style="width: 76%;">
                                     <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="80"></div>
@@ -76,7 +110,7 @@
                             </div>
                         </div>
                         <div>
-                            <p>Twitter Campaign</p>
+                            <p>CRS</p>
                             <div class="">
                                 <div class="progress progress_sm" style="width: 76%;">
                                     <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="60"></div>
@@ -86,7 +120,7 @@
                     </div>
                     <div class="col-md-12 col-sm-12 col-xs-6">
                         <div>
-                            <p>Conventional Media</p>
+                            <p>FRA</p>
                             <div class="">
                                 <div class="progress progress_sm" style="width: 76%;">
                                     <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="40"></div>
@@ -94,7 +128,7 @@
                             </div>
                         </div>
                         <div>
-                            <p>Bill boards</p>
+                            <p>FX FWD</p>
                             <div class="">
                                 <div class="progress progress_sm" style="width: 76%;">
                                     <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="50"></div>

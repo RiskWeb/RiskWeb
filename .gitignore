@@ -7,4 +7,5 @@ bin
 *.tss
 .sonarqube
 dotCover
-App/App/wwwroot/Uploads/
+App/App/wwwroot/Uploads/Portfolios/*
+App/App/wwwroot/Uploads/Portfolios/TrashCan/Portfolios/*

@@ -35,7 +35,7 @@ namespace App.Controllers
             // With Docker enabled hosting environment path defaults to C:\ and environment to "Development"
 
             //string root = _config.Value.OrePath;
-            string root = "C:\\developer\\git\\ore\\Engine";
+            string root = "C:\\Development\\GitShare\\ore";
             //string root = _env.ContentRootPath.ToString();
 
             string runFile = string.Format("{0}\\{1}", root, "Examples\\Example_1\\run.py");
@@ -73,7 +73,7 @@ namespace App.Controllers
         public ActionResult LoadExposure()
         {            
             //string root = _config.Value.OrePath;
-            string root = "C:\\developer\\git\\ore\\Engine";
+            string root = "C:\\Development\\GitShare\\ore";
             //string root = _env.ContentRootPath.ToString();            
 
             string csv_name1 = string.Format("{0}\\{1}", root, "Examples\\Example_1\\Output\\exposure_trade_Swap_20y.csv");

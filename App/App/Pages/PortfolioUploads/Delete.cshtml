@@ -8,58 +8,6 @@
 
 <h2>Delete</h2>
 
-@*<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>PortfolioUpload</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.PortfolioUpload.Name)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.PortfolioUpload.Name)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.PortfolioUpload.TradeCount)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.PortfolioUpload.TradeCount)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.PortfolioUpload.Agreements)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.PortfolioUpload.Agreements)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.PortfolioUpload.UploadTime)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.PortfolioUpload.UploadTime)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.PortfolioUpload.FileName)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.PortfolioUpload.FileName)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.PortfolioUpload.LastRunTime)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.PortfolioUpload.LastRunTime)
-        </dd>
-    </dl>
-
-    <form method="post">
-        <input type="hidden" asp-for="PortfolioUpload.Id" />
-        <input type="submit" value="Delete" class="btn btn-default" /> |
-        <a asp-page="./Index">Back to List</a>
-    </form>
-</div>*@
-
-
-
 <!-- page content -->
 <div class="right_col" role="main">
     <div class="">
@@ -72,8 +20,30 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                     <div class="x_title">
-                        <h2>Are you sure you want to delete this portfolio? <small>different form elements</small></h2>
+                        <h2>Are you sure you want to delete this portfolio?</h2>
+                        <ul class="nav navbar-right panel_toolbox">
+                            <li>
+                                <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a href="#">Settings 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Settings 2</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="close-link"><i class="fa fa-close"></i></a>
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
                     </div>
+
+                    <div class="clearfix"></div>
                     <div class="x_content">
                         <dl class="dl-horizontal">
                             <dt>@Html.DisplayNameFor(model => model.PortfolioUpload.Name)</dt>
@@ -109,36 +79,11 @@
                                 @Html.DisplayFor(model => model.PortfolioUpload.LastRunTime)
                             </dd>
                         </dl>
-                            <form method="post">
-                                <input type="hidden" asp-for="PortfolioUpload.Id" />
-                                <input type="submit" value="Delete" class="btn btn-default" /> |
-                                <a asp-page="./Index">Back to List</a>
-                            </form>
-                            @*<br />*@
-
-                            @*<form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
-                <dl class="dl-horizontal">
-                    <dt>@Html.DisplayNameFor(model => model.Name)</dt>
-                    <dd>@Html.DisplayFor(model => model.Name)</dd>
-                    <dt>@Html.DisplayNameFor(model => model.TradeCount)</dt>
-                    <dd>@Html.DisplayFor(model => model.TradeCount)</dd>
-                    <dt>@Html.DisplayNameFor(model => model.Agreements)</dt>
-                    <dd>@Html.DisplayFor(model => model.Agreements)</dd>
-                    <dt>@Html.DisplayNameFor(model => model.UploadTime)</dt>
-                    <dd>@Html.DisplayFor(model => model.UploadTime)</dd>
-                    <dt>@Html.DisplayNameFor(model => model.FileName)</dt>
-                    <dd>@Html.DisplayFor(model => model.FileName)</dd>
-                    <dt>@Html.DisplayNameFor(model => model.LastRunTime)</dt>
-                    <dd>@Html.DisplayFor(model => model.LastRunTime)</dd>
-                </dl>
-                <div class="ln_solid"></div>
-                <div class="form-group">
-                    <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                        <button class="btn btn-primary" type="button" onclick="location.href='@Url.Action("Index", "PortfolioUploads")'">Cancel</button>
-                        <button class="btn btn-primary" type="button" asp-action="DeleteConfirmed" asp-route-id="@Model.Id">Delete</button>
-                    </div>
-                </div>
-            </form>*@
+                        <form method="post">
+                            <input type="hidden" asp-for="PortfolioUpload.Id" />
+                            <input type="submit" value="Delete" class="btn btn-default" /> |
+                            <a asp-page="./Index">Back to List</a>
+                        </form>
                     </div>
                 </div>
             </div>

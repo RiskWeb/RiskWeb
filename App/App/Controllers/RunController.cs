@@ -31,6 +31,10 @@ namespace App.Controllers
 
         public ActionResult Console()
         {
+            // Test python
+            //Test("/home/anders/developer/git/RiskWeb");
+            Test("/app/");
+
             // TODO: Unable to read from launchSettings.json file when Docker is included.
             // With Docker enabled hosting environment path defaults to C:\ and environment to "Development"
 
@@ -123,6 +127,38 @@ namespace App.Controllers
             data = temp.Skip(offset).Select(d => Convert.ToDouble(d)).ToList();
            
             return data;
+        }
+
+        private string Test(string root)
+        {
+            //string runFile = string.Format("{0}", "~/developer/git/Engine/Examples/Example_2/run.py");
+            string runFile = string.Format("{0}/{1}", root, "test.py");
+
+            ProcessStartInfo start = new ProcessStartInfo();
+            //start.WorkingDirectory = string.Format("{0}", "~/developer/git/Engine/Examples/Example_2");
+            start.FileName = "python"; // Assumes path to python.exe in PATH-variable
+            start.Arguments = string.Format("{0} {1}", runFile, "");
+            start.CreateNoWindow = true;
+            start.UseShellExecute = false;
+            start.RedirectStandardError = true; 
+            start.RedirectStandardOutput = true;            
+
+            // Console output
+         
+            StringBuilder sb = new StringBuilder();
+            string str = "";
+
+            using (Process process = Process.Start(start))
+            {
+                string line;
+                while ((line = process.StandardOutput.ReadLine()) != null)
+                {
+                    sb.AppendFormat(line, Environment.NewLine);
+                    str += line + Environment.NewLine;
+                }                
+            }
+
+            return str; 
         }
     }
 }

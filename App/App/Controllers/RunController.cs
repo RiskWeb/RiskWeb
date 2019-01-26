@@ -32,8 +32,8 @@ namespace App.Controllers
         public ActionResult Console()
         {
             // Test python
-            //Test("/home/anders/developer/git/RiskWeb");
-            Test("/app/");
+            //string strTest = Test("/home/anders/developer/git/RiskWeb");
+            string strTest = Test("/app/");
 
             // TODO: Unable to read from launchSettings.json file when Docker is included.
             // With Docker enabled hosting environment path defaults to C:\ and environment to "Development"
@@ -74,7 +74,8 @@ namespace App.Controllers
                 }                
             }
 
-            console.Text = str; 
+            //console.Text = str; 
+            console.Text = strTest; 
 
             return View(console);
         }

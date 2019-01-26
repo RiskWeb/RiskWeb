@@ -35,16 +35,21 @@ namespace App.Controllers
             // With Docker enabled hosting environment path defaults to C:\ and environment to "Development"
 
             //string root = _config.Value.OrePath;
-            string root = "C:\\Development\\GitShare\\ore";
             //string root = _env.ContentRootPath.ToString();
 
-            string runFile = string.Format("{0}\\{1}", root, "Examples\\Example_1\\run.py");
-            //string runFile = string.Format("{0}\\{1}", root, "~/developer/git/ore/Engine/Examples/Example_1/run.py");
-
             ProcessStartInfo start = new ProcessStartInfo();
-            start.WorkingDirectory = string.Format("{0}\\{1}", root, "Examples\\Example_1");
-            //start.WorkingDirectory = string.Format("{0}\\{1}", root, "~/developer/git/ore/Engine/Examples/Example_1");
 
+            // Windows
+            //string root = "C:\\Development\\GitShare\\ore";            
+            //string runFile = string.Format("{0}\\{1}", root, "Examples\\Example_1\\run.py");            
+            //string wd = string.Format("{0}\\{1}", root, "Examples\\Example_1");            
+
+            // Linux
+            string root = "/home/anders/developer/git/ore/Engine"; 
+            string runFile = string.Format("{0}/{1}", root, "Examples/Example_1/run.py");            
+            string wd = string.Format("{0}/{1}", root, "Examples/Example_1");            
+
+            start.WorkingDirectory = wd;
             start.FileName = "python"; // Assumes path to python.exe in PATH-variable
             start.Arguments = string.Format("{0} {1}", runFile, "");
             start.UseShellExecute = false;
@@ -73,13 +78,17 @@ namespace App.Controllers
         public ActionResult LoadExposure()
         {            
             //string root = _config.Value.OrePath;
-            string root = "C:\\Development\\GitShare\\ore";
-            //string root = _env.ContentRootPath.ToString();            
-
-            string csv_name1 = string.Format("{0}\\{1}", root, "Examples\\Example_1\\Output\\exposure_trade_Swap_20y.csv");
-            string csv_name2 = string.Format("{0}\\{1}", root, "Examples\\Example_1\\Output\\swaption_npv.csv");       
             
-
+            // Windows
+            //string root = "C:\\Development\\GitShare\\ore";
+            //string csv_name1 = string.Format("{0}\\{1}", root, "Examples\\Example_1\\Output\\exposure_trade_Swap_20y.csv");
+            //string csv_name2 = string.Format("{0}\\{1}", root, "Examples\\Example_1\\Output\\swaption_npv.csv");       
+            
+            // Linux
+            string root = "/home/anders/developer/git/ore/Engine";            
+            string csv_name1 = string.Format("{0}/{1}", root, "Examples/Example_1/Output/exposure_trade_Swap_20y.csv");
+            string csv_name2 = string.Format("{0}/{1}", root, "Examples/Example_1/Output/swaption_npv.csv");       
+            
             List<double> time = GetData(csv_name1, 2).Select(t => Math.Round(t, 1)).ToList();
             List<double> values1 = GetData(csv_name1, 3);
             List<double> values2 = GetData(csv_name1, 4);

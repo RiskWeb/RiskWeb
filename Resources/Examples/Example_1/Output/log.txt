@@ -1,0 +1,996 @@
+NOTICE   [2019-Jan-27 13:57:55.784303] (oreapp.cpp:54)               : ORE starting
+NOTICE   [2019-Jan-27 13:57:55.784424] (parameters.cpp:104)          : Parameters:
+NOTICE   [2019-Jan-27 13:57:55.784443] (parameters.cpp:107)          : group = cashflow : active = N
+NOTICE   [2019-Jan-27 13:57:55.784458] (parameters.cpp:107)          : group = cashflow : outputFileName = flows.csv
+NOTICE   [2019-Jan-27 13:57:55.784472] (parameters.cpp:107)          : group = curves : active = N
+NOTICE   [2019-Jan-27 13:57:55.784484] (parameters.cpp:107)          : group = curves : configuration = default
+NOTICE   [2019-Jan-27 13:57:55.784496] (parameters.cpp:107)          : group = curves : grid = 240,1M
+NOTICE   [2019-Jan-27 13:57:55.784507] (parameters.cpp:107)          : group = curves : outputFileName = curves.csv
+NOTICE   [2019-Jan-27 13:57:55.784520] (parameters.cpp:107)          : group = initialMargin : active = N
+NOTICE   [2019-Jan-27 13:57:55.784533] (parameters.cpp:107)          : group = initialMargin : method = 
+NOTICE   [2019-Jan-27 13:57:55.784547] (parameters.cpp:107)          : group = markets : fxcalibration = libor
+NOTICE   [2019-Jan-27 13:57:55.784559] (parameters.cpp:107)          : group = markets : lgmcalibration = libor
+NOTICE   [2019-Jan-27 13:57:55.784571] (parameters.cpp:107)          : group = markets : pricing = libor
+NOTICE   [2019-Jan-27 13:57:55.784584] (parameters.cpp:107)          : group = markets : simulation = libor
+NOTICE   [2019-Jan-27 13:57:55.784598] (parameters.cpp:107)          : group = npv : active = Y
+NOTICE   [2019-Jan-27 13:57:55.784611] (parameters.cpp:107)          : group = npv : baseCurrency = EUR
+NOTICE   [2019-Jan-27 13:57:55.784625] (parameters.cpp:107)          : group = npv : outputFileName = swaption_npv.csv
+NOTICE   [2019-Jan-27 13:57:55.784642] (parameters.cpp:107)          : group = setup : asofDate = 2016-02-05
+NOTICE   [2019-Jan-27 13:57:55.784655] (parameters.cpp:107)          : group = setup : conventionsFile = ../../Input/conventions.xml
+NOTICE   [2019-Jan-27 13:57:55.784667] (parameters.cpp:107)          : group = setup : curveConfigFile = ../../Input/curveconfig.xml
+NOTICE   [2019-Jan-27 13:57:55.784680] (parameters.cpp:107)          : group = setup : fixingDataFile = ../../Input/fixings_20160205.txt
+NOTICE   [2019-Jan-27 13:57:55.784694] (parameters.cpp:107)          : group = setup : implyTodaysFixings = Y
+NOTICE   [2019-Jan-27 13:57:55.784706] (parameters.cpp:107)          : group = setup : inputPath = Input
+NOTICE   [2019-Jan-27 13:57:55.784719] (parameters.cpp:107)          : group = setup : logFile = log.txt
+NOTICE   [2019-Jan-27 13:57:55.784731] (parameters.cpp:107)          : group = setup : logMask = 31
+NOTICE   [2019-Jan-27 13:57:55.784743] (parameters.cpp:107)          : group = setup : marketConfigFile = ../../Input/todaysmarket.xml
+NOTICE   [2019-Jan-27 13:57:55.784754] (parameters.cpp:107)          : group = setup : marketDataFile = ../../Input/market_20160205_flat.txt
+NOTICE   [2019-Jan-27 13:57:55.784767] (parameters.cpp:107)          : group = setup : outputPath = Output
+NOTICE   [2019-Jan-27 13:57:55.784778] (parameters.cpp:107)          : group = setup : portfolioFile = portfolio_swaption.xml
+NOTICE   [2019-Jan-27 13:57:55.784791] (parameters.cpp:107)          : group = setup : pricingEnginesFile = ../../Input/pricingengine.xml
+NOTICE   [2019-Jan-27 13:57:55.784806] (parameters.cpp:107)          : group = simulation : active = N
+NOTICE   [2019-Jan-27 13:57:55.784819] (parameters.cpp:107)          : group = simulation : aggregationScenarioDataFileName = scenariodata.dat
+NOTICE   [2019-Jan-27 13:57:55.784831] (parameters.cpp:107)          : group = simulation : baseCurrency = EUR
+NOTICE   [2019-Jan-27 13:57:55.784843] (parameters.cpp:107)          : group = simulation : cubeFile = cube.dat
+NOTICE   [2019-Jan-27 13:57:55.784854] (parameters.cpp:107)          : group = simulation : pricingEnginesFile = ../../Input/pricingengine.xml
+NOTICE   [2019-Jan-27 13:57:55.784866] (parameters.cpp:107)          : group = simulation : simulationMarketFile = ../../Input/simulationmarket.xml
+NOTICE   [2019-Jan-27 13:57:55.784885] (parameters.cpp:107)          : group = simulation : simulationModelFile = simulationmodels.xml
+NOTICE   [2019-Jan-27 13:57:55.784896] (parameters.cpp:107)          : group = simulation : simulationParamFile = simulationparams.xml
+NOTICE   [2019-Jan-27 13:57:55.784913] (parameters.cpp:107)          : group = xva : active = N
+NOTICE   [2019-Jan-27 13:57:55.784927] (parameters.cpp:107)          : group = xva : allocationMethod = None
+NOTICE   [2019-Jan-27 13:57:55.784940] (parameters.cpp:107)          : group = xva : baseCurrency = EUR
+NOTICE   [2019-Jan-27 13:57:55.784952] (parameters.cpp:107)          : group = xva : calculationType = Symmetric
+NOTICE   [2019-Jan-27 13:57:55.784965] (parameters.cpp:107)          : group = xva : colva = N
+NOTICE   [2019-Jan-27 13:57:55.784977] (parameters.cpp:107)          : group = xva : colvaSpread = 0.0000
+NOTICE   [2019-Jan-27 13:57:55.784988] (parameters.cpp:107)          : group = xva : csaFile = netting.xml
+NOTICE   [2019-Jan-27 13:57:55.785000] (parameters.cpp:107)          : group = xva : cubeFile = cube.dat
+NOTICE   [2019-Jan-27 13:57:55.785012] (parameters.cpp:107)          : group = xva : cva = Y
+NOTICE   [2019-Jan-27 13:57:55.785023] (parameters.cpp:107)          : group = xva : dva = N
+NOTICE   [2019-Jan-27 13:57:55.785036] (parameters.cpp:107)          : group = xva : dvaName = BANK
+NOTICE   [2019-Jan-27 13:57:55.785049] (parameters.cpp:107)          : group = xva : eoniaFloor = Y
+NOTICE   [2019-Jan-27 13:57:55.785061] (parameters.cpp:107)          : group = xva : exposureProfiles = Y
+NOTICE   [2019-Jan-27 13:57:55.785073] (parameters.cpp:107)          : group = xva : fva = N
+NOTICE   [2019-Jan-27 13:57:55.785084] (parameters.cpp:107)          : group = xva : fvaFundingCurve = BANK_EUR_FUNDING
+NOTICE   [2019-Jan-27 13:57:55.785096] (parameters.cpp:107)          : group = xva : fvaInvestmentCurve = BANK_EUR_INVESTMENT
+NOTICE   [2019-Jan-27 13:57:55.785108] (parameters.cpp:107)          : group = xva : marginalAllocationLimit = 1.0
+NOTICE   [2019-Jan-27 13:57:55.785121] (parameters.cpp:107)          : group = xva : netCubeOutputFile = netcube.csv
+NOTICE   [2019-Jan-27 13:57:55.785132] (parameters.cpp:107)          : group = xva : quantile = 0.95
+NOTICE   [2019-Jan-27 13:57:55.785144] (parameters.cpp:107)          : group = xva : rawCubeOutputFile = rawcube.csv
+NOTICE   [2019-Jan-27 13:57:55.785156] (parameters.cpp:107)          : group = xva : scenarioFile = scenariodata.dat
+NOTICE   [2019-Jan-27 13:57:55.789250] (csvloader.cpp:56)            : CSVLoader loading from Input/../../Input/market_20160205_flat.txt
+NOTICE   [2019-Jan-27 13:57:55.859666] (csvloader.cpp:97)            : CSVLoader completed processing Input/../../Input/market_20160205_flat.txt
+NOTICE   [2019-Jan-27 13:57:55.860012] (csvloader.cpp:45)            : CSVLoader loaded 7356 market data points for February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:55.860255] (csvloader.cpp:56)            : CSVLoader loading from Input/../../Input/fixings_20160205.txt
+NOTICE   [2019-Jan-27 13:57:55.886475] (csvloader.cpp:97)            : CSVLoader completed processing Input/../../Input/fixings_20160205.txt
+NOTICE   [2019-Jan-27 13:57:55.886527] (csvloader.cpp:50)            : CSVLoader loaded 8684 fixings
+NOTICE   [2019-Jan-27 13:57:55.886543] (csvloader.cpp:52)            : CSVLoader complete.
+NOTICE   [2019-Jan-27 13:57:55.888201] (todaysmarket.cpp:57)         : Todays Market Loading Fixings
+NOTICE   [2019-Jan-27 13:57:55.977600] (todaysmarket.cpp:59)         : Todays Market Loading Fixing done.
+NOTICE   [2019-Jan-27 13:57:55.977646] (todaysmarket.cpp:79)         : Build objects in TodaysMarket configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:55.978052] (todaysmarket.cpp:100)        : Loading spec Yield/CHF/CHF1D
+NOTICE   [2019-Jan-27 13:57:55.978074] (todaysmarket.cpp:112)        : Building YieldCurve for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:55.984939] (yieldcurve.cpp:152)          : Yield curve Yield/CHF/CHF1D built
+NOTICE   [2019-Jan-27 13:57:55.984987] (todaysmarket.cpp:141)        : Adding Index(CHF-TOIS) with spec Yield/CHF/CHF1D to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:55.985042] (todaysmarket.cpp:579)        : Loading spec Yield/CHF/CHF1D done.
+NOTICE   [2019-Jan-27 13:57:55.985052] (todaysmarket.cpp:100)        : Loading spec Yield/CHF/CHF3M
+NOTICE   [2019-Jan-27 13:57:55.985060] (todaysmarket.cpp:112)        : Building YieldCurve for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:56.006715] (yieldcurve.cpp:152)          : Yield curve Yield/CHF/CHF3M built
+NOTICE   [2019-Jan-27 13:57:56.006958] (todaysmarket.cpp:141)        : Adding Index(CHF-LIBOR-3M) with spec Yield/CHF/CHF3M to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:56.007180] (todaysmarket.cpp:579)        : Loading spec Yield/CHF/CHF3M done.
+NOTICE   [2019-Jan-27 13:57:56.007281] (todaysmarket.cpp:100)        : Loading spec Yield/CHF/CHF6M
+NOTICE   [2019-Jan-27 13:57:56.007299] (todaysmarket.cpp:112)        : Building YieldCurve for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:56.022733] (yieldcurve.cpp:152)          : Yield curve Yield/CHF/CHF6M built
+NOTICE   [2019-Jan-27 13:57:56.022844] (todaysmarket.cpp:132)        : Adding YieldCurve(CHF) with spec Yield/CHF/CHF6M to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:56.022879] (todaysmarket.cpp:141)        : Adding Index(CHF-LIBOR-6M) with spec Yield/CHF/CHF6M to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:56.022972] (todaysmarket.cpp:579)        : Loading spec Yield/CHF/CHF6M done.
+NOTICE   [2019-Jan-27 13:57:56.022995] (todaysmarket.cpp:100)        : Loading spec Yield/EUR/BOND_YIELD_EUR
+NOTICE   [2019-Jan-27 13:57:56.023010] (todaysmarket.cpp:112)        : Building YieldCurve for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:56.023169] (yieldcurve.cpp:434)          : Insert zero curve point at time zero for Yield/EUR/BOND_YIELD_EUR: date 2016-02-05, zero 0.0300
+NOTICE   [2019-Jan-27 13:57:56.023257] (yieldcurve.cpp:462)          : Add zero curve point for Yield/EUR/BOND_YIELD_EUR: 2021-02-09 0.0300 / 0.8603
+NOTICE   [2019-Jan-27 13:57:56.023292] (yieldcurve.cpp:462)          : Add zero curve point for Yield/EUR/BOND_YIELD_EUR: 2026-02-09 0.0300 / 0.7404
+NOTICE   [2019-Jan-27 13:57:56.023352] (yieldcurve.cpp:152)          : Yield curve Yield/EUR/BOND_YIELD_EUR built
+NOTICE   [2019-Jan-27 13:57:56.023379] (todaysmarket.cpp:132)        : Adding YieldCurve(BOND_YIELD_EUR) with spec Yield/EUR/BOND_YIELD_EUR to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:56.023407] (todaysmarket.cpp:579)        : Loading spec Yield/EUR/BOND_YIELD_EUR done.
+NOTICE   [2019-Jan-27 13:57:56.023422] (todaysmarket.cpp:100)        : Loading spec Yield/EUR/EUR1D
+NOTICE   [2019-Jan-27 13:57:56.023437] (todaysmarket.cpp:112)        : Building YieldCurve for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:56.030554] (yieldcurve.cpp:152)          : Yield curve Yield/EUR/EUR1D built
+NOTICE   [2019-Jan-27 13:57:56.030626] (todaysmarket.cpp:132)        : Adding YieldCurve(EUR) with spec Yield/EUR/EUR1D to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:56.030645] (todaysmarket.cpp:141)        : Adding Index(EUR-EONIA) with spec Yield/EUR/EUR1D to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:56.030688] (todaysmarket.cpp:579)        : Loading spec Yield/EUR/EUR1D done.
+NOTICE   [2019-Jan-27 13:57:56.030710] (todaysmarket.cpp:100)        : Loading spec Yield/EUR/EUR1M
+NOTICE   [2019-Jan-27 13:57:56.030719] (todaysmarket.cpp:112)        : Building YieldCurve for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:56.097383] (yieldcurve.cpp:152)          : Yield curve Yield/EUR/EUR1M built
+NOTICE   [2019-Jan-27 13:57:56.097480] (todaysmarket.cpp:141)        : Adding Index(EUR-EURIBOR-1M) with spec Yield/EUR/EUR1M to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:56.097538] (todaysmarket.cpp:579)        : Loading spec Yield/EUR/EUR1M done.
+NOTICE   [2019-Jan-27 13:57:56.097556] (todaysmarket.cpp:100)        : Loading spec Yield/EUR/EUR3M
+NOTICE   [2019-Jan-27 13:57:56.097726] (todaysmarket.cpp:112)        : Building YieldCurve for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:56.131004] (yieldcurve.cpp:152)          : Yield curve Yield/EUR/EUR3M built
+NOTICE   [2019-Jan-27 13:57:56.131085] (todaysmarket.cpp:141)        : Adding Index(EUR-EURIBOR-3M) with spec Yield/EUR/EUR3M to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:56.131137] (todaysmarket.cpp:579)        : Loading spec Yield/EUR/EUR3M done.
+NOTICE   [2019-Jan-27 13:57:56.131148] (todaysmarket.cpp:100)        : Loading spec Yield/EUR/EUR6M
+NOTICE   [2019-Jan-27 13:57:56.131163] (todaysmarket.cpp:112)        : Building YieldCurve for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:56.146345] (yieldcurve.cpp:152)          : Yield curve Yield/EUR/EUR6M built
+NOTICE   [2019-Jan-27 13:57:56.146423] (todaysmarket.cpp:141)        : Adding Index(EUR-EURIBOR-6M) with spec Yield/EUR/EUR6M to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:56.146480] (todaysmarket.cpp:579)        : Loading spec Yield/EUR/EUR6M done.
+NOTICE   [2019-Jan-27 13:57:56.146489] (todaysmarket.cpp:100)        : Loading spec Yield/GBP/GBP1D
+NOTICE   [2019-Jan-27 13:57:56.146498] (todaysmarket.cpp:112)        : Building YieldCurve for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:56.155356] (yieldcurve.cpp:152)          : Yield curve Yield/GBP/GBP1D built
+NOTICE   [2019-Jan-27 13:57:56.155432] (todaysmarket.cpp:141)        : Adding Index(GBP-SONIA) with spec Yield/GBP/GBP1D to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:56.155489] (todaysmarket.cpp:579)        : Loading spec Yield/GBP/GBP1D done.
+NOTICE   [2019-Jan-27 13:57:56.155556] (todaysmarket.cpp:100)        : Loading spec Yield/GBP/GBP6M
+NOTICE   [2019-Jan-27 13:57:56.155577] (todaysmarket.cpp:112)        : Building YieldCurve for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:56.168484] (yieldcurve.cpp:152)          : Yield curve Yield/GBP/GBP6M built
+NOTICE   [2019-Jan-27 13:57:56.168575] (todaysmarket.cpp:141)        : Adding Index(GBP-LIBOR-6M) with spec Yield/GBP/GBP6M to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:56.168640] (todaysmarket.cpp:579)        : Loading spec Yield/GBP/GBP6M done.
+NOTICE   [2019-Jan-27 13:57:56.168653] (todaysmarket.cpp:100)        : Loading spec Yield/JPY/JPY1D
+NOTICE   [2019-Jan-27 13:57:56.168661] (todaysmarket.cpp:112)        : Building YieldCurve for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:56.174813] (yieldcurve.cpp:152)          : Yield curve Yield/JPY/JPY1D built
+NOTICE   [2019-Jan-27 13:57:56.174899] (todaysmarket.cpp:141)        : Adding Index(JPY-TONAR) with spec Yield/JPY/JPY1D to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:56.174961] (todaysmarket.cpp:579)        : Loading spec Yield/JPY/JPY1D done.
+NOTICE   [2019-Jan-27 13:57:56.174984] (todaysmarket.cpp:100)        : Loading spec Yield/JPY/JPY6M
+NOTICE   [2019-Jan-27 13:57:56.175003] (todaysmarket.cpp:112)        : Building YieldCurve for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:56.189135] (yieldcurve.cpp:152)          : Yield curve Yield/JPY/JPY6M built
+NOTICE   [2019-Jan-27 13:57:56.189218] (todaysmarket.cpp:132)        : Adding YieldCurve(JPY) with spec Yield/JPY/JPY6M to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:56.189275] (todaysmarket.cpp:141)        : Adding Index(JPY-LIBOR-6M) with spec Yield/JPY/JPY6M to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:56.189347] (todaysmarket.cpp:579)        : Loading spec Yield/JPY/JPY6M done.
+NOTICE   [2019-Jan-27 13:57:56.189364] (todaysmarket.cpp:100)        : Loading spec Yield/USD/USD1D
+NOTICE   [2019-Jan-27 13:57:56.189377] (todaysmarket.cpp:112)        : Building YieldCurve for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:56.196008] (yieldcurve.cpp:152)          : Yield curve Yield/USD/USD1D built
+NOTICE   [2019-Jan-27 13:57:56.196075] (todaysmarket.cpp:141)        : Adding Index(USD-FedFunds) with spec Yield/USD/USD1D to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:56.196117] (todaysmarket.cpp:579)        : Loading spec Yield/USD/USD1D done.
+NOTICE   [2019-Jan-27 13:57:56.196144] (todaysmarket.cpp:100)        : Loading spec Yield/USD/USD3M
+NOTICE   [2019-Jan-27 13:57:56.196153] (todaysmarket.cpp:112)        : Building YieldCurve for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:56.224963] (yieldcurve.cpp:152)          : Yield curve Yield/USD/USD3M built
+NOTICE   [2019-Jan-27 13:57:56.225083] (todaysmarket.cpp:141)        : Adding Index(USD-LIBOR-3M) with spec Yield/USD/USD3M to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:56.225194] (todaysmarket.cpp:579)        : Loading spec Yield/USD/USD3M done.
+NOTICE   [2019-Jan-27 13:57:56.225212] (todaysmarket.cpp:100)        : Loading spec Yield/USD/USD6M
+NOTICE   [2019-Jan-27 13:57:56.225239] (todaysmarket.cpp:112)        : Building YieldCurve for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:56.258336] (yieldcurve.cpp:152)          : Yield curve Yield/USD/USD6M built
+NOTICE   [2019-Jan-27 13:57:56.258424] (todaysmarket.cpp:141)        : Adding Index(USD-LIBOR-6M) with spec Yield/USD/USD6M to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:56.258506] (todaysmarket.cpp:579)        : Loading spec Yield/USD/USD6M done.
+NOTICE   [2019-Jan-27 13:57:56.258527] (todaysmarket.cpp:100)        : Loading spec Yield/EUR/BANK_EUR_BORROW
+NOTICE   [2019-Jan-27 13:57:56.258544] (todaysmarket.cpp:112)        : Building YieldCurve for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:56.258716] (yieldcurve.cpp:152)          : Yield curve Yield/EUR/BANK_EUR_BORROW built
+NOTICE   [2019-Jan-27 13:57:56.258740] (todaysmarket.cpp:132)        : Adding YieldCurve(BANK_EUR_BORROW) with spec Yield/EUR/BANK_EUR_BORROW to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:56.258763] (todaysmarket.cpp:579)        : Loading spec Yield/EUR/BANK_EUR_BORROW done.
+NOTICE   [2019-Jan-27 13:57:56.258773] (todaysmarket.cpp:100)        : Loading spec Yield/EUR/BANK_EUR_LEND
+NOTICE   [2019-Jan-27 13:57:56.258789] (todaysmarket.cpp:112)        : Building YieldCurve for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:56.258946] (yieldcurve.cpp:152)          : Yield curve Yield/EUR/BANK_EUR_LEND built
+NOTICE   [2019-Jan-27 13:57:56.258976] (todaysmarket.cpp:132)        : Adding YieldCurve(BANK_EUR_LEND) with spec Yield/EUR/BANK_EUR_LEND to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:56.258991] (todaysmarket.cpp:579)        : Loading spec Yield/EUR/BANK_EUR_LEND done.
+NOTICE   [2019-Jan-27 13:57:56.259001] (todaysmarket.cpp:100)        : Loading spec Yield/EUR/BENCHMARK_EUR
+NOTICE   [2019-Jan-27 13:57:56.259009] (todaysmarket.cpp:112)        : Building YieldCurve for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:56.259087] (yieldcurve.cpp:152)          : Yield curve Yield/EUR/BENCHMARK_EUR built
+NOTICE   [2019-Jan-27 13:57:56.259109] (todaysmarket.cpp:132)        : Adding YieldCurve(BENCHMARK_EUR) with spec Yield/EUR/BENCHMARK_EUR to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:56.259124] (todaysmarket.cpp:579)        : Loading spec Yield/EUR/BENCHMARK_EUR done.
+NOTICE   [2019-Jan-27 13:57:56.259132] (todaysmarket.cpp:100)        : Loading spec Yield/EUR/EUR12M
+NOTICE   [2019-Jan-27 13:57:56.259140] (todaysmarket.cpp:112)        : Building YieldCurve for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:56.284166] (yieldcurve.cpp:152)          : Yield curve Yield/EUR/EUR12M built
+NOTICE   [2019-Jan-27 13:57:56.284281] (todaysmarket.cpp:141)        : Adding Index(EUR-EURIBOR-12M) with spec Yield/EUR/EUR12M to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:56.284367] (todaysmarket.cpp:579)        : Loading spec Yield/EUR/EUR12M done.
+NOTICE   [2019-Jan-27 13:57:56.284384] (todaysmarket.cpp:100)        : Loading spec Yield/GBP/GBP3M
+NOTICE   [2019-Jan-27 13:57:56.284398] (todaysmarket.cpp:112)        : Building YieldCurve for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:56.349440] (yieldcurve.cpp:152)          : Yield curve Yield/GBP/GBP3M built
+NOTICE   [2019-Jan-27 13:57:56.349535] (todaysmarket.cpp:141)        : Adding Index(GBP-LIBOR-3M) with spec Yield/GBP/GBP3M to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:56.349623] (todaysmarket.cpp:579)        : Loading spec Yield/GBP/GBP3M done.
+NOTICE   [2019-Jan-27 13:57:56.349765] (todaysmarket.cpp:100)        : Loading spec Yield/USD/USD-IN-EUR
+NOTICE   [2019-Jan-27 13:57:56.349776] (todaysmarket.cpp:112)        : Building YieldCurve for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:56.349838] (yieldcurve.cpp:1260)         : YieldCurve::addFXForwards(), create FX forward quotes and helpers
+NOTICE   [2019-Jan-27 13:57:56.349946] (yieldcurve.cpp:1304)         : YieldCurve::addFXForwards() done
+NOTICE   [2019-Jan-27 13:57:56.409449] (yieldcurve.cpp:152)          : Yield curve Yield/USD/USD-IN-EUR built
+NOTICE   [2019-Jan-27 13:57:56.409555] (todaysmarket.cpp:132)        : Adding YieldCurve(USD) with spec Yield/USD/USD-IN-EUR to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:56.409632] (todaysmarket.cpp:579)        : Loading spec Yield/USD/USD-IN-EUR done.
+NOTICE   [2019-Jan-27 13:57:56.409852] (todaysmarket.cpp:100)        : Loading spec Yield/GBP/GBP-IN-EUR
+NOTICE   [2019-Jan-27 13:57:56.409867] (todaysmarket.cpp:112)        : Building YieldCurve for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:56.409938] (yieldcurve.cpp:1260)         : YieldCurve::addFXForwards(), create FX forward quotes and helpers
+NOTICE   [2019-Jan-27 13:57:56.410003] (yieldcurve.cpp:1304)         : YieldCurve::addFXForwards() done
+NOTICE   [2019-Jan-27 13:57:56.461092] (yieldcurve.cpp:152)          : Yield curve Yield/GBP/GBP-IN-EUR built
+NOTICE   [2019-Jan-27 13:57:56.461192] (todaysmarket.cpp:132)        : Adding YieldCurve(GBP) with spec Yield/GBP/GBP-IN-EUR to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:56.461258] (todaysmarket.cpp:567)        : building swap indices...
+NOTICE   [2019-Jan-27 13:57:56.461602] (todaysmarket.cpp:573)        : Added SwapIndex CHF-CMS-1Y with DiscountingIndex CHF-TOIS
+NOTICE   [2019-Jan-27 13:57:56.461660] (todaysmarket.cpp:573)        : Added SwapIndex CHF-CMS-30Y with DiscountingIndex CHF-TOIS
+NOTICE   [2019-Jan-27 13:57:56.461692] (todaysmarket.cpp:573)        : Added SwapIndex EUR-CMS-1Y with DiscountingIndex EUR-EONIA
+NOTICE   [2019-Jan-27 13:57:56.461730] (todaysmarket.cpp:573)        : Added SwapIndex EUR-CMS-30Y with DiscountingIndex EUR-EONIA
+NOTICE   [2019-Jan-27 13:57:56.461764] (todaysmarket.cpp:573)        : Added SwapIndex GBP-CMS-1Y with DiscountingIndex GBP-SONIA
+NOTICE   [2019-Jan-27 13:57:56.461794] (todaysmarket.cpp:573)        : Added SwapIndex GBP-CMS-30Y with DiscountingIndex GBP-SONIA
+NOTICE   [2019-Jan-27 13:57:56.461824] (todaysmarket.cpp:573)        : Added SwapIndex JPY-CMS-1Y with DiscountingIndex JPY-TONAR
+NOTICE   [2019-Jan-27 13:57:56.461852] (todaysmarket.cpp:573)        : Added SwapIndex JPY-CMS-30Y with DiscountingIndex JPY-TONAR
+NOTICE   [2019-Jan-27 13:57:56.461902] (todaysmarket.cpp:573)        : Added SwapIndex USD-CMS-1Y with DiscountingIndex USD-FedFunds
+NOTICE   [2019-Jan-27 13:57:56.461941] (todaysmarket.cpp:573)        : Added SwapIndex USD-CMS-30Y with DiscountingIndex USD-FedFunds
+NOTICE   [2019-Jan-27 13:57:56.461952] (todaysmarket.cpp:579)        : Loading spec Yield/GBP/GBP-IN-EUR done.
+NOTICE   [2019-Jan-27 13:57:56.461961] (todaysmarket.cpp:100)        : Loading spec CapFloorVolatility/EUR/EUR_CF_N
+NOTICE   [2019-Jan-27 13:57:56.461976] (todaysmarket.cpp:247)        : Building cap/floor volatility for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:56.463431] (capfloorvolcurve.cpp:126)    : CapFloorVolCurve: read 684 vols
+NOTICE   [2019-Jan-27 13:57:56.596506] (todaysmarket.cpp:269)        : Adding CapFloorVol (EUR) with spec CapFloorVolatility/EUR/EUR_CF_N to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:56.596852] (todaysmarket.cpp:579)        : Loading spec CapFloorVolatility/EUR/EUR_CF_N done.
+NOTICE   [2019-Jan-27 13:57:56.597453] (todaysmarket.cpp:100)        : Loading spec CapFloorVolatility/GBP/GBP_CF_N
+NOTICE   [2019-Jan-27 13:57:56.597497] (todaysmarket.cpp:247)        : Building cap/floor volatility for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:56.603495] (capfloorvolcurve.cpp:126)    : CapFloorVolCurve: read 480 vols
+NOTICE   [2019-Jan-27 13:57:56.783447] (todaysmarket.cpp:269)        : Adding CapFloorVol (GBP) with spec CapFloorVolatility/GBP/GBP_CF_N to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:56.784823] (todaysmarket.cpp:579)        : Loading spec CapFloorVolatility/GBP/GBP_CF_N done.
+NOTICE   [2019-Jan-27 13:57:56.784859] (todaysmarket.cpp:100)        : Loading spec CapFloorVolatility/USD/USD_CF_N
+NOTICE   [2019-Jan-27 13:57:56.784889] (todaysmarket.cpp:247)        : Building cap/floor volatility for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:56.795988] (capfloorvolcurve.cpp:126)    : CapFloorVolCurve: read 480 vols
+NOTICE   [2019-Jan-27 13:57:57.587296] (todaysmarket.cpp:269)        : Adding CapFloorVol (USD) with spec CapFloorVolatility/USD/USD_CF_N to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:57.588911] (todaysmarket.cpp:579)        : Loading spec CapFloorVolatility/USD/USD_CF_N done.
+NOTICE   [2019-Jan-27 13:57:57.589102] (todaysmarket.cpp:100)        : Loading spec SwaptionVolatility/CHF/CHF_SW_N
+NOTICE   [2019-Jan-27 13:57:57.589143] (todaysmarket.cpp:211)        : Building Swaption Volatility for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:57.620655] (swaptionvolcurve.cpp:122)    : SwaptionVolCurve: read 154 vols
+NOTICE   [2019-Jan-27 13:57:57.620977] (swaptionvolcurve.cpp:186)    : Returning ATM surface for config SwaptionVolatility/CHF/CHF_SW_N
+NOTICE   [2019-Jan-27 13:57:57.621019] (todaysmarket.cpp:224)        : Adding SwaptionVol (CHF) with spec SwaptionVolatility/CHF/CHF_SW_N to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:57.621056] (todaysmarket.cpp:579)        : Loading spec SwaptionVolatility/CHF/CHF_SW_N done.
+NOTICE   [2019-Jan-27 13:57:57.621075] (todaysmarket.cpp:100)        : Loading spec SwaptionVolatility/CHF/JPY_SW_N
+NOTICE   [2019-Jan-27 13:57:57.621092] (todaysmarket.cpp:211)        : Building Swaption Volatility for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:57.621237] (swaptionvolcurve.cpp:122)    : SwaptionVolCurve: read 154 vols
+NOTICE   [2019-Jan-27 13:57:57.621420] (swaptionvolcurve.cpp:186)    : Returning ATM surface for config SwaptionVolatility/CHF/JPY_SW_N
+NOTICE   [2019-Jan-27 13:57:57.621491] (todaysmarket.cpp:224)        : Adding SwaptionVol (JPY) with spec SwaptionVolatility/CHF/JPY_SW_N to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:57.621514] (todaysmarket.cpp:579)        : Loading spec SwaptionVolatility/CHF/JPY_SW_N done.
+NOTICE   [2019-Jan-27 13:57:57.621529] (todaysmarket.cpp:100)        : Loading spec SwaptionVolatility/EUR/EUR_SW_N
+NOTICE   [2019-Jan-27 13:57:57.621546] (todaysmarket.cpp:211)        : Building Swaption Volatility for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:57.621742] (swaptionvolcurve.cpp:122)    : SwaptionVolCurve: read 154 vols
+NOTICE   [2019-Jan-27 13:57:57.621955] (swaptionvolcurve.cpp:186)    : Returning ATM surface for config SwaptionVolatility/EUR/EUR_SW_N
+NOTICE   [2019-Jan-27 13:57:57.622013] (todaysmarket.cpp:224)        : Adding SwaptionVol (EUR) with spec SwaptionVolatility/EUR/EUR_SW_N to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:57.622043] (todaysmarket.cpp:579)        : Loading spec SwaptionVolatility/EUR/EUR_SW_N done.
+NOTICE   [2019-Jan-27 13:57:57.622061] (todaysmarket.cpp:100)        : Loading spec SwaptionVolatility/GBP/GBP_SW_N
+NOTICE   [2019-Jan-27 13:57:57.622077] (todaysmarket.cpp:211)        : Building Swaption Volatility for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:57.622397] (swaptionvolcurve.cpp:122)    : SwaptionVolCurve: read 288 vols
+NOTICE   [2019-Jan-27 13:57:57.622607] (swaptionvolcurve.cpp:186)    : Returning ATM surface for config SwaptionVolatility/GBP/GBP_SW_N
+NOTICE   [2019-Jan-27 13:57:57.622647] (todaysmarket.cpp:224)        : Adding SwaptionVol (GBP) with spec SwaptionVolatility/GBP/GBP_SW_N to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:57.622673] (todaysmarket.cpp:579)        : Loading spec SwaptionVolatility/GBP/GBP_SW_N done.
+NOTICE   [2019-Jan-27 13:57:57.622703] (todaysmarket.cpp:100)        : Loading spec SwaptionVolatility/USD/USD_SW_N
+NOTICE   [2019-Jan-27 13:57:57.622721] (todaysmarket.cpp:211)        : Building Swaption Volatility for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:57.623087] (swaptionvolcurve.cpp:122)    : SwaptionVolCurve: read 168 vols
+NOTICE   [2019-Jan-27 13:57:57.623273] (swaptionvolcurve.cpp:186)    : Returning ATM surface for config SwaptionVolatility/USD/USD_SW_N
+NOTICE   [2019-Jan-27 13:57:57.623309] (todaysmarket.cpp:224)        : Adding SwaptionVol (USD) with spec SwaptionVolatility/USD/USD_SW_N to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:57.623331] (todaysmarket.cpp:579)        : Loading spec SwaptionVolatility/USD/USD_SW_N done.
+NOTICE   [2019-Jan-27 13:57:57.623345] (todaysmarket.cpp:100)        : Loading spec FX/EUR/CHF
+NOTICE   [2019-Jan-27 13:57:57.623360] (todaysmarket.cpp:157)        : Building FXSpot for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:57.623419] (todaysmarket.cpp:166)        : Adding FXSpot (EURCHF) with spec FX/EUR/CHF to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:57.623447] (todaysmarket.cpp:579)        : Loading spec FX/EUR/CHF done.
+NOTICE   [2019-Jan-27 13:57:57.623461] (todaysmarket.cpp:100)        : Loading spec FX/EUR/GBP
+NOTICE   [2019-Jan-27 13:57:57.623470] (todaysmarket.cpp:157)        : Building FXSpot for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:57.623491] (todaysmarket.cpp:166)        : Adding FXSpot (EURGBP) with spec FX/EUR/GBP to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:57.623502] (todaysmarket.cpp:579)        : Loading spec FX/EUR/GBP done.
+NOTICE   [2019-Jan-27 13:57:57.623510] (todaysmarket.cpp:100)        : Loading spec FX/EUR/JPY
+NOTICE   [2019-Jan-27 13:57:57.623517] (todaysmarket.cpp:157)        : Building FXSpot for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:57.623535] (todaysmarket.cpp:166)        : Adding FXSpot (EURJPY) with spec FX/EUR/JPY to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:57.623545] (todaysmarket.cpp:579)        : Loading spec FX/EUR/JPY done.
+NOTICE   [2019-Jan-27 13:57:57.623553] (todaysmarket.cpp:100)        : Loading spec FX/EUR/USD
+NOTICE   [2019-Jan-27 13:57:57.623560] (todaysmarket.cpp:157)        : Building FXSpot for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:57.623578] (todaysmarket.cpp:166)        : Adding FXSpot (EURUSD) with spec FX/EUR/USD to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:57.623588] (todaysmarket.cpp:579)        : Loading spec FX/EUR/USD done.
+NOTICE   [2019-Jan-27 13:57:57.623596] (todaysmarket.cpp:100)        : Loading spec FXVolatility/EUR/CHF/EURCHF
+NOTICE   [2019-Jan-27 13:57:57.623604] (todaysmarket.cpp:183)        : Building FXVolatility for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:57.623637] (fxvolcurve.cpp:102)          : FXVolCurve: read 9 ATM vols
+NOTICE   [2019-Jan-27 13:57:57.623675] (todaysmarket.cpp:193)        : Adding FXVol (EURCHF) with spec FXVolatility/EUR/CHF/EURCHF to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:57.623696] (todaysmarket.cpp:579)        : Loading spec FXVolatility/EUR/CHF/EURCHF done.
+NOTICE   [2019-Jan-27 13:57:57.623705] (todaysmarket.cpp:100)        : Loading spec FXVolatility/EUR/GBP/EURGBP
+NOTICE   [2019-Jan-27 13:57:57.623714] (todaysmarket.cpp:183)        : Building FXVolatility for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:57.623737] (fxvolcurve.cpp:102)          : FXVolCurve: read 7 ATM vols
+NOTICE   [2019-Jan-27 13:57:57.623757] (todaysmarket.cpp:193)        : Adding FXVol (EURGBP) with spec FXVolatility/EUR/GBP/EURGBP to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:57.623775] (todaysmarket.cpp:579)        : Loading spec FXVolatility/EUR/GBP/EURGBP done.
+NOTICE   [2019-Jan-27 13:57:57.623787] (todaysmarket.cpp:100)        : Loading spec FXVolatility/EUR/JPY/EURJPY
+NOTICE   [2019-Jan-27 13:57:57.623799] (todaysmarket.cpp:183)        : Building FXVolatility for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:57.623847] (fxvolcurve.cpp:102)          : FXVolCurve: read 9 ATM vols
+NOTICE   [2019-Jan-27 13:57:57.623875] (todaysmarket.cpp:193)        : Adding FXVol (EURJPY) with spec FXVolatility/EUR/JPY/EURJPY to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:57.623895] (todaysmarket.cpp:579)        : Loading spec FXVolatility/EUR/JPY/EURJPY done.
+NOTICE   [2019-Jan-27 13:57:57.623909] (todaysmarket.cpp:100)        : Loading spec FXVolatility/EUR/USD/EURUSD
+NOTICE   [2019-Jan-27 13:57:57.623919] (todaysmarket.cpp:183)        : Building FXVolatility for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:57.623946] (fxvolcurve.cpp:102)          : FXVolCurve: read 7 ATM vols
+NOTICE   [2019-Jan-27 13:57:57.623969] (todaysmarket.cpp:193)        : Adding FXVol (EURUSD) with spec FXVolatility/EUR/USD/EURUSD to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:57.623987] (todaysmarket.cpp:579)        : Loading spec FXVolatility/EUR/USD/EURUSD done.
+NOTICE   [2019-Jan-27 13:57:57.624000] (todaysmarket.cpp:100)        : Loading spec FXVolatility/GBP/USD/GBPUSD
+NOTICE   [2019-Jan-27 13:57:57.624013] (todaysmarket.cpp:183)        : Building FXVolatility for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:57.624052] (fxvolcurve.cpp:102)          : FXVolCurve: read 9 ATM vols
+NOTICE   [2019-Jan-27 13:57:57.624079] (todaysmarket.cpp:193)        : Adding FXVol (GBPUSD) with spec FXVolatility/GBP/USD/GBPUSD to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:57.624099] (todaysmarket.cpp:579)        : Loading spec FXVolatility/GBP/USD/GBPUSD done.
+NOTICE   [2019-Jan-27 13:57:57.624113] (todaysmarket.cpp:100)        : Loading spec Default/EUR/BOND_YIELD_EUR_OVER_OIS
+NOTICE   [2019-Jan-27 13:57:57.624130] (todaysmarket.cpp:285)        : Building DefaultCurve for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:57.624304] (defaultcurve.cpp:143)        : DefaultCurve: read 0 default quotes
+NOTICE   [2019-Jan-27 13:57:57.624357] (defaultcurve.cpp:233)        : DefaultCurve: set up interpolated surv prob curve as yield over benchmark
+NOTICE   [2019-Jan-27 13:57:57.624393] (todaysmarket.cpp:294)        : Adding DefaultCurve (BOND_YIELD_EUR_OVER_OIS) with spec Default/EUR/BOND_YIELD_EUR_OVER_OIS to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:57.624421] (todaysmarket.cpp:579)        : Loading spec Default/EUR/BOND_YIELD_EUR_OVER_OIS done.
+NOTICE   [2019-Jan-27 13:57:57.624430] (todaysmarket.cpp:100)        : Loading spec Default/EUR/CPTY_C_SR_EUR
+NOTICE   [2019-Jan-27 13:57:57.624438] (todaysmarket.cpp:285)        : Building DefaultCurve for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:57.624604] (defaultcurve.cpp:143)        : DefaultCurve: read 1 default quotes
+NOTICE   [2019-Jan-27 13:57:57.624630] (defaultcurve.cpp:189)        : DefaultCurve: add asof (February 5th, 2016), hazard rate 0.0000, because not given
+NOTICE   [2019-Jan-27 13:57:57.624673] (defaultcurve.cpp:199)        : DefaultCurve: set up interpolated hazard rate curve
+NOTICE   [2019-Jan-27 13:57:57.624713] (todaysmarket.cpp:294)        : Adding DefaultCurve (CPTY_C) with spec Default/EUR/CPTY_C_SR_EUR to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:57.624740] (todaysmarket.cpp:579)        : Loading spec Default/EUR/CPTY_C_SR_EUR done.
+NOTICE   [2019-Jan-27 13:57:57.624754] (todaysmarket.cpp:100)        : Loading spec Default/USD/BANK_SR_USD
+NOTICE   [2019-Jan-27 13:57:57.624768] (todaysmarket.cpp:285)        : Building DefaultCurve for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:57.625032] (defaultcurve.cpp:143)        : DefaultCurve: read 7 default quotes
+NOTICE   [2019-Jan-27 13:57:57.627320] (defaultcurve.cpp:171)        : DefaultCurve: copy piecewise curve to interpolated survival probability curve
+NOTICE   [2019-Jan-27 13:57:57.627517] (todaysmarket.cpp:294)        : Adding DefaultCurve (BANK) with spec Default/USD/BANK_SR_USD to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:57.627565] (todaysmarket.cpp:579)        : Loading spec Default/USD/BANK_SR_USD done.
+NOTICE   [2019-Jan-27 13:57:57.627603] (todaysmarket.cpp:100)        : Loading spec Default/USD/CPTY_A_SR_USD
+NOTICE   [2019-Jan-27 13:57:57.627615] (todaysmarket.cpp:285)        : Building DefaultCurve for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:57.627958] (defaultcurve.cpp:143)        : DefaultCurve: read 11 default quotes
+NOTICE   [2019-Jan-27 13:57:57.628016] (defaultcurve.cpp:199)        : DefaultCurve: set up interpolated hazard rate curve
+NOTICE   [2019-Jan-27 13:57:57.628056] (todaysmarket.cpp:294)        : Adding DefaultCurve (CPTY_A) with spec Default/USD/CPTY_A_SR_USD to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:57.628083] (todaysmarket.cpp:294)        : Adding DefaultCurve (CPTY_B) with spec Default/USD/CPTY_A_SR_USD to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:57.628096] (todaysmarket.cpp:579)        : Loading spec Default/USD/CPTY_A_SR_USD done.
+NOTICE   [2019-Jan-27 13:57:57.628105] (todaysmarket.cpp:100)        : Loading spec Inflation/EUHICP/EUHICP_ZC_Swaps
+NOTICE   [2019-Jan-27 13:57:57.628114] (todaysmarket.cpp:371)        : Building InflationCurve Inflation/EUHICP/EUHICP_ZC_Swaps for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:57.628453] (todaysmarket.cpp:386)        : Adding ZeroInflationIndex (EUHICP) with spec Inflation/EUHICP/EUHICP_ZC_Swaps to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:57.628521] (todaysmarket.cpp:579)        : Loading spec Inflation/EUHICP/EUHICP_ZC_Swaps done.
+NOTICE   [2019-Jan-27 13:57:57.628538] (todaysmarket.cpp:100)        : Loading spec Inflation/EUHICPXT/EUHICPXT_YY_Swaps
+NOTICE   [2019-Jan-27 13:57:57.628553] (todaysmarket.cpp:371)        : Building InflationCurve Inflation/EUHICPXT/EUHICPXT_YY_Swaps for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:57.629440] (todaysmarket.cpp:408)        : Adding YoYInflationIndex (EUHICPXT) with spec Inflation/EUHICPXT/EUHICPXT_YY_Swaps to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:57.629495] (todaysmarket.cpp:579)        : Loading spec Inflation/EUHICPXT/EUHICPXT_YY_Swaps done.
+NOTICE   [2019-Jan-27 13:57:57.629507] (todaysmarket.cpp:100)        : Loading spec Inflation/EUHICPXT/EUHICPXT_ZC_Swaps
+NOTICE   [2019-Jan-27 13:57:57.629516] (todaysmarket.cpp:371)        : Building InflationCurve Inflation/EUHICPXT/EUHICPXT_ZC_Swaps for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:57.630068] (todaysmarket.cpp:386)        : Adding ZeroInflationIndex (EUHICPXT) with spec Inflation/EUHICPXT/EUHICPXT_ZC_Swaps to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:57.630116] (todaysmarket.cpp:579)        : Loading spec Inflation/EUHICPXT/EUHICPXT_ZC_Swaps done.
+NOTICE   [2019-Jan-27 13:57:57.630128] (todaysmarket.cpp:100)        : Loading spec Inflation/FRHICP/FRHICP_ZC_Swaps
+NOTICE   [2019-Jan-27 13:57:57.630137] (todaysmarket.cpp:371)        : Building InflationCurve Inflation/FRHICP/FRHICP_ZC_Swaps for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:57.630272] (todaysmarket.cpp:386)        : Adding ZeroInflationIndex (FRHICP) with spec Inflation/FRHICP/FRHICP_ZC_Swaps to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:57.630304] (todaysmarket.cpp:579)        : Loading spec Inflation/FRHICP/FRHICP_ZC_Swaps done.
+NOTICE   [2019-Jan-27 13:57:57.630316] (todaysmarket.cpp:100)        : Loading spec Inflation/UKRPI/UKRPI_ZC_Swaps
+NOTICE   [2019-Jan-27 13:57:57.630324] (todaysmarket.cpp:371)        : Building InflationCurve Inflation/UKRPI/UKRPI_ZC_Swaps for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:57.630765] (todaysmarket.cpp:386)        : Adding ZeroInflationIndex (UKRPI) with spec Inflation/UKRPI/UKRPI_ZC_Swaps to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:57.630800] (todaysmarket.cpp:579)        : Loading spec Inflation/UKRPI/UKRPI_ZC_Swaps done.
+NOTICE   [2019-Jan-27 13:57:57.630815] (todaysmarket.cpp:100)        : Loading spec Inflation/USCPI/USCPI_ZC_Swaps
+NOTICE   [2019-Jan-27 13:57:57.630831] (todaysmarket.cpp:371)        : Building InflationCurve Inflation/USCPI/USCPI_ZC_Swaps for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:57.631235] (todaysmarket.cpp:386)        : Adding ZeroInflationIndex (USCPI) with spec Inflation/USCPI/USCPI_ZC_Swaps to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:57.631264] (todaysmarket.cpp:579)        : Loading spec Inflation/USCPI/USCPI_ZC_Swaps done.
+NOTICE   [2019-Jan-27 13:57:57.631273] (todaysmarket.cpp:100)        : Loading spec Inflation/ZACPI/ZACPI_ZC_Swaps
+NOTICE   [2019-Jan-27 13:57:57.631281] (todaysmarket.cpp:371)        : Building InflationCurve Inflation/ZACPI/ZACPI_ZC_Swaps for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:57.631393] (todaysmarket.cpp:386)        : Adding ZeroInflationIndex (ZACPI) with spec Inflation/ZACPI/ZACPI_ZC_Swaps to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:57.631418] (todaysmarket.cpp:579)        : Loading spec Inflation/ZACPI/ZACPI_ZC_Swaps done.
+NOTICE   [2019-Jan-27 13:57:57.631427] (todaysmarket.cpp:100)        : Loading spec InflationCapFloorPrice/EUHICPXT/EUHICPXT_ZC_CF
+NOTICE   [2019-Jan-27 13:57:57.631438] (todaysmarket.cpp:431)        : Building InflationCapFloorPriceSurface for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:57.633677] (todaysmarket.cpp:442)        : Adding InflationCapFloorPriceSurface (EUHICPXT) with spec InflationCapFloorPrice/EUHICPXT/EUHICPXT_ZC_CF to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:57.633717] (todaysmarket.cpp:579)        : Loading spec InflationCapFloorPrice/EUHICPXT/EUHICPXT_ZC_CF done.
+NOTICE   [2019-Jan-27 13:57:57.633727] (todaysmarket.cpp:100)        : Loading spec InflationCapFloorPrice/UKRPI/UKRPI_ZC_CF
+NOTICE   [2019-Jan-27 13:57:57.633736] (todaysmarket.cpp:431)        : Building InflationCapFloorPriceSurface for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:57.635922] (todaysmarket.cpp:442)        : Adding InflationCapFloorPriceSurface (UKRPI) with spec InflationCapFloorPrice/UKRPI/UKRPI_ZC_CF to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:57.635959] (todaysmarket.cpp:579)        : Loading spec InflationCapFloorPrice/UKRPI/UKRPI_ZC_CF done.
+NOTICE   [2019-Jan-27 13:57:57.635969] (todaysmarket.cpp:100)        : Loading spec InflationCapFloorPrice/USCPI/USCPI_ZC_CF
+NOTICE   [2019-Jan-27 13:57:57.635978] (todaysmarket.cpp:431)        : Building InflationCapFloorPriceSurface for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:57.638894] (todaysmarket.cpp:442)        : Adding InflationCapFloorPriceSurface (USCPI) with spec InflationCapFloorPrice/USCPI/USCPI_ZC_CF to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:57.638967] (todaysmarket.cpp:579)        : Loading spec InflationCapFloorPrice/USCPI/USCPI_ZC_CF done.
+NOTICE   [2019-Jan-27 13:57:57.638995] (todaysmarket.cpp:100)        : Loading spec Equity/EUR/Lufthansa
+NOTICE   [2019-Jan-27 13:57:57.639013] (todaysmarket.cpp:458)        : Building EquityCurve for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:57.639346] (equitycurve.cpp:121)         : EquityCurve: read 4 quotes of type EQUITY_FWD
+NOTICE   [2019-Jan-27 13:57:57.639411] (todaysmarket.cpp:467)        : Adding EquityCurve (Lufthansa) with spec Equity/EUR/Lufthansa to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:57.639483] (todaysmarket.cpp:579)        : Loading spec Equity/EUR/Lufthansa done.
+NOTICE   [2019-Jan-27 13:57:57.639501] (todaysmarket.cpp:100)        : Loading spec Equity/USD/SP5
+NOTICE   [2019-Jan-27 13:57:57.639515] (todaysmarket.cpp:458)        : Building EquityCurve for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:57.639760] (equitycurve.cpp:121)         : EquityCurve: read 4 quotes of type EQUITY_DIVIDEND
+NOTICE   [2019-Jan-27 13:57:57.639807] (todaysmarket.cpp:467)        : Adding EquityCurve (SP5) with spec Equity/USD/SP5 to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:57.639851] (todaysmarket.cpp:579)        : Loading spec Equity/USD/SP5 done.
+NOTICE   [2019-Jan-27 13:57:57.639867] (todaysmarket.cpp:100)        : Loading spec EquityVolatility/EUR/Lufthansa
+NOTICE   [2019-Jan-27 13:57:57.639883] (todaysmarket.cpp:493)        : Building EquityVol for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:57.640051] (equityvolcurve.cpp:89)       : EquityVolCurve: Building BlackConstantVol
+NOTICE   [2019-Jan-27 13:57:57.640093] (todaysmarket.cpp:505)        : Adding EquityVol (Lufthansa) with spec EquityVolatility/EUR/Lufthansa to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:57.640144] (todaysmarket.cpp:579)        : Loading spec EquityVolatility/EUR/Lufthansa done.
+NOTICE   [2019-Jan-27 13:57:57.640161] (todaysmarket.cpp:100)        : Loading spec EquityVolatility/USD/SP5
+NOTICE   [2019-Jan-27 13:57:57.640175] (todaysmarket.cpp:493)        : Building EquityVol for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:57.640315] (equityvolcurve.cpp:89)       : EquityVolCurve: Building BlackConstantVol
+NOTICE   [2019-Jan-27 13:57:57.640350] (todaysmarket.cpp:505)        : Adding EquityVol (SP5) with spec EquityVolatility/USD/SP5 to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:57.640382] (todaysmarket.cpp:579)        : Loading spec EquityVolatility/USD/SP5 done.
+NOTICE   [2019-Jan-27 13:57:57.640399] (todaysmarket.cpp:100)        : Loading spec Security/SECURITY_1
+NOTICE   [2019-Jan-27 13:57:57.640415] (todaysmarket.cpp:537)        : Building Securities for asof February 5th, 2016
+NOTICE   [2019-Jan-27 13:57:57.640633] (todaysmarket.cpp:546)        : Adding Security (SECURITY_1) with spec Security/SECURITY_1 to configuration collateral_eur
+NOTICE   [2019-Jan-27 13:57:57.640671] (todaysmarket.cpp:579)        : Loading spec Security/SECURITY_1 done.
+NOTICE   [2019-Jan-27 13:57:57.640688] (todaysmarket.cpp:581)        : Loading 0 CurveSpecs done.
+NOTICE   [2019-Jan-27 13:57:57.640714] (todaysmarket.cpp:79)         : Build objects in TodaysMarket configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.641084] (todaysmarket.cpp:100)        : Loading spec Yield/CHF/CHF1D
+NOTICE   [2019-Jan-27 13:57:57.641119] (todaysmarket.cpp:141)        : Adding Index(CHF-TOIS) with spec Yield/CHF/CHF1D to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.641174] (todaysmarket.cpp:579)        : Loading spec Yield/CHF/CHF1D done.
+NOTICE   [2019-Jan-27 13:57:57.641191] (todaysmarket.cpp:100)        : Loading spec Yield/CHF/CHF3M
+NOTICE   [2019-Jan-27 13:57:57.641210] (todaysmarket.cpp:141)        : Adding Index(CHF-LIBOR-3M) with spec Yield/CHF/CHF3M to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.641258] (todaysmarket.cpp:579)        : Loading spec Yield/CHF/CHF3M done.
+NOTICE   [2019-Jan-27 13:57:57.641274] (todaysmarket.cpp:100)        : Loading spec Yield/CHF/CHF6M
+NOTICE   [2019-Jan-27 13:57:57.641291] (todaysmarket.cpp:132)        : Adding YieldCurve(CHF) with spec Yield/CHF/CHF6M to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.641312] (todaysmarket.cpp:141)        : Adding Index(CHF-LIBOR-6M) with spec Yield/CHF/CHF6M to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.641352] (todaysmarket.cpp:579)        : Loading spec Yield/CHF/CHF6M done.
+NOTICE   [2019-Jan-27 13:57:57.641369] (todaysmarket.cpp:100)        : Loading spec Yield/EUR/BOND_YIELD_EUR
+NOTICE   [2019-Jan-27 13:57:57.641390] (todaysmarket.cpp:132)        : Adding YieldCurve(BOND_YIELD_EUR) with spec Yield/EUR/BOND_YIELD_EUR to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.641414] (todaysmarket.cpp:579)        : Loading spec Yield/EUR/BOND_YIELD_EUR done.
+NOTICE   [2019-Jan-27 13:57:57.641429] (todaysmarket.cpp:100)        : Loading spec Yield/EUR/EUR1D
+NOTICE   [2019-Jan-27 13:57:57.641446] (todaysmarket.cpp:132)        : Adding YieldCurve(EUR) with spec Yield/EUR/EUR1D to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.641465] (todaysmarket.cpp:141)        : Adding Index(EUR-EONIA) with spec Yield/EUR/EUR1D to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.641502] (todaysmarket.cpp:579)        : Loading spec Yield/EUR/EUR1D done.
+NOTICE   [2019-Jan-27 13:57:57.641518] (todaysmarket.cpp:100)        : Loading spec Yield/EUR/EUR1M
+NOTICE   [2019-Jan-27 13:57:57.641537] (todaysmarket.cpp:141)        : Adding Index(EUR-EURIBOR-1M) with spec Yield/EUR/EUR1M to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.641592] (todaysmarket.cpp:579)        : Loading spec Yield/EUR/EUR1M done.
+NOTICE   [2019-Jan-27 13:57:57.641608] (todaysmarket.cpp:100)        : Loading spec Yield/EUR/EUR3M
+NOTICE   [2019-Jan-27 13:57:57.641628] (todaysmarket.cpp:141)        : Adding Index(EUR-EURIBOR-3M) with spec Yield/EUR/EUR3M to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.641677] (todaysmarket.cpp:579)        : Loading spec Yield/EUR/EUR3M done.
+NOTICE   [2019-Jan-27 13:57:57.641697] (todaysmarket.cpp:100)        : Loading spec Yield/EUR/EUR6M
+NOTICE   [2019-Jan-27 13:57:57.641717] (todaysmarket.cpp:141)        : Adding Index(EUR-EURIBOR-6M) with spec Yield/EUR/EUR6M to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.641756] (todaysmarket.cpp:579)        : Loading spec Yield/EUR/EUR6M done.
+NOTICE   [2019-Jan-27 13:57:57.641777] (todaysmarket.cpp:100)        : Loading spec Yield/GBP/GBP1D
+NOTICE   [2019-Jan-27 13:57:57.641797] (todaysmarket.cpp:132)        : Adding YieldCurve(GBP) with spec Yield/GBP/GBP1D to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.641821] (todaysmarket.cpp:141)        : Adding Index(GBP-SONIA) with spec Yield/GBP/GBP1D to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.641868] (todaysmarket.cpp:579)        : Loading spec Yield/GBP/GBP1D done.
+NOTICE   [2019-Jan-27 13:57:57.641910] (todaysmarket.cpp:100)        : Loading spec Yield/GBP/GBP6M
+NOTICE   [2019-Jan-27 13:57:57.641935] (todaysmarket.cpp:141)        : Adding Index(GBP-LIBOR-6M) with spec Yield/GBP/GBP6M to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.641988] (todaysmarket.cpp:579)        : Loading spec Yield/GBP/GBP6M done.
+NOTICE   [2019-Jan-27 13:57:57.642006] (todaysmarket.cpp:100)        : Loading spec Yield/JPY/JPY1D
+NOTICE   [2019-Jan-27 13:57:57.642028] (todaysmarket.cpp:141)        : Adding Index(JPY-TONAR) with spec Yield/JPY/JPY1D to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.642069] (todaysmarket.cpp:579)        : Loading spec Yield/JPY/JPY1D done.
+NOTICE   [2019-Jan-27 13:57:57.642087] (todaysmarket.cpp:100)        : Loading spec Yield/JPY/JPY6M
+NOTICE   [2019-Jan-27 13:57:57.642104] (todaysmarket.cpp:132)        : Adding YieldCurve(JPY) with spec Yield/JPY/JPY6M to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.642127] (todaysmarket.cpp:141)        : Adding Index(JPY-LIBOR-6M) with spec Yield/JPY/JPY6M to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.642173] (todaysmarket.cpp:579)        : Loading spec Yield/JPY/JPY6M done.
+NOTICE   [2019-Jan-27 13:57:57.642190] (todaysmarket.cpp:100)        : Loading spec Yield/USD/USD1D
+NOTICE   [2019-Jan-27 13:57:57.642209] (todaysmarket.cpp:132)        : Adding YieldCurve(USD) with spec Yield/USD/USD1D to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.642232] (todaysmarket.cpp:141)        : Adding Index(USD-FedFunds) with spec Yield/USD/USD1D to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.642271] (todaysmarket.cpp:579)        : Loading spec Yield/USD/USD1D done.
+NOTICE   [2019-Jan-27 13:57:57.642288] (todaysmarket.cpp:100)        : Loading spec Yield/USD/USD3M
+NOTICE   [2019-Jan-27 13:57:57.642309] (todaysmarket.cpp:141)        : Adding Index(USD-LIBOR-3M) with spec Yield/USD/USD3M to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.642350] (todaysmarket.cpp:579)        : Loading spec Yield/USD/USD3M done.
+NOTICE   [2019-Jan-27 13:57:57.642367] (todaysmarket.cpp:100)        : Loading spec Yield/USD/USD6M
+NOTICE   [2019-Jan-27 13:57:57.642392] (todaysmarket.cpp:141)        : Adding Index(USD-LIBOR-6M) with spec Yield/USD/USD6M to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.642442] (todaysmarket.cpp:579)        : Loading spec Yield/USD/USD6M done.
+NOTICE   [2019-Jan-27 13:57:57.642493] (todaysmarket.cpp:100)        : Loading spec Yield/EUR/BANK_EUR_BORROW
+NOTICE   [2019-Jan-27 13:57:57.642519] (todaysmarket.cpp:132)        : Adding YieldCurve(BANK_EUR_BORROW) with spec Yield/EUR/BANK_EUR_BORROW to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.642559] (todaysmarket.cpp:579)        : Loading spec Yield/EUR/BANK_EUR_BORROW done.
+NOTICE   [2019-Jan-27 13:57:57.642574] (todaysmarket.cpp:100)        : Loading spec Yield/EUR/BANK_EUR_LEND
+NOTICE   [2019-Jan-27 13:57:57.642594] (todaysmarket.cpp:132)        : Adding YieldCurve(BANK_EUR_LEND) with spec Yield/EUR/BANK_EUR_LEND to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.642619] (todaysmarket.cpp:579)        : Loading spec Yield/EUR/BANK_EUR_LEND done.
+NOTICE   [2019-Jan-27 13:57:57.642634] (todaysmarket.cpp:100)        : Loading spec Yield/EUR/BENCHMARK_EUR
+NOTICE   [2019-Jan-27 13:57:57.642653] (todaysmarket.cpp:132)        : Adding YieldCurve(BENCHMARK_EUR) with spec Yield/EUR/BENCHMARK_EUR to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.642676] (todaysmarket.cpp:579)        : Loading spec Yield/EUR/BENCHMARK_EUR done.
+NOTICE   [2019-Jan-27 13:57:57.642690] (todaysmarket.cpp:100)        : Loading spec Yield/EUR/EUR12M
+NOTICE   [2019-Jan-27 13:57:57.642711] (todaysmarket.cpp:141)        : Adding Index(EUR-EURIBOR-12M) with spec Yield/EUR/EUR12M to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.642763] (todaysmarket.cpp:579)        : Loading spec Yield/EUR/EUR12M done.
+NOTICE   [2019-Jan-27 13:57:57.642781] (todaysmarket.cpp:100)        : Loading spec Yield/GBP/GBP3M
+NOTICE   [2019-Jan-27 13:57:57.642802] (todaysmarket.cpp:141)        : Adding Index(GBP-LIBOR-3M) with spec Yield/GBP/GBP3M to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.642843] (todaysmarket.cpp:567)        : building swap indices...
+NOTICE   [2019-Jan-27 13:57:57.642906] (todaysmarket.cpp:573)        : Added SwapIndex CHF-CMS-1Y with DiscountingIndex CHF-TOIS
+NOTICE   [2019-Jan-27 13:57:57.642959] (todaysmarket.cpp:573)        : Added SwapIndex CHF-CMS-30Y with DiscountingIndex CHF-TOIS
+NOTICE   [2019-Jan-27 13:57:57.643010] (todaysmarket.cpp:573)        : Added SwapIndex EUR-CMS-1Y with DiscountingIndex EUR-EONIA
+NOTICE   [2019-Jan-27 13:57:57.643058] (todaysmarket.cpp:573)        : Added SwapIndex EUR-CMS-30Y with DiscountingIndex EUR-EONIA
+NOTICE   [2019-Jan-27 13:57:57.643109] (todaysmarket.cpp:573)        : Added SwapIndex GBP-CMS-1Y with DiscountingIndex GBP-SONIA
+NOTICE   [2019-Jan-27 13:57:57.643156] (todaysmarket.cpp:573)        : Added SwapIndex GBP-CMS-30Y with DiscountingIndex GBP-SONIA
+NOTICE   [2019-Jan-27 13:57:57.643204] (todaysmarket.cpp:573)        : Added SwapIndex JPY-CMS-1Y with DiscountingIndex JPY-TONAR
+NOTICE   [2019-Jan-27 13:57:57.643247] (todaysmarket.cpp:573)        : Added SwapIndex JPY-CMS-30Y with DiscountingIndex JPY-TONAR
+NOTICE   [2019-Jan-27 13:57:57.643293] (todaysmarket.cpp:573)        : Added SwapIndex USD-CMS-1Y with DiscountingIndex USD-FedFunds
+NOTICE   [2019-Jan-27 13:57:57.643340] (todaysmarket.cpp:573)        : Added SwapIndex USD-CMS-30Y with DiscountingIndex USD-FedFunds
+NOTICE   [2019-Jan-27 13:57:57.643357] (todaysmarket.cpp:579)        : Loading spec Yield/GBP/GBP3M done.
+NOTICE   [2019-Jan-27 13:57:57.643370] (todaysmarket.cpp:100)        : Loading spec CapFloorVolatility/EUR/EUR_CF_N
+NOTICE   [2019-Jan-27 13:57:57.643390] (todaysmarket.cpp:269)        : Adding CapFloorVol (EUR) with spec CapFloorVolatility/EUR/EUR_CF_N to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.643411] (todaysmarket.cpp:579)        : Loading spec CapFloorVolatility/EUR/EUR_CF_N done.
+NOTICE   [2019-Jan-27 13:57:57.643424] (todaysmarket.cpp:100)        : Loading spec CapFloorVolatility/GBP/GBP_CF_N
+NOTICE   [2019-Jan-27 13:57:57.643439] (todaysmarket.cpp:269)        : Adding CapFloorVol (GBP) with spec CapFloorVolatility/GBP/GBP_CF_N to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.643456] (todaysmarket.cpp:579)        : Loading spec CapFloorVolatility/GBP/GBP_CF_N done.
+NOTICE   [2019-Jan-27 13:57:57.643469] (todaysmarket.cpp:100)        : Loading spec CapFloorVolatility/USD/USD_CF_N
+NOTICE   [2019-Jan-27 13:57:57.643497] (todaysmarket.cpp:269)        : Adding CapFloorVol (USD) with spec CapFloorVolatility/USD/USD_CF_N to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.643514] (todaysmarket.cpp:579)        : Loading spec CapFloorVolatility/USD/USD_CF_N done.
+NOTICE   [2019-Jan-27 13:57:57.643527] (todaysmarket.cpp:100)        : Loading spec SwaptionVolatility/CHF/CHF_SW_N
+NOTICE   [2019-Jan-27 13:57:57.643545] (todaysmarket.cpp:224)        : Adding SwaptionVol (CHF) with spec SwaptionVolatility/CHF/CHF_SW_N to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.643568] (todaysmarket.cpp:579)        : Loading spec SwaptionVolatility/CHF/CHF_SW_N done.
+NOTICE   [2019-Jan-27 13:57:57.643581] (todaysmarket.cpp:100)        : Loading spec SwaptionVolatility/CHF/JPY_SW_N
+NOTICE   [2019-Jan-27 13:57:57.643597] (todaysmarket.cpp:224)        : Adding SwaptionVol (JPY) with spec SwaptionVolatility/CHF/JPY_SW_N to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.643615] (todaysmarket.cpp:579)        : Loading spec SwaptionVolatility/CHF/JPY_SW_N done.
+NOTICE   [2019-Jan-27 13:57:57.643630] (todaysmarket.cpp:100)        : Loading spec SwaptionVolatility/EUR/EUR_SW_N
+NOTICE   [2019-Jan-27 13:57:57.643647] (todaysmarket.cpp:224)        : Adding SwaptionVol (EUR) with spec SwaptionVolatility/EUR/EUR_SW_N to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.643667] (todaysmarket.cpp:579)        : Loading spec SwaptionVolatility/EUR/EUR_SW_N done.
+NOTICE   [2019-Jan-27 13:57:57.643680] (todaysmarket.cpp:100)        : Loading spec SwaptionVolatility/GBP/GBP_SW_N
+NOTICE   [2019-Jan-27 13:57:57.643694] (todaysmarket.cpp:224)        : Adding SwaptionVol (GBP) with spec SwaptionVolatility/GBP/GBP_SW_N to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.643712] (todaysmarket.cpp:579)        : Loading spec SwaptionVolatility/GBP/GBP_SW_N done.
+NOTICE   [2019-Jan-27 13:57:57.643723] (todaysmarket.cpp:100)        : Loading spec SwaptionVolatility/USD/USD_SW_N
+NOTICE   [2019-Jan-27 13:57:57.643739] (todaysmarket.cpp:224)        : Adding SwaptionVol (USD) with spec SwaptionVolatility/USD/USD_SW_N to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.643756] (todaysmarket.cpp:579)        : Loading spec SwaptionVolatility/USD/USD_SW_N done.
+NOTICE   [2019-Jan-27 13:57:57.643770] (todaysmarket.cpp:100)        : Loading spec FX/EUR/CHF
+NOTICE   [2019-Jan-27 13:57:57.643786] (todaysmarket.cpp:166)        : Adding FXSpot (EURCHF) with spec FX/EUR/CHF to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.643809] (todaysmarket.cpp:579)        : Loading spec FX/EUR/CHF done.
+NOTICE   [2019-Jan-27 13:57:57.643824] (todaysmarket.cpp:100)        : Loading spec FX/EUR/GBP
+NOTICE   [2019-Jan-27 13:57:57.643841] (todaysmarket.cpp:166)        : Adding FXSpot (EURGBP) with spec FX/EUR/GBP to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.643859] (todaysmarket.cpp:579)        : Loading spec FX/EUR/GBP done.
+NOTICE   [2019-Jan-27 13:57:57.643873] (todaysmarket.cpp:100)        : Loading spec FX/EUR/JPY
+NOTICE   [2019-Jan-27 13:57:57.643888] (todaysmarket.cpp:166)        : Adding FXSpot (EURJPY) with spec FX/EUR/JPY to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.643904] (todaysmarket.cpp:579)        : Loading spec FX/EUR/JPY done.
+NOTICE   [2019-Jan-27 13:57:57.643918] (todaysmarket.cpp:100)        : Loading spec FX/EUR/USD
+NOTICE   [2019-Jan-27 13:57:57.643933] (todaysmarket.cpp:166)        : Adding FXSpot (EURUSD) with spec FX/EUR/USD to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.643948] (todaysmarket.cpp:579)        : Loading spec FX/EUR/USD done.
+NOTICE   [2019-Jan-27 13:57:57.643961] (todaysmarket.cpp:100)        : Loading spec FXVolatility/EUR/CHF/EURCHF
+NOTICE   [2019-Jan-27 13:57:57.643978] (todaysmarket.cpp:193)        : Adding FXVol (EURCHF) with spec FXVolatility/EUR/CHF/EURCHF to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.644003] (todaysmarket.cpp:579)        : Loading spec FXVolatility/EUR/CHF/EURCHF done.
+NOTICE   [2019-Jan-27 13:57:57.644036] (todaysmarket.cpp:100)        : Loading spec FXVolatility/EUR/GBP/EURGBP
+NOTICE   [2019-Jan-27 13:57:57.644052] (todaysmarket.cpp:193)        : Adding FXVol (EURGBP) with spec FXVolatility/EUR/GBP/EURGBP to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.644072] (todaysmarket.cpp:579)        : Loading spec FXVolatility/EUR/GBP/EURGBP done.
+NOTICE   [2019-Jan-27 13:57:57.644086] (todaysmarket.cpp:100)        : Loading spec FXVolatility/EUR/JPY/EURJPY
+NOTICE   [2019-Jan-27 13:57:57.644100] (todaysmarket.cpp:193)        : Adding FXVol (EURJPY) with spec FXVolatility/EUR/JPY/EURJPY to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.644118] (todaysmarket.cpp:579)        : Loading spec FXVolatility/EUR/JPY/EURJPY done.
+NOTICE   [2019-Jan-27 13:57:57.644130] (todaysmarket.cpp:100)        : Loading spec FXVolatility/EUR/USD/EURUSD
+NOTICE   [2019-Jan-27 13:57:57.644144] (todaysmarket.cpp:193)        : Adding FXVol (EURUSD) with spec FXVolatility/EUR/USD/EURUSD to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.644160] (todaysmarket.cpp:579)        : Loading spec FXVolatility/EUR/USD/EURUSD done.
+NOTICE   [2019-Jan-27 13:57:57.644173] (todaysmarket.cpp:100)        : Loading spec FXVolatility/GBP/USD/GBPUSD
+NOTICE   [2019-Jan-27 13:57:57.644191] (todaysmarket.cpp:193)        : Adding FXVol (GBPUSD) with spec FXVolatility/GBP/USD/GBPUSD to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.644208] (todaysmarket.cpp:579)        : Loading spec FXVolatility/GBP/USD/GBPUSD done.
+NOTICE   [2019-Jan-27 13:57:57.644222] (todaysmarket.cpp:100)        : Loading spec Default/EUR/BOND_YIELD_EUR_OVER_OIS
+NOTICE   [2019-Jan-27 13:57:57.644240] (todaysmarket.cpp:294)        : Adding DefaultCurve (BOND_YIELD_EUR_OVER_OIS) with spec Default/EUR/BOND_YIELD_EUR_OVER_OIS to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.644270] (todaysmarket.cpp:579)        : Loading spec Default/EUR/BOND_YIELD_EUR_OVER_OIS done.
+NOTICE   [2019-Jan-27 13:57:57.644284] (todaysmarket.cpp:100)        : Loading spec Default/EUR/CPTY_C_SR_EUR
+NOTICE   [2019-Jan-27 13:57:57.644300] (todaysmarket.cpp:294)        : Adding DefaultCurve (CPTY_C) with spec Default/EUR/CPTY_C_SR_EUR to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.644320] (todaysmarket.cpp:579)        : Loading spec Default/EUR/CPTY_C_SR_EUR done.
+NOTICE   [2019-Jan-27 13:57:57.644335] (todaysmarket.cpp:100)        : Loading spec Default/USD/BANK_SR_USD
+NOTICE   [2019-Jan-27 13:57:57.644349] (todaysmarket.cpp:294)        : Adding DefaultCurve (BANK) with spec Default/USD/BANK_SR_USD to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.644373] (todaysmarket.cpp:579)        : Loading spec Default/USD/BANK_SR_USD done.
+NOTICE   [2019-Jan-27 13:57:57.644387] (todaysmarket.cpp:100)        : Loading spec Default/USD/CPTY_A_SR_USD
+NOTICE   [2019-Jan-27 13:57:57.644403] (todaysmarket.cpp:294)        : Adding DefaultCurve (CPTY_A) with spec Default/USD/CPTY_A_SR_USD to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.644425] (todaysmarket.cpp:294)        : Adding DefaultCurve (CPTY_B) with spec Default/USD/CPTY_A_SR_USD to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.644445] (todaysmarket.cpp:579)        : Loading spec Default/USD/CPTY_A_SR_USD done.
+NOTICE   [2019-Jan-27 13:57:57.644460] (todaysmarket.cpp:100)        : Loading spec Inflation/EUHICP/EUHICP_ZC_Swaps
+NOTICE   [2019-Jan-27 13:57:57.644491] (todaysmarket.cpp:386)        : Adding ZeroInflationIndex (EUHICP) with spec Inflation/EUHICP/EUHICP_ZC_Swaps to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.644537] (todaysmarket.cpp:579)        : Loading spec Inflation/EUHICP/EUHICP_ZC_Swaps done.
+NOTICE   [2019-Jan-27 13:57:57.644553] (todaysmarket.cpp:100)        : Loading spec Inflation/EUHICPXT/EUHICPXT_YY_Swaps
+NOTICE   [2019-Jan-27 13:57:57.644576] (todaysmarket.cpp:408)        : Adding YoYInflationIndex (EUHICPXT) with spec Inflation/EUHICPXT/EUHICPXT_YY_Swaps to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.644623] (todaysmarket.cpp:579)        : Loading spec Inflation/EUHICPXT/EUHICPXT_YY_Swaps done.
+NOTICE   [2019-Jan-27 13:57:57.644640] (todaysmarket.cpp:100)        : Loading spec Inflation/EUHICPXT/EUHICPXT_ZC_Swaps
+NOTICE   [2019-Jan-27 13:57:57.644659] (todaysmarket.cpp:386)        : Adding ZeroInflationIndex (EUHICPXT) with spec Inflation/EUHICPXT/EUHICPXT_ZC_Swaps to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.644689] (todaysmarket.cpp:579)        : Loading spec Inflation/EUHICPXT/EUHICPXT_ZC_Swaps done.
+NOTICE   [2019-Jan-27 13:57:57.644704] (todaysmarket.cpp:100)        : Loading spec Inflation/FRHICP/FRHICP_ZC_Swaps
+NOTICE   [2019-Jan-27 13:57:57.644723] (todaysmarket.cpp:386)        : Adding ZeroInflationIndex (FRHICP) with spec Inflation/FRHICP/FRHICP_ZC_Swaps to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.644751] (todaysmarket.cpp:579)        : Loading spec Inflation/FRHICP/FRHICP_ZC_Swaps done.
+NOTICE   [2019-Jan-27 13:57:57.644767] (todaysmarket.cpp:100)        : Loading spec Inflation/UKRPI/UKRPI_ZC_Swaps
+NOTICE   [2019-Jan-27 13:57:57.644786] (todaysmarket.cpp:386)        : Adding ZeroInflationIndex (UKRPI) with spec Inflation/UKRPI/UKRPI_ZC_Swaps to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.644815] (todaysmarket.cpp:579)        : Loading spec Inflation/UKRPI/UKRPI_ZC_Swaps done.
+NOTICE   [2019-Jan-27 13:57:57.644831] (todaysmarket.cpp:100)        : Loading spec Inflation/USCPI/USCPI_ZC_Swaps
+NOTICE   [2019-Jan-27 13:57:57.644850] (todaysmarket.cpp:386)        : Adding ZeroInflationIndex (USCPI) with spec Inflation/USCPI/USCPI_ZC_Swaps to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.644879] (todaysmarket.cpp:579)        : Loading spec Inflation/USCPI/USCPI_ZC_Swaps done.
+NOTICE   [2019-Jan-27 13:57:57.644896] (todaysmarket.cpp:100)        : Loading spec Inflation/ZACPI/ZACPI_ZC_Swaps
+NOTICE   [2019-Jan-27 13:57:57.644916] (todaysmarket.cpp:386)        : Adding ZeroInflationIndex (ZACPI) with spec Inflation/ZACPI/ZACPI_ZC_Swaps to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.644945] (todaysmarket.cpp:579)        : Loading spec Inflation/ZACPI/ZACPI_ZC_Swaps done.
+NOTICE   [2019-Jan-27 13:57:57.644959] (todaysmarket.cpp:100)        : Loading spec InflationCapFloorPrice/EUHICPXT/EUHICPXT_ZC_CF
+NOTICE   [2019-Jan-27 13:57:57.644977] (todaysmarket.cpp:442)        : Adding InflationCapFloorPriceSurface (EUHICPXT) with spec InflationCapFloorPrice/EUHICPXT/EUHICPXT_ZC_CF to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.644999] (todaysmarket.cpp:579)        : Loading spec InflationCapFloorPrice/EUHICPXT/EUHICPXT_ZC_CF done.
+NOTICE   [2019-Jan-27 13:57:57.645014] (todaysmarket.cpp:100)        : Loading spec InflationCapFloorPrice/UKRPI/UKRPI_ZC_CF
+NOTICE   [2019-Jan-27 13:57:57.645030] (todaysmarket.cpp:442)        : Adding InflationCapFloorPriceSurface (UKRPI) with spec InflationCapFloorPrice/UKRPI/UKRPI_ZC_CF to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.645049] (todaysmarket.cpp:579)        : Loading spec InflationCapFloorPrice/UKRPI/UKRPI_ZC_CF done.
+NOTICE   [2019-Jan-27 13:57:57.645063] (todaysmarket.cpp:100)        : Loading spec InflationCapFloorPrice/USCPI/USCPI_ZC_CF
+NOTICE   [2019-Jan-27 13:57:57.645081] (todaysmarket.cpp:442)        : Adding InflationCapFloorPriceSurface (USCPI) with spec InflationCapFloorPrice/USCPI/USCPI_ZC_CF to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.645098] (todaysmarket.cpp:579)        : Loading spec InflationCapFloorPrice/USCPI/USCPI_ZC_CF done.
+NOTICE   [2019-Jan-27 13:57:57.645113] (todaysmarket.cpp:100)        : Loading spec Equity/EUR/Lufthansa
+NOTICE   [2019-Jan-27 13:57:57.645131] (todaysmarket.cpp:467)        : Adding EquityCurve (Lufthansa) with spec Equity/EUR/Lufthansa to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.645184] (todaysmarket.cpp:579)        : Loading spec Equity/EUR/Lufthansa done.
+NOTICE   [2019-Jan-27 13:57:57.645200] (todaysmarket.cpp:100)        : Loading spec Equity/USD/SP5
+NOTICE   [2019-Jan-27 13:57:57.645225] (todaysmarket.cpp:467)        : Adding EquityCurve (SP5) with spec Equity/USD/SP5 to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.645255] (todaysmarket.cpp:579)        : Loading spec Equity/USD/SP5 done.
+NOTICE   [2019-Jan-27 13:57:57.645271] (todaysmarket.cpp:100)        : Loading spec EquityVolatility/EUR/Lufthansa
+NOTICE   [2019-Jan-27 13:57:57.645288] (todaysmarket.cpp:505)        : Adding EquityVol (Lufthansa) with spec EquityVolatility/EUR/Lufthansa to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.645319] (todaysmarket.cpp:579)        : Loading spec EquityVolatility/EUR/Lufthansa done.
+NOTICE   [2019-Jan-27 13:57:57.645334] (todaysmarket.cpp:100)        : Loading spec EquityVolatility/USD/SP5
+NOTICE   [2019-Jan-27 13:57:57.645352] (todaysmarket.cpp:505)        : Adding EquityVol (SP5) with spec EquityVolatility/USD/SP5 to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.645375] (todaysmarket.cpp:579)        : Loading spec EquityVolatility/USD/SP5 done.
+NOTICE   [2019-Jan-27 13:57:57.645391] (todaysmarket.cpp:100)        : Loading spec Security/SECURITY_1
+NOTICE   [2019-Jan-27 13:57:57.645408] (todaysmarket.cpp:546)        : Adding Security (SECURITY_1) with spec Security/SECURITY_1 to configuration collateral_inccy
+NOTICE   [2019-Jan-27 13:57:57.645427] (todaysmarket.cpp:579)        : Loading spec Security/SECURITY_1 done.
+NOTICE   [2019-Jan-27 13:57:57.645441] (todaysmarket.cpp:581)        : Loading 0 CurveSpecs done.
+NOTICE   [2019-Jan-27 13:57:57.645465] (todaysmarket.cpp:79)         : Build objects in TodaysMarket configuration default
+NOTICE   [2019-Jan-27 13:57:57.646006] (todaysmarket.cpp:100)        : Loading spec Yield/CHF/CHF1D
+NOTICE   [2019-Jan-27 13:57:57.646034] (todaysmarket.cpp:141)        : Adding Index(CHF-TOIS) with spec Yield/CHF/CHF1D to configuration default
+NOTICE   [2019-Jan-27 13:57:57.646077] (todaysmarket.cpp:579)        : Loading spec Yield/CHF/CHF1D done.
+NOTICE   [2019-Jan-27 13:57:57.646092] (todaysmarket.cpp:100)        : Loading spec Yield/CHF/CHF3M
+NOTICE   [2019-Jan-27 13:57:57.646108] (todaysmarket.cpp:141)        : Adding Index(CHF-LIBOR-3M) with spec Yield/CHF/CHF3M to configuration default
+NOTICE   [2019-Jan-27 13:57:57.646151] (todaysmarket.cpp:579)        : Loading spec Yield/CHF/CHF3M done.
+NOTICE   [2019-Jan-27 13:57:57.646166] (todaysmarket.cpp:100)        : Loading spec Yield/CHF/CHF6M
+NOTICE   [2019-Jan-27 13:57:57.646181] (todaysmarket.cpp:132)        : Adding YieldCurve(CHF) with spec Yield/CHF/CHF6M to configuration default
+NOTICE   [2019-Jan-27 13:57:57.646199] (todaysmarket.cpp:141)        : Adding Index(CHF-LIBOR-6M) with spec Yield/CHF/CHF6M to configuration default
+NOTICE   [2019-Jan-27 13:57:57.646234] (todaysmarket.cpp:579)        : Loading spec Yield/CHF/CHF6M done.
+NOTICE   [2019-Jan-27 13:57:57.646249] (todaysmarket.cpp:100)        : Loading spec Yield/EUR/BOND_YIELD_EUR
+NOTICE   [2019-Jan-27 13:57:57.646268] (todaysmarket.cpp:132)        : Adding YieldCurve(BOND_YIELD_EUR) with spec Yield/EUR/BOND_YIELD_EUR to configuration default
+NOTICE   [2019-Jan-27 13:57:57.646289] (todaysmarket.cpp:579)        : Loading spec Yield/EUR/BOND_YIELD_EUR done.
+NOTICE   [2019-Jan-27 13:57:57.646303] (todaysmarket.cpp:100)        : Loading spec Yield/EUR/EUR1D
+NOTICE   [2019-Jan-27 13:57:57.646318] (todaysmarket.cpp:132)        : Adding YieldCurve(EUR) with spec Yield/EUR/EUR1D to configuration default
+NOTICE   [2019-Jan-27 13:57:57.646336] (todaysmarket.cpp:141)        : Adding Index(EUR-EONIA) with spec Yield/EUR/EUR1D to configuration default
+NOTICE   [2019-Jan-27 13:57:57.646369] (todaysmarket.cpp:579)        : Loading spec Yield/EUR/EUR1D done.
+NOTICE   [2019-Jan-27 13:57:57.646383] (todaysmarket.cpp:100)        : Loading spec Yield/EUR/EUR1M
+NOTICE   [2019-Jan-27 13:57:57.646401] (todaysmarket.cpp:141)        : Adding Index(EUR-EURIBOR-1M) with spec Yield/EUR/EUR1M to configuration default
+NOTICE   [2019-Jan-27 13:57:57.646436] (todaysmarket.cpp:579)        : Loading spec Yield/EUR/EUR1M done.
+NOTICE   [2019-Jan-27 13:57:57.646457] (todaysmarket.cpp:100)        : Loading spec Yield/EUR/EUR3M
+NOTICE   [2019-Jan-27 13:57:57.646476] (todaysmarket.cpp:141)        : Adding Index(EUR-EURIBOR-3M) with spec Yield/EUR/EUR3M to configuration default
+NOTICE   [2019-Jan-27 13:57:57.646511] (todaysmarket.cpp:579)        : Loading spec Yield/EUR/EUR3M done.
+NOTICE   [2019-Jan-27 13:57:57.646525] (todaysmarket.cpp:100)        : Loading spec Yield/EUR/EUR6M
+NOTICE   [2019-Jan-27 13:57:57.646543] (todaysmarket.cpp:141)        : Adding Index(EUR-EURIBOR-6M) with spec Yield/EUR/EUR6M to configuration default
+NOTICE   [2019-Jan-27 13:57:57.646575] (todaysmarket.cpp:579)        : Loading spec Yield/EUR/EUR6M done.
+NOTICE   [2019-Jan-27 13:57:57.646590] (todaysmarket.cpp:100)        : Loading spec Yield/GBP/GBP1D
+NOTICE   [2019-Jan-27 13:57:57.646609] (todaysmarket.cpp:141)        : Adding Index(GBP-SONIA) with spec Yield/GBP/GBP1D to configuration default
+NOTICE   [2019-Jan-27 13:57:57.646641] (todaysmarket.cpp:579)        : Loading spec Yield/GBP/GBP1D done.
+NOTICE   [2019-Jan-27 13:57:57.646656] (todaysmarket.cpp:100)        : Loading spec Yield/GBP/GBP6M
+NOTICE   [2019-Jan-27 13:57:57.646673] (todaysmarket.cpp:141)        : Adding Index(GBP-LIBOR-6M) with spec Yield/GBP/GBP6M to configuration default
+NOTICE   [2019-Jan-27 13:57:57.646709] (todaysmarket.cpp:579)        : Loading spec Yield/GBP/GBP6M done.
+NOTICE   [2019-Jan-27 13:57:57.646724] (todaysmarket.cpp:100)        : Loading spec Yield/JPY/JPY1D
+NOTICE   [2019-Jan-27 13:57:57.646744] (todaysmarket.cpp:141)        : Adding Index(JPY-TONAR) with spec Yield/JPY/JPY1D to configuration default
+NOTICE   [2019-Jan-27 13:57:57.646775] (todaysmarket.cpp:579)        : Loading spec Yield/JPY/JPY1D done.
+NOTICE   [2019-Jan-27 13:57:57.646789] (todaysmarket.cpp:100)        : Loading spec Yield/JPY/JPY6M
+NOTICE   [2019-Jan-27 13:57:57.646804] (todaysmarket.cpp:132)        : Adding YieldCurve(JPY) with spec Yield/JPY/JPY6M to configuration default
+NOTICE   [2019-Jan-27 13:57:57.646824] (todaysmarket.cpp:141)        : Adding Index(JPY-LIBOR-6M) with spec Yield/JPY/JPY6M to configuration default
+NOTICE   [2019-Jan-27 13:57:57.646858] (todaysmarket.cpp:579)        : Loading spec Yield/JPY/JPY6M done.
+NOTICE   [2019-Jan-27 13:57:57.646873] (todaysmarket.cpp:100)        : Loading spec Yield/USD/USD1D
+NOTICE   [2019-Jan-27 13:57:57.646892] (todaysmarket.cpp:141)        : Adding Index(USD-FedFunds) with spec Yield/USD/USD1D to configuration default
+NOTICE   [2019-Jan-27 13:57:57.646923] (todaysmarket.cpp:579)        : Loading spec Yield/USD/USD1D done.
+NOTICE   [2019-Jan-27 13:57:57.646938] (todaysmarket.cpp:100)        : Loading spec Yield/USD/USD3M
+NOTICE   [2019-Jan-27 13:57:57.646957] (todaysmarket.cpp:141)        : Adding Index(USD-LIBOR-3M) with spec Yield/USD/USD3M to configuration default
+NOTICE   [2019-Jan-27 13:57:57.646991] (todaysmarket.cpp:579)        : Loading spec Yield/USD/USD3M done.
+NOTICE   [2019-Jan-27 13:57:57.647006] (todaysmarket.cpp:100)        : Loading spec Yield/USD/USD6M
+NOTICE   [2019-Jan-27 13:57:57.647025] (todaysmarket.cpp:141)        : Adding Index(USD-LIBOR-6M) with spec Yield/USD/USD6M to configuration default
+NOTICE   [2019-Jan-27 13:57:57.647057] (todaysmarket.cpp:579)        : Loading spec Yield/USD/USD6M done.
+NOTICE   [2019-Jan-27 13:57:57.647072] (todaysmarket.cpp:100)        : Loading spec Yield/EUR/BANK_EUR_BORROW
+NOTICE   [2019-Jan-27 13:57:57.647089] (todaysmarket.cpp:132)        : Adding YieldCurve(BANK_EUR_BORROW) with spec Yield/EUR/BANK_EUR_BORROW to configuration default
+NOTICE   [2019-Jan-27 13:57:57.647111] (todaysmarket.cpp:579)        : Loading spec Yield/EUR/BANK_EUR_BORROW done.
+NOTICE   [2019-Jan-27 13:57:57.647126] (todaysmarket.cpp:100)        : Loading spec Yield/EUR/BANK_EUR_LEND
+NOTICE   [2019-Jan-27 13:57:57.647143] (todaysmarket.cpp:132)        : Adding YieldCurve(BANK_EUR_LEND) with spec Yield/EUR/BANK_EUR_LEND to configuration default
+NOTICE   [2019-Jan-27 13:57:57.647171] (todaysmarket.cpp:579)        : Loading spec Yield/EUR/BANK_EUR_LEND done.
+NOTICE   [2019-Jan-27 13:57:57.647186] (todaysmarket.cpp:100)        : Loading spec Yield/EUR/BENCHMARK_EUR
+NOTICE   [2019-Jan-27 13:57:57.647204] (todaysmarket.cpp:132)        : Adding YieldCurve(BENCHMARK_EUR) with spec Yield/EUR/BENCHMARK_EUR to configuration default
+NOTICE   [2019-Jan-27 13:57:57.647226] (todaysmarket.cpp:579)        : Loading spec Yield/EUR/BENCHMARK_EUR done.
+NOTICE   [2019-Jan-27 13:57:57.647239] (todaysmarket.cpp:100)        : Loading spec Yield/EUR/EUR12M
+NOTICE   [2019-Jan-27 13:57:57.647259] (todaysmarket.cpp:141)        : Adding Index(EUR-EURIBOR-12M) with spec Yield/EUR/EUR12M to configuration default
+NOTICE   [2019-Jan-27 13:57:57.647293] (todaysmarket.cpp:579)        : Loading spec Yield/EUR/EUR12M done.
+NOTICE   [2019-Jan-27 13:57:57.647307] (todaysmarket.cpp:100)        : Loading spec Yield/GBP/GBP3M
+NOTICE   [2019-Jan-27 13:57:57.647326] (todaysmarket.cpp:141)        : Adding Index(GBP-LIBOR-3M) with spec Yield/GBP/GBP3M to configuration default
+NOTICE   [2019-Jan-27 13:57:57.647360] (todaysmarket.cpp:579)        : Loading spec Yield/GBP/GBP3M done.
+NOTICE   [2019-Jan-27 13:57:57.647374] (todaysmarket.cpp:100)        : Loading spec Yield/USD/USD-IN-EUR
+NOTICE   [2019-Jan-27 13:57:57.647390] (todaysmarket.cpp:132)        : Adding YieldCurve(USD) with spec Yield/USD/USD-IN-EUR to configuration default
+NOTICE   [2019-Jan-27 13:57:57.647412] (todaysmarket.cpp:579)        : Loading spec Yield/USD/USD-IN-EUR done.
+NOTICE   [2019-Jan-27 13:57:57.647426] (todaysmarket.cpp:100)        : Loading spec Yield/GBP/GBP-IN-EUR
+NOTICE   [2019-Jan-27 13:57:57.647441] (todaysmarket.cpp:132)        : Adding YieldCurve(GBP) with spec Yield/GBP/GBP-IN-EUR to configuration default
+NOTICE   [2019-Jan-27 13:57:57.647463] (todaysmarket.cpp:567)        : building swap indices...
+NOTICE   [2019-Jan-27 13:57:57.647515] (todaysmarket.cpp:573)        : Added SwapIndex CHF-CMS-1Y with DiscountingIndex CHF-TOIS
+NOTICE   [2019-Jan-27 13:57:57.647564] (todaysmarket.cpp:573)        : Added SwapIndex CHF-CMS-30Y with DiscountingIndex CHF-TOIS
+NOTICE   [2019-Jan-27 13:57:57.647611] (todaysmarket.cpp:573)        : Added SwapIndex EUR-CMS-1Y with DiscountingIndex EUR-EONIA
+NOTICE   [2019-Jan-27 13:57:57.647656] (todaysmarket.cpp:573)        : Added SwapIndex EUR-CMS-30Y with DiscountingIndex EUR-EONIA
+NOTICE   [2019-Jan-27 13:57:57.647704] (todaysmarket.cpp:573)        : Added SwapIndex GBP-CMS-1Y with DiscountingIndex GBP-SONIA
+NOTICE   [2019-Jan-27 13:57:57.647751] (todaysmarket.cpp:573)        : Added SwapIndex GBP-CMS-30Y with DiscountingIndex GBP-SONIA
+NOTICE   [2019-Jan-27 13:57:57.647797] (todaysmarket.cpp:573)        : Added SwapIndex JPY-CMS-1Y with DiscountingIndex JPY-TONAR
+NOTICE   [2019-Jan-27 13:57:57.647839] (todaysmarket.cpp:573)        : Added SwapIndex JPY-CMS-30Y with DiscountingIndex JPY-TONAR
+NOTICE   [2019-Jan-27 13:57:57.647885] (todaysmarket.cpp:573)        : Added SwapIndex USD-CMS-1Y with DiscountingIndex USD-FedFunds
+NOTICE   [2019-Jan-27 13:57:57.647930] (todaysmarket.cpp:573)        : Added SwapIndex USD-CMS-30Y with DiscountingIndex USD-FedFunds
+NOTICE   [2019-Jan-27 13:57:57.647947] (todaysmarket.cpp:579)        : Loading spec Yield/GBP/GBP-IN-EUR done.
+NOTICE   [2019-Jan-27 13:57:57.647961] (todaysmarket.cpp:100)        : Loading spec CapFloorVolatility/EUR/EUR_CF_N
+NOTICE   [2019-Jan-27 13:57:57.647978] (todaysmarket.cpp:269)        : Adding CapFloorVol (EUR) with spec CapFloorVolatility/EUR/EUR_CF_N to configuration default
+NOTICE   [2019-Jan-27 13:57:57.647998] (todaysmarket.cpp:579)        : Loading spec CapFloorVolatility/EUR/EUR_CF_N done.
+NOTICE   [2019-Jan-27 13:57:57.648011] (todaysmarket.cpp:100)        : Loading spec CapFloorVolatility/GBP/GBP_CF_N
+NOTICE   [2019-Jan-27 13:57:57.648027] (todaysmarket.cpp:269)        : Adding CapFloorVol (GBP) with spec CapFloorVolatility/GBP/GBP_CF_N to configuration default
+NOTICE   [2019-Jan-27 13:57:57.648044] (todaysmarket.cpp:579)        : Loading spec CapFloorVolatility/GBP/GBP_CF_N done.
+NOTICE   [2019-Jan-27 13:57:57.648063] (todaysmarket.cpp:100)        : Loading spec CapFloorVolatility/USD/USD_CF_N
+NOTICE   [2019-Jan-27 13:57:57.648080] (todaysmarket.cpp:269)        : Adding CapFloorVol (USD) with spec CapFloorVolatility/USD/USD_CF_N to configuration default
+NOTICE   [2019-Jan-27 13:57:57.648095] (todaysmarket.cpp:579)        : Loading spec CapFloorVolatility/USD/USD_CF_N done.
+NOTICE   [2019-Jan-27 13:57:57.648109] (todaysmarket.cpp:100)        : Loading spec SwaptionVolatility/CHF/CHF_SW_N
+NOTICE   [2019-Jan-27 13:57:57.648126] (todaysmarket.cpp:224)        : Adding SwaptionVol (CHF) with spec SwaptionVolatility/CHF/CHF_SW_N to configuration default
+NOTICE   [2019-Jan-27 13:57:57.648147] (todaysmarket.cpp:579)        : Loading spec SwaptionVolatility/CHF/CHF_SW_N done.
+NOTICE   [2019-Jan-27 13:57:57.648161] (todaysmarket.cpp:100)        : Loading spec SwaptionVolatility/CHF/JPY_SW_N
+NOTICE   [2019-Jan-27 13:57:57.648177] (todaysmarket.cpp:224)        : Adding SwaptionVol (JPY) with spec SwaptionVolatility/CHF/JPY_SW_N to configuration default
+NOTICE   [2019-Jan-27 13:57:57.648195] (todaysmarket.cpp:579)        : Loading spec SwaptionVolatility/CHF/JPY_SW_N done.
+NOTICE   [2019-Jan-27 13:57:57.648208] (todaysmarket.cpp:100)        : Loading spec SwaptionVolatility/EUR/EUR_SW_N
+NOTICE   [2019-Jan-27 13:57:57.648223] (todaysmarket.cpp:224)        : Adding SwaptionVol (EUR) with spec SwaptionVolatility/EUR/EUR_SW_N to configuration default
+NOTICE   [2019-Jan-27 13:57:57.648243] (todaysmarket.cpp:579)        : Loading spec SwaptionVolatility/EUR/EUR_SW_N done.
+NOTICE   [2019-Jan-27 13:57:57.648257] (todaysmarket.cpp:100)        : Loading spec SwaptionVolatility/GBP/GBP_SW_N
+NOTICE   [2019-Jan-27 13:57:57.648273] (todaysmarket.cpp:224)        : Adding SwaptionVol (GBP) with spec SwaptionVolatility/GBP/GBP_SW_N to configuration default
+NOTICE   [2019-Jan-27 13:57:57.648291] (todaysmarket.cpp:579)        : Loading spec SwaptionVolatility/GBP/GBP_SW_N done.
+NOTICE   [2019-Jan-27 13:57:57.648305] (todaysmarket.cpp:100)        : Loading spec SwaptionVolatility/USD/USD_SW_N
+NOTICE   [2019-Jan-27 13:57:57.648320] (todaysmarket.cpp:224)        : Adding SwaptionVol (USD) with spec SwaptionVolatility/USD/USD_SW_N to configuration default
+NOTICE   [2019-Jan-27 13:57:57.648338] (todaysmarket.cpp:579)        : Loading spec SwaptionVolatility/USD/USD_SW_N done.
+NOTICE   [2019-Jan-27 13:57:57.648352] (todaysmarket.cpp:100)        : Loading spec FX/EUR/CHF
+NOTICE   [2019-Jan-27 13:57:57.648366] (todaysmarket.cpp:166)        : Adding FXSpot (EURCHF) with spec FX/EUR/CHF to configuration default
+NOTICE   [2019-Jan-27 13:57:57.648385] (todaysmarket.cpp:579)        : Loading spec FX/EUR/CHF done.
+NOTICE   [2019-Jan-27 13:57:57.648398] (todaysmarket.cpp:100)        : Loading spec FX/EUR/GBP
+NOTICE   [2019-Jan-27 13:57:57.648412] (todaysmarket.cpp:166)        : Adding FXSpot (EURGBP) with spec FX/EUR/GBP to configuration default
+NOTICE   [2019-Jan-27 13:57:57.648427] (todaysmarket.cpp:579)        : Loading spec FX/EUR/GBP done.
+NOTICE   [2019-Jan-27 13:57:57.648439] (todaysmarket.cpp:100)        : Loading spec FX/EUR/JPY
+NOTICE   [2019-Jan-27 13:57:57.648453] (todaysmarket.cpp:166)        : Adding FXSpot (EURJPY) with spec FX/EUR/JPY to configuration default
+NOTICE   [2019-Jan-27 13:57:57.648469] (todaysmarket.cpp:579)        : Loading spec FX/EUR/JPY done.
+NOTICE   [2019-Jan-27 13:57:57.648483] (todaysmarket.cpp:100)        : Loading spec FX/EUR/USD
+NOTICE   [2019-Jan-27 13:57:57.648496] (todaysmarket.cpp:166)        : Adding FXSpot (EURUSD) with spec FX/EUR/USD to configuration default
+NOTICE   [2019-Jan-27 13:57:57.648511] (todaysmarket.cpp:579)        : Loading spec FX/EUR/USD done.
+NOTICE   [2019-Jan-27 13:57:57.648524] (todaysmarket.cpp:100)        : Loading spec FXVolatility/EUR/CHF/EURCHF
+NOTICE   [2019-Jan-27 13:57:57.648540] (todaysmarket.cpp:193)        : Adding FXVol (EURCHF) with spec FXVolatility/EUR/CHF/EURCHF to configuration default
+NOTICE   [2019-Jan-27 13:57:57.648559] (todaysmarket.cpp:579)        : Loading spec FXVolatility/EUR/CHF/EURCHF done.
+NOTICE   [2019-Jan-27 13:57:57.648579] (todaysmarket.cpp:100)        : Loading spec FXVolatility/EUR/GBP/EURGBP
+NOTICE   [2019-Jan-27 13:57:57.648595] (todaysmarket.cpp:193)        : Adding FXVol (EURGBP) with spec FXVolatility/EUR/GBP/EURGBP to configuration default
+NOTICE   [2019-Jan-27 13:57:57.648615] (todaysmarket.cpp:579)        : Loading spec FXVolatility/EUR/GBP/EURGBP done.
+NOTICE   [2019-Jan-27 13:57:57.648629] (todaysmarket.cpp:100)        : Loading spec FXVolatility/EUR/JPY/EURJPY
+NOTICE   [2019-Jan-27 13:57:57.648645] (todaysmarket.cpp:193)        : Adding FXVol (EURJPY) with spec FXVolatility/EUR/JPY/EURJPY to configuration default
+NOTICE   [2019-Jan-27 13:57:57.648663] (todaysmarket.cpp:579)        : Loading spec FXVolatility/EUR/JPY/EURJPY done.
+NOTICE   [2019-Jan-27 13:57:57.648676] (todaysmarket.cpp:100)        : Loading spec FXVolatility/EUR/USD/EURUSD
+NOTICE   [2019-Jan-27 13:57:57.648692] (todaysmarket.cpp:193)        : Adding FXVol (EURUSD) with spec FXVolatility/EUR/USD/EURUSD to configuration default
+NOTICE   [2019-Jan-27 13:57:57.648708] (todaysmarket.cpp:579)        : Loading spec FXVolatility/EUR/USD/EURUSD done.
+NOTICE   [2019-Jan-27 13:57:57.648722] (todaysmarket.cpp:100)        : Loading spec FXVolatility/GBP/USD/GBPUSD
+NOTICE   [2019-Jan-27 13:57:57.648738] (todaysmarket.cpp:193)        : Adding FXVol (GBPUSD) with spec FXVolatility/GBP/USD/GBPUSD to configuration default
+NOTICE   [2019-Jan-27 13:57:57.648754] (todaysmarket.cpp:579)        : Loading spec FXVolatility/GBP/USD/GBPUSD done.
+NOTICE   [2019-Jan-27 13:57:57.648768] (todaysmarket.cpp:100)        : Loading spec Default/EUR/BOND_YIELD_EUR_OVER_OIS
+NOTICE   [2019-Jan-27 13:57:57.648785] (todaysmarket.cpp:294)        : Adding DefaultCurve (BOND_YIELD_EUR_OVER_OIS) with spec Default/EUR/BOND_YIELD_EUR_OVER_OIS to configuration default
+NOTICE   [2019-Jan-27 13:57:57.648808] (todaysmarket.cpp:579)        : Loading spec Default/EUR/BOND_YIELD_EUR_OVER_OIS done.
+NOTICE   [2019-Jan-27 13:57:57.648822] (todaysmarket.cpp:100)        : Loading spec Default/EUR/CPTY_C_SR_EUR
+NOTICE   [2019-Jan-27 13:57:57.648839] (todaysmarket.cpp:294)        : Adding DefaultCurve (CPTY_C) with spec Default/EUR/CPTY_C_SR_EUR to configuration default
+NOTICE   [2019-Jan-27 13:57:57.648858] (todaysmarket.cpp:579)        : Loading spec Default/EUR/CPTY_C_SR_EUR done.
+NOTICE   [2019-Jan-27 13:57:57.648872] (todaysmarket.cpp:100)        : Loading spec Default/USD/BANK_SR_USD
+NOTICE   [2019-Jan-27 13:57:57.648887] (todaysmarket.cpp:294)        : Adding DefaultCurve (BANK) with spec Default/USD/BANK_SR_USD to configuration default
+NOTICE   [2019-Jan-27 13:57:57.648908] (todaysmarket.cpp:579)        : Loading spec Default/USD/BANK_SR_USD done.
+NOTICE   [2019-Jan-27 13:57:57.648921] (todaysmarket.cpp:100)        : Loading spec Default/USD/CPTY_A_SR_USD
+NOTICE   [2019-Jan-27 13:57:57.648937] (todaysmarket.cpp:294)        : Adding DefaultCurve (CPTY_A) with spec Default/USD/CPTY_A_SR_USD to configuration default
+NOTICE   [2019-Jan-27 13:57:57.648957] (todaysmarket.cpp:294)        : Adding DefaultCurve (CPTY_B) with spec Default/USD/CPTY_A_SR_USD to configuration default
+NOTICE   [2019-Jan-27 13:57:57.648978] (todaysmarket.cpp:579)        : Loading spec Default/USD/CPTY_A_SR_USD done.
+NOTICE   [2019-Jan-27 13:57:57.648991] (todaysmarket.cpp:100)        : Loading spec Inflation/EUHICP/EUHICP_ZC_Swaps
+NOTICE   [2019-Jan-27 13:57:57.649009] (todaysmarket.cpp:386)        : Adding ZeroInflationIndex (EUHICP) with spec Inflation/EUHICP/EUHICP_ZC_Swaps to configuration default
+NOTICE   [2019-Jan-27 13:57:57.649041] (todaysmarket.cpp:579)        : Loading spec Inflation/EUHICP/EUHICP_ZC_Swaps done.
+NOTICE   [2019-Jan-27 13:57:57.649056] (todaysmarket.cpp:100)        : Loading spec Inflation/EUHICPXT/EUHICPXT_YY_Swaps
+NOTICE   [2019-Jan-27 13:57:57.649076] (todaysmarket.cpp:408)        : Adding YoYInflationIndex (EUHICPXT) with spec Inflation/EUHICPXT/EUHICPXT_YY_Swaps to configuration default
+NOTICE   [2019-Jan-27 13:57:57.649112] (todaysmarket.cpp:579)        : Loading spec Inflation/EUHICPXT/EUHICPXT_YY_Swaps done.
+NOTICE   [2019-Jan-27 13:57:57.649128] (todaysmarket.cpp:100)        : Loading spec Inflation/EUHICPXT/EUHICPXT_ZC_Swaps
+NOTICE   [2019-Jan-27 13:57:57.649145] (todaysmarket.cpp:386)        : Adding ZeroInflationIndex (EUHICPXT) with spec Inflation/EUHICPXT/EUHICPXT_ZC_Swaps to configuration default
+NOTICE   [2019-Jan-27 13:57:57.649171] (todaysmarket.cpp:579)        : Loading spec Inflation/EUHICPXT/EUHICPXT_ZC_Swaps done.
+NOTICE   [2019-Jan-27 13:57:57.649186] (todaysmarket.cpp:100)        : Loading spec Inflation/FRHICP/FRHICP_ZC_Swaps
+NOTICE   [2019-Jan-27 13:57:57.649202] (todaysmarket.cpp:386)        : Adding ZeroInflationIndex (FRHICP) with spec Inflation/FRHICP/FRHICP_ZC_Swaps to configuration default
+NOTICE   [2019-Jan-27 13:57:57.649228] (todaysmarket.cpp:579)        : Loading spec Inflation/FRHICP/FRHICP_ZC_Swaps done.
+NOTICE   [2019-Jan-27 13:57:57.649243] (todaysmarket.cpp:100)        : Loading spec Inflation/UKRPI/UKRPI_ZC_Swaps
+NOTICE   [2019-Jan-27 13:57:57.649260] (todaysmarket.cpp:386)        : Adding ZeroInflationIndex (UKRPI) with spec Inflation/UKRPI/UKRPI_ZC_Swaps to configuration default
+NOTICE   [2019-Jan-27 13:57:57.649286] (todaysmarket.cpp:579)        : Loading spec Inflation/UKRPI/UKRPI_ZC_Swaps done.
+NOTICE   [2019-Jan-27 13:57:57.649300] (todaysmarket.cpp:100)        : Loading spec Inflation/USCPI/USCPI_ZC_Swaps
+NOTICE   [2019-Jan-27 13:57:57.649317] (todaysmarket.cpp:386)        : Adding ZeroInflationIndex (USCPI) with spec Inflation/USCPI/USCPI_ZC_Swaps to configuration default
+NOTICE   [2019-Jan-27 13:57:57.649344] (todaysmarket.cpp:579)        : Loading spec Inflation/USCPI/USCPI_ZC_Swaps done.
+NOTICE   [2019-Jan-27 13:57:57.649358] (todaysmarket.cpp:100)        : Loading spec Inflation/ZACPI/ZACPI_ZC_Swaps
+NOTICE   [2019-Jan-27 13:57:57.649376] (todaysmarket.cpp:386)        : Adding ZeroInflationIndex (ZACPI) with spec Inflation/ZACPI/ZACPI_ZC_Swaps to configuration default
+NOTICE   [2019-Jan-27 13:57:57.649402] (todaysmarket.cpp:579)        : Loading spec Inflation/ZACPI/ZACPI_ZC_Swaps done.
+NOTICE   [2019-Jan-27 13:57:57.649416] (todaysmarket.cpp:100)        : Loading spec InflationCapFloorPrice/EUHICPXT/EUHICPXT_ZC_CF
+NOTICE   [2019-Jan-27 13:57:57.649432] (todaysmarket.cpp:442)        : Adding InflationCapFloorPriceSurface (EUHICPXT) with spec InflationCapFloorPrice/EUHICPXT/EUHICPXT_ZC_CF to configuration default
+NOTICE   [2019-Jan-27 13:57:57.649451] (todaysmarket.cpp:579)        : Loading spec InflationCapFloorPrice/EUHICPXT/EUHICPXT_ZC_CF done.
+NOTICE   [2019-Jan-27 13:57:57.649466] (todaysmarket.cpp:100)        : Loading spec InflationCapFloorPrice/UKRPI/UKRPI_ZC_CF
+NOTICE   [2019-Jan-27 13:57:57.649482] (todaysmarket.cpp:442)        : Adding InflationCapFloorPriceSurface (UKRPI) with spec InflationCapFloorPrice/UKRPI/UKRPI_ZC_CF to configuration default
+NOTICE   [2019-Jan-27 13:57:57.649499] (todaysmarket.cpp:579)        : Loading spec InflationCapFloorPrice/UKRPI/UKRPI_ZC_CF done.
+NOTICE   [2019-Jan-27 13:57:57.649512] (todaysmarket.cpp:100)        : Loading spec InflationCapFloorPrice/USCPI/USCPI_ZC_CF
+NOTICE   [2019-Jan-27 13:57:57.649528] (todaysmarket.cpp:442)        : Adding InflationCapFloorPriceSurface (USCPI) with spec InflationCapFloorPrice/USCPI/USCPI_ZC_CF to configuration default
+NOTICE   [2019-Jan-27 13:57:57.649545] (todaysmarket.cpp:579)        : Loading spec InflationCapFloorPrice/USCPI/USCPI_ZC_CF done.
+NOTICE   [2019-Jan-27 13:57:57.649558] (todaysmarket.cpp:100)        : Loading spec Equity/EUR/Lufthansa
+NOTICE   [2019-Jan-27 13:57:57.649573] (todaysmarket.cpp:467)        : Adding EquityCurve (Lufthansa) with spec Equity/EUR/Lufthansa to configuration default
+NOTICE   [2019-Jan-27 13:57:57.649612] (todaysmarket.cpp:579)        : Loading spec Equity/EUR/Lufthansa done.
+NOTICE   [2019-Jan-27 13:57:57.649627] (todaysmarket.cpp:100)        : Loading spec Equity/USD/SP5
+NOTICE   [2019-Jan-27 13:57:57.649642] (todaysmarket.cpp:467)        : Adding EquityCurve (SP5) with spec Equity/USD/SP5 to configuration default
+NOTICE   [2019-Jan-27 13:57:57.649677] (todaysmarket.cpp:579)        : Loading spec Equity/USD/SP5 done.
+NOTICE   [2019-Jan-27 13:57:57.649692] (todaysmarket.cpp:100)        : Loading spec EquityVolatility/EUR/Lufthansa
+NOTICE   [2019-Jan-27 13:57:57.649707] (todaysmarket.cpp:505)        : Adding EquityVol (Lufthansa) with spec EquityVolatility/EUR/Lufthansa to configuration default
+NOTICE   [2019-Jan-27 13:57:57.649732] (todaysmarket.cpp:579)        : Loading spec EquityVolatility/EUR/Lufthansa done.
+NOTICE   [2019-Jan-27 13:57:57.649747] (todaysmarket.cpp:100)        : Loading spec EquityVolatility/USD/SP5
+NOTICE   [2019-Jan-27 13:57:57.649761] (todaysmarket.cpp:505)        : Adding EquityVol (SP5) with spec EquityVolatility/USD/SP5 to configuration default
+NOTICE   [2019-Jan-27 13:57:57.649783] (todaysmarket.cpp:579)        : Loading spec EquityVolatility/USD/SP5 done.
+NOTICE   [2019-Jan-27 13:57:57.649798] (todaysmarket.cpp:100)        : Loading spec Security/SECURITY_1
+NOTICE   [2019-Jan-27 13:57:57.649813] (todaysmarket.cpp:546)        : Adding Security (SECURITY_1) with spec Security/SECURITY_1 to configuration default
+NOTICE   [2019-Jan-27 13:57:57.649830] (todaysmarket.cpp:579)        : Loading spec Security/SECURITY_1 done.
+NOTICE   [2019-Jan-27 13:57:57.649843] (todaysmarket.cpp:581)        : Loading 0 CurveSpecs done.
+NOTICE   [2019-Jan-27 13:57:57.649861] (todaysmarket.cpp:79)         : Build objects in TodaysMarket configuration libor
+NOTICE   [2019-Jan-27 13:57:57.650382] (todaysmarket.cpp:100)        : Loading spec Yield/CHF/CHF1D
+NOTICE   [2019-Jan-27 13:57:57.650408] (todaysmarket.cpp:141)        : Adding Index(CHF-TOIS) with spec Yield/CHF/CHF1D to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.650443] (todaysmarket.cpp:579)        : Loading spec Yield/CHF/CHF1D done.
+NOTICE   [2019-Jan-27 13:57:57.650458] (todaysmarket.cpp:100)        : Loading spec Yield/CHF/CHF3M
+NOTICE   [2019-Jan-27 13:57:57.650475] (todaysmarket.cpp:141)        : Adding Index(CHF-LIBOR-3M) with spec Yield/CHF/CHF3M to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.650513] (todaysmarket.cpp:579)        : Loading spec Yield/CHF/CHF3M done.
+NOTICE   [2019-Jan-27 13:57:57.650529] (todaysmarket.cpp:100)        : Loading spec Yield/CHF/CHF6M
+NOTICE   [2019-Jan-27 13:57:57.650544] (todaysmarket.cpp:132)        : Adding YieldCurve(CHF) with spec Yield/CHF/CHF6M to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.650563] (todaysmarket.cpp:141)        : Adding Index(CHF-LIBOR-6M) with spec Yield/CHF/CHF6M to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.650599] (todaysmarket.cpp:579)        : Loading spec Yield/CHF/CHF6M done.
+NOTICE   [2019-Jan-27 13:57:57.650613] (todaysmarket.cpp:100)        : Loading spec Yield/EUR/BOND_YIELD_EUR
+NOTICE   [2019-Jan-27 13:57:57.650632] (todaysmarket.cpp:132)        : Adding YieldCurve(BOND_YIELD_EUR) with spec Yield/EUR/BOND_YIELD_EUR to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.650654] (todaysmarket.cpp:579)        : Loading spec Yield/EUR/BOND_YIELD_EUR done.
+NOTICE   [2019-Jan-27 13:57:57.650668] (todaysmarket.cpp:100)        : Loading spec Yield/EUR/EUR1D
+NOTICE   [2019-Jan-27 13:57:57.650686] (todaysmarket.cpp:141)        : Adding Index(EUR-EONIA) with spec Yield/EUR/EUR1D to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.650718] (todaysmarket.cpp:579)        : Loading spec Yield/EUR/EUR1D done.
+NOTICE   [2019-Jan-27 13:57:57.650731] (todaysmarket.cpp:100)        : Loading spec Yield/EUR/EUR1M
+NOTICE   [2019-Jan-27 13:57:57.650748] (todaysmarket.cpp:141)        : Adding Index(EUR-EURIBOR-1M) with spec Yield/EUR/EUR1M to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.650780] (todaysmarket.cpp:579)        : Loading spec Yield/EUR/EUR1M done.
+NOTICE   [2019-Jan-27 13:57:57.650794] (todaysmarket.cpp:100)        : Loading spec Yield/EUR/EUR3M
+NOTICE   [2019-Jan-27 13:57:57.650813] (todaysmarket.cpp:141)        : Adding Index(EUR-EURIBOR-3M) with spec Yield/EUR/EUR3M to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.650852] (todaysmarket.cpp:579)        : Loading spec Yield/EUR/EUR3M done.
+NOTICE   [2019-Jan-27 13:57:57.650867] (todaysmarket.cpp:100)        : Loading spec Yield/EUR/EUR6M
+NOTICE   [2019-Jan-27 13:57:57.650881] (todaysmarket.cpp:132)        : Adding YieldCurve(EUR) with spec Yield/EUR/EUR6M to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.650899] (todaysmarket.cpp:132)        : Adding YieldCurve(EUR-EURIBOR-6M) with spec Yield/EUR/EUR6M to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.650917] (todaysmarket.cpp:141)        : Adding Index(EUR-EURIBOR-6M) with spec Yield/EUR/EUR6M to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.650949] (todaysmarket.cpp:579)        : Loading spec Yield/EUR/EUR6M done.
+NOTICE   [2019-Jan-27 13:57:57.650965] (todaysmarket.cpp:100)        : Loading spec Yield/GBP/GBP1D
+NOTICE   [2019-Jan-27 13:57:57.650984] (todaysmarket.cpp:141)        : Adding Index(GBP-SONIA) with spec Yield/GBP/GBP1D to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.651015] (todaysmarket.cpp:579)        : Loading spec Yield/GBP/GBP1D done.
+NOTICE   [2019-Jan-27 13:57:57.651030] (todaysmarket.cpp:100)        : Loading spec Yield/GBP/GBP6M
+NOTICE   [2019-Jan-27 13:57:57.651044] (todaysmarket.cpp:132)        : Adding YieldCurve(GBP) with spec Yield/GBP/GBP6M to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.651063] (todaysmarket.cpp:141)        : Adding Index(GBP-LIBOR-6M) with spec Yield/GBP/GBP6M to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.651097] (todaysmarket.cpp:579)        : Loading spec Yield/GBP/GBP6M done.
+NOTICE   [2019-Jan-27 13:57:57.651112] (todaysmarket.cpp:100)        : Loading spec Yield/JPY/JPY1D
+NOTICE   [2019-Jan-27 13:57:57.651132] (todaysmarket.cpp:141)        : Adding Index(JPY-TONAR) with spec Yield/JPY/JPY1D to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.651162] (todaysmarket.cpp:579)        : Loading spec Yield/JPY/JPY1D done.
+NOTICE   [2019-Jan-27 13:57:57.651177] (todaysmarket.cpp:100)        : Loading spec Yield/JPY/JPY6M
+NOTICE   [2019-Jan-27 13:57:57.651192] (todaysmarket.cpp:132)        : Adding YieldCurve(JPY) with spec Yield/JPY/JPY6M to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.651211] (todaysmarket.cpp:141)        : Adding Index(JPY-LIBOR-6M) with spec Yield/JPY/JPY6M to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.651244] (todaysmarket.cpp:579)        : Loading spec Yield/JPY/JPY6M done.
+NOTICE   [2019-Jan-27 13:57:57.651259] (todaysmarket.cpp:100)        : Loading spec Yield/USD/USD1D
+NOTICE   [2019-Jan-27 13:57:57.651280] (todaysmarket.cpp:141)        : Adding Index(USD-FedFunds) with spec Yield/USD/USD1D to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.651309] (todaysmarket.cpp:579)        : Loading spec Yield/USD/USD1D done.
+NOTICE   [2019-Jan-27 13:57:57.651324] (todaysmarket.cpp:100)        : Loading spec Yield/USD/USD3M
+NOTICE   [2019-Jan-27 13:57:57.651340] (todaysmarket.cpp:132)        : Adding YieldCurve(USD) with spec Yield/USD/USD3M to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.651360] (todaysmarket.cpp:141)        : Adding Index(USD-LIBOR-3M) with spec Yield/USD/USD3M to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.651392] (todaysmarket.cpp:579)        : Loading spec Yield/USD/USD3M done.
+NOTICE   [2019-Jan-27 13:57:57.651406] (todaysmarket.cpp:100)        : Loading spec Yield/USD/USD6M
+NOTICE   [2019-Jan-27 13:57:57.651425] (todaysmarket.cpp:141)        : Adding Index(USD-LIBOR-6M) with spec Yield/USD/USD6M to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.651456] (todaysmarket.cpp:579)        : Loading spec Yield/USD/USD6M done.
+NOTICE   [2019-Jan-27 13:57:57.651471] (todaysmarket.cpp:100)        : Loading spec Yield/EUR/BANK_EUR_BORROW
+NOTICE   [2019-Jan-27 13:57:57.651488] (todaysmarket.cpp:132)        : Adding YieldCurve(BANK_EUR_BORROW) with spec Yield/EUR/BANK_EUR_BORROW to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.651512] (todaysmarket.cpp:579)        : Loading spec Yield/EUR/BANK_EUR_BORROW done.
+NOTICE   [2019-Jan-27 13:57:57.651526] (todaysmarket.cpp:100)        : Loading spec Yield/EUR/BANK_EUR_LEND
+NOTICE   [2019-Jan-27 13:57:57.651549] (todaysmarket.cpp:132)        : Adding YieldCurve(BANK_EUR_LEND) with spec Yield/EUR/BANK_EUR_LEND to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.651573] (todaysmarket.cpp:579)        : Loading spec Yield/EUR/BANK_EUR_LEND done.
+NOTICE   [2019-Jan-27 13:57:57.651587] (todaysmarket.cpp:100)        : Loading spec Yield/EUR/BENCHMARK_EUR
+NOTICE   [2019-Jan-27 13:57:57.651604] (todaysmarket.cpp:132)        : Adding YieldCurve(BENCHMARK_EUR) with spec Yield/EUR/BENCHMARK_EUR to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.651625] (todaysmarket.cpp:579)        : Loading spec Yield/EUR/BENCHMARK_EUR done.
+NOTICE   [2019-Jan-27 13:57:57.651647] (todaysmarket.cpp:100)        : Loading spec Yield/EUR/EUR12M
+NOTICE   [2019-Jan-27 13:57:57.651667] (todaysmarket.cpp:141)        : Adding Index(EUR-EURIBOR-12M) with spec Yield/EUR/EUR12M to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.651710] (todaysmarket.cpp:579)        : Loading spec Yield/EUR/EUR12M done.
+NOTICE   [2019-Jan-27 13:57:57.651725] (todaysmarket.cpp:100)        : Loading spec Yield/GBP/GBP3M
+NOTICE   [2019-Jan-27 13:57:57.651744] (todaysmarket.cpp:141)        : Adding Index(GBP-LIBOR-3M) with spec Yield/GBP/GBP3M to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.651778] (todaysmarket.cpp:567)        : building swap indices...
+NOTICE   [2019-Jan-27 13:57:57.651828] (todaysmarket.cpp:573)        : Added SwapIndex CHF-CMS-1Y with DiscountingIndex CHF-TOIS
+NOTICE   [2019-Jan-27 13:57:57.651873] (todaysmarket.cpp:573)        : Added SwapIndex CHF-CMS-30Y with DiscountingIndex CHF-TOIS
+NOTICE   [2019-Jan-27 13:57:57.651918] (todaysmarket.cpp:573)        : Added SwapIndex EUR-CMS-1Y with DiscountingIndex EUR-EONIA
+NOTICE   [2019-Jan-27 13:57:57.651963] (todaysmarket.cpp:573)        : Added SwapIndex EUR-CMS-30Y with DiscountingIndex EUR-EONIA
+NOTICE   [2019-Jan-27 13:57:57.652006] (todaysmarket.cpp:573)        : Added SwapIndex GBP-CMS-1Y with DiscountingIndex GBP-SONIA
+NOTICE   [2019-Jan-27 13:57:57.652051] (todaysmarket.cpp:573)        : Added SwapIndex GBP-CMS-30Y with DiscountingIndex GBP-SONIA
+NOTICE   [2019-Jan-27 13:57:57.652095] (todaysmarket.cpp:573)        : Added SwapIndex JPY-CMS-1Y with DiscountingIndex JPY-TONAR
+NOTICE   [2019-Jan-27 13:57:57.652139] (todaysmarket.cpp:573)        : Added SwapIndex JPY-CMS-30Y with DiscountingIndex JPY-TONAR
+NOTICE   [2019-Jan-27 13:57:57.652184] (todaysmarket.cpp:573)        : Added SwapIndex USD-CMS-1Y with DiscountingIndex USD-FedFunds
+NOTICE   [2019-Jan-27 13:57:57.652229] (todaysmarket.cpp:573)        : Added SwapIndex USD-CMS-30Y with DiscountingIndex USD-FedFunds
+NOTICE   [2019-Jan-27 13:57:57.652245] (todaysmarket.cpp:579)        : Loading spec Yield/GBP/GBP3M done.
+NOTICE   [2019-Jan-27 13:57:57.652259] (todaysmarket.cpp:100)        : Loading spec CapFloorVolatility/EUR/EUR_CF_N
+NOTICE   [2019-Jan-27 13:57:57.652276] (todaysmarket.cpp:269)        : Adding CapFloorVol (EUR) with spec CapFloorVolatility/EUR/EUR_CF_N to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.652293] (todaysmarket.cpp:579)        : Loading spec CapFloorVolatility/EUR/EUR_CF_N done.
+NOTICE   [2019-Jan-27 13:57:57.652307] (todaysmarket.cpp:100)        : Loading spec CapFloorVolatility/GBP/GBP_CF_N
+NOTICE   [2019-Jan-27 13:57:57.652322] (todaysmarket.cpp:269)        : Adding CapFloorVol (GBP) with spec CapFloorVolatility/GBP/GBP_CF_N to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.652339] (todaysmarket.cpp:579)        : Loading spec CapFloorVolatility/GBP/GBP_CF_N done.
+NOTICE   [2019-Jan-27 13:57:57.652352] (todaysmarket.cpp:100)        : Loading spec CapFloorVolatility/USD/USD_CF_N
+NOTICE   [2019-Jan-27 13:57:57.652368] (todaysmarket.cpp:269)        : Adding CapFloorVol (USD) with spec CapFloorVolatility/USD/USD_CF_N to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.652384] (todaysmarket.cpp:579)        : Loading spec CapFloorVolatility/USD/USD_CF_N done.
+NOTICE   [2019-Jan-27 13:57:57.652397] (todaysmarket.cpp:100)        : Loading spec SwaptionVolatility/CHF/CHF_SW_N
+NOTICE   [2019-Jan-27 13:57:57.652419] (todaysmarket.cpp:224)        : Adding SwaptionVol (CHF) with spec SwaptionVolatility/CHF/CHF_SW_N to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.652440] (todaysmarket.cpp:579)        : Loading spec SwaptionVolatility/CHF/CHF_SW_N done.
+NOTICE   [2019-Jan-27 13:57:57.652454] (todaysmarket.cpp:100)        : Loading spec SwaptionVolatility/CHF/JPY_SW_N
+NOTICE   [2019-Jan-27 13:57:57.652470] (todaysmarket.cpp:224)        : Adding SwaptionVol (JPY) with spec SwaptionVolatility/CHF/JPY_SW_N to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.652487] (todaysmarket.cpp:579)        : Loading spec SwaptionVolatility/CHF/JPY_SW_N done.
+NOTICE   [2019-Jan-27 13:57:57.652501] (todaysmarket.cpp:100)        : Loading spec SwaptionVolatility/EUR/EUR_SW_N
+NOTICE   [2019-Jan-27 13:57:57.652516] (todaysmarket.cpp:224)        : Adding SwaptionVol (EUR) with spec SwaptionVolatility/EUR/EUR_SW_N to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.652535] (todaysmarket.cpp:579)        : Loading spec SwaptionVolatility/EUR/EUR_SW_N done.
+NOTICE   [2019-Jan-27 13:57:57.652550] (todaysmarket.cpp:100)        : Loading spec SwaptionVolatility/GBP/GBP_SW_N
+NOTICE   [2019-Jan-27 13:57:57.652566] (todaysmarket.cpp:224)        : Adding SwaptionVol (GBP) with spec SwaptionVolatility/GBP/GBP_SW_N to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.652585] (todaysmarket.cpp:579)        : Loading spec SwaptionVolatility/GBP/GBP_SW_N done.
+NOTICE   [2019-Jan-27 13:57:57.652598] (todaysmarket.cpp:100)        : Loading spec SwaptionVolatility/USD/USD_SW_N
+NOTICE   [2019-Jan-27 13:57:57.652615] (todaysmarket.cpp:224)        : Adding SwaptionVol (USD) with spec SwaptionVolatility/USD/USD_SW_N to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.652632] (todaysmarket.cpp:579)        : Loading spec SwaptionVolatility/USD/USD_SW_N done.
+NOTICE   [2019-Jan-27 13:57:57.652645] (todaysmarket.cpp:100)        : Loading spec FX/EUR/CHF
+NOTICE   [2019-Jan-27 13:57:57.652659] (todaysmarket.cpp:166)        : Adding FXSpot (EURCHF) with spec FX/EUR/CHF to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.652677] (todaysmarket.cpp:579)        : Loading spec FX/EUR/CHF done.
+NOTICE   [2019-Jan-27 13:57:57.652690] (todaysmarket.cpp:100)        : Loading spec FX/EUR/GBP
+NOTICE   [2019-Jan-27 13:57:57.652705] (todaysmarket.cpp:166)        : Adding FXSpot (EURGBP) with spec FX/EUR/GBP to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.652720] (todaysmarket.cpp:579)        : Loading spec FX/EUR/GBP done.
+NOTICE   [2019-Jan-27 13:57:57.652733] (todaysmarket.cpp:100)        : Loading spec FX/EUR/JPY
+NOTICE   [2019-Jan-27 13:57:57.652747] (todaysmarket.cpp:166)        : Adding FXSpot (EURJPY) with spec FX/EUR/JPY to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.652762] (todaysmarket.cpp:579)        : Loading spec FX/EUR/JPY done.
+NOTICE   [2019-Jan-27 13:57:57.652775] (todaysmarket.cpp:100)        : Loading spec FX/EUR/USD
+NOTICE   [2019-Jan-27 13:57:57.652789] (todaysmarket.cpp:166)        : Adding FXSpot (EURUSD) with spec FX/EUR/USD to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.652803] (todaysmarket.cpp:579)        : Loading spec FX/EUR/USD done.
+NOTICE   [2019-Jan-27 13:57:57.652817] (todaysmarket.cpp:100)        : Loading spec FXVolatility/EUR/CHF/EURCHF
+NOTICE   [2019-Jan-27 13:57:57.652832] (todaysmarket.cpp:193)        : Adding FXVol (EURCHF) with spec FXVolatility/EUR/CHF/EURCHF to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.652851] (todaysmarket.cpp:579)        : Loading spec FXVolatility/EUR/CHF/EURCHF done.
+NOTICE   [2019-Jan-27 13:57:57.652864] (todaysmarket.cpp:100)        : Loading spec FXVolatility/EUR/GBP/EURGBP
+NOTICE   [2019-Jan-27 13:57:57.652879] (todaysmarket.cpp:193)        : Adding FXVol (EURGBP) with spec FXVolatility/EUR/GBP/EURGBP to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.652898] (todaysmarket.cpp:579)        : Loading spec FXVolatility/EUR/GBP/EURGBP done.
+NOTICE   [2019-Jan-27 13:57:57.652911] (todaysmarket.cpp:100)        : Loading spec FXVolatility/EUR/JPY/EURJPY
+NOTICE   [2019-Jan-27 13:57:57.652932] (todaysmarket.cpp:193)        : Adding FXVol (EURJPY) with spec FXVolatility/EUR/JPY/EURJPY to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.652950] (todaysmarket.cpp:579)        : Loading spec FXVolatility/EUR/JPY/EURJPY done.
+NOTICE   [2019-Jan-27 13:57:57.652963] (todaysmarket.cpp:100)        : Loading spec FXVolatility/EUR/USD/EURUSD
+NOTICE   [2019-Jan-27 13:57:57.652979] (todaysmarket.cpp:193)        : Adding FXVol (EURUSD) with spec FXVolatility/EUR/USD/EURUSD to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.652996] (todaysmarket.cpp:579)        : Loading spec FXVolatility/EUR/USD/EURUSD done.
+NOTICE   [2019-Jan-27 13:57:57.653010] (todaysmarket.cpp:100)        : Loading spec FXVolatility/GBP/USD/GBPUSD
+NOTICE   [2019-Jan-27 13:57:57.653026] (todaysmarket.cpp:193)        : Adding FXVol (GBPUSD) with spec FXVolatility/GBP/USD/GBPUSD to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.653043] (todaysmarket.cpp:579)        : Loading spec FXVolatility/GBP/USD/GBPUSD done.
+NOTICE   [2019-Jan-27 13:57:57.653057] (todaysmarket.cpp:100)        : Loading spec Default/EUR/BOND_YIELD_EUR_OVER_OIS
+NOTICE   [2019-Jan-27 13:57:57.653074] (todaysmarket.cpp:294)        : Adding DefaultCurve (BOND_YIELD_EUR_OVER_OIS) with spec Default/EUR/BOND_YIELD_EUR_OVER_OIS to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.653096] (todaysmarket.cpp:579)        : Loading spec Default/EUR/BOND_YIELD_EUR_OVER_OIS done.
+NOTICE   [2019-Jan-27 13:57:57.653109] (todaysmarket.cpp:100)        : Loading spec Default/EUR/CPTY_C_SR_EUR
+NOTICE   [2019-Jan-27 13:57:57.653126] (todaysmarket.cpp:294)        : Adding DefaultCurve (CPTY_C) with spec Default/EUR/CPTY_C_SR_EUR to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.653146] (todaysmarket.cpp:579)        : Loading spec Default/EUR/CPTY_C_SR_EUR done.
+NOTICE   [2019-Jan-27 13:57:57.653160] (todaysmarket.cpp:100)        : Loading spec Default/USD/BANK_SR_USD
+NOTICE   [2019-Jan-27 13:57:57.653175] (todaysmarket.cpp:294)        : Adding DefaultCurve (BANK) with spec Default/USD/BANK_SR_USD to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.653197] (todaysmarket.cpp:579)        : Loading spec Default/USD/BANK_SR_USD done.
+NOTICE   [2019-Jan-27 13:57:57.653211] (todaysmarket.cpp:100)        : Loading spec Default/USD/CPTY_A_SR_USD
+NOTICE   [2019-Jan-27 13:57:57.653227] (todaysmarket.cpp:294)        : Adding DefaultCurve (CPTY_A) with spec Default/USD/CPTY_A_SR_USD to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.653246] (todaysmarket.cpp:294)        : Adding DefaultCurve (CPTY_B) with spec Default/USD/CPTY_A_SR_USD to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.653267] (todaysmarket.cpp:579)        : Loading spec Default/USD/CPTY_A_SR_USD done.
+NOTICE   [2019-Jan-27 13:57:57.653281] (todaysmarket.cpp:100)        : Loading spec Inflation/EUHICP/EUHICP_ZC_Swaps
+NOTICE   [2019-Jan-27 13:57:57.653298] (todaysmarket.cpp:386)        : Adding ZeroInflationIndex (EUHICP) with spec Inflation/EUHICP/EUHICP_ZC_Swaps to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.653328] (todaysmarket.cpp:579)        : Loading spec Inflation/EUHICP/EUHICP_ZC_Swaps done.
+NOTICE   [2019-Jan-27 13:57:57.653343] (todaysmarket.cpp:100)        : Loading spec Inflation/EUHICPXT/EUHICPXT_YY_Swaps
+NOTICE   [2019-Jan-27 13:57:57.653363] (todaysmarket.cpp:408)        : Adding YoYInflationIndex (EUHICPXT) with spec Inflation/EUHICPXT/EUHICPXT_YY_Swaps to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.653391] (todaysmarket.cpp:579)        : Loading spec Inflation/EUHICPXT/EUHICPXT_YY_Swaps done.
+NOTICE   [2019-Jan-27 13:57:57.653406] (todaysmarket.cpp:100)        : Loading spec Inflation/EUHICPXT/EUHICPXT_ZC_Swaps
+NOTICE   [2019-Jan-27 13:57:57.653423] (todaysmarket.cpp:386)        : Adding ZeroInflationIndex (EUHICPXT) with spec Inflation/EUHICPXT/EUHICPXT_ZC_Swaps to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.653449] (todaysmarket.cpp:579)        : Loading spec Inflation/EUHICPXT/EUHICPXT_ZC_Swaps done.
+NOTICE   [2019-Jan-27 13:57:57.653463] (todaysmarket.cpp:100)        : Loading spec Inflation/FRHICP/FRHICP_ZC_Swaps
+NOTICE   [2019-Jan-27 13:57:57.653485] (todaysmarket.cpp:386)        : Adding ZeroInflationIndex (FRHICP) with spec Inflation/FRHICP/FRHICP_ZC_Swaps to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.653512] (todaysmarket.cpp:579)        : Loading spec Inflation/FRHICP/FRHICP_ZC_Swaps done.
+NOTICE   [2019-Jan-27 13:57:57.653526] (todaysmarket.cpp:100)        : Loading spec Inflation/UKRPI/UKRPI_ZC_Swaps
+NOTICE   [2019-Jan-27 13:57:57.653543] (todaysmarket.cpp:386)        : Adding ZeroInflationIndex (UKRPI) with spec Inflation/UKRPI/UKRPI_ZC_Swaps to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.653568] (todaysmarket.cpp:579)        : Loading spec Inflation/UKRPI/UKRPI_ZC_Swaps done.
+NOTICE   [2019-Jan-27 13:57:57.653583] (todaysmarket.cpp:100)        : Loading spec Inflation/USCPI/USCPI_ZC_Swaps
+NOTICE   [2019-Jan-27 13:57:57.653600] (todaysmarket.cpp:386)        : Adding ZeroInflationIndex (USCPI) with spec Inflation/USCPI/USCPI_ZC_Swaps to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.653626] (todaysmarket.cpp:579)        : Loading spec Inflation/USCPI/USCPI_ZC_Swaps done.
+NOTICE   [2019-Jan-27 13:57:57.653640] (todaysmarket.cpp:100)        : Loading spec Inflation/ZACPI/ZACPI_ZC_Swaps
+NOTICE   [2019-Jan-27 13:57:57.653658] (todaysmarket.cpp:386)        : Adding ZeroInflationIndex (ZACPI) with spec Inflation/ZACPI/ZACPI_ZC_Swaps to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.653684] (todaysmarket.cpp:579)        : Loading spec Inflation/ZACPI/ZACPI_ZC_Swaps done.
+NOTICE   [2019-Jan-27 13:57:57.653698] (todaysmarket.cpp:100)        : Loading spec InflationCapFloorPrice/EUHICPXT/EUHICPXT_ZC_CF
+NOTICE   [2019-Jan-27 13:57:57.653713] (todaysmarket.cpp:442)        : Adding InflationCapFloorPriceSurface (EUHICPXT) with spec InflationCapFloorPrice/EUHICPXT/EUHICPXT_ZC_CF to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.653732] (todaysmarket.cpp:579)        : Loading spec InflationCapFloorPrice/EUHICPXT/EUHICPXT_ZC_CF done.
+NOTICE   [2019-Jan-27 13:57:57.653745] (todaysmarket.cpp:100)        : Loading spec InflationCapFloorPrice/UKRPI/UKRPI_ZC_CF
+NOTICE   [2019-Jan-27 13:57:57.653762] (todaysmarket.cpp:442)        : Adding InflationCapFloorPriceSurface (UKRPI) with spec InflationCapFloorPrice/UKRPI/UKRPI_ZC_CF to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.653778] (todaysmarket.cpp:579)        : Loading spec InflationCapFloorPrice/UKRPI/UKRPI_ZC_CF done.
+NOTICE   [2019-Jan-27 13:57:57.653792] (todaysmarket.cpp:100)        : Loading spec InflationCapFloorPrice/USCPI/USCPI_ZC_CF
+NOTICE   [2019-Jan-27 13:57:57.653808] (todaysmarket.cpp:442)        : Adding InflationCapFloorPriceSurface (USCPI) with spec InflationCapFloorPrice/USCPI/USCPI_ZC_CF to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.653825] (todaysmarket.cpp:579)        : Loading spec InflationCapFloorPrice/USCPI/USCPI_ZC_CF done.
+NOTICE   [2019-Jan-27 13:57:57.653839] (todaysmarket.cpp:100)        : Loading spec Equity/EUR/Lufthansa
+NOTICE   [2019-Jan-27 13:57:57.653861] (todaysmarket.cpp:467)        : Adding EquityCurve (Lufthansa) with spec Equity/EUR/Lufthansa to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.653911] (todaysmarket.cpp:579)        : Loading spec Equity/EUR/Lufthansa done.
+NOTICE   [2019-Jan-27 13:57:57.653936] (todaysmarket.cpp:100)        : Loading spec Equity/USD/SP5
+NOTICE   [2019-Jan-27 13:57:57.653951] (todaysmarket.cpp:467)        : Adding EquityCurve (SP5) with spec Equity/USD/SP5 to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.653977] (todaysmarket.cpp:579)        : Loading spec Equity/USD/SP5 done.
+NOTICE   [2019-Jan-27 13:57:57.653992] (todaysmarket.cpp:100)        : Loading spec EquityVolatility/EUR/Lufthansa
+NOTICE   [2019-Jan-27 13:57:57.654007] (todaysmarket.cpp:505)        : Adding EquityVol (Lufthansa) with spec EquityVolatility/EUR/Lufthansa to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.654033] (todaysmarket.cpp:579)        : Loading spec EquityVolatility/EUR/Lufthansa done.
+NOTICE   [2019-Jan-27 13:57:57.654054] (todaysmarket.cpp:100)        : Loading spec EquityVolatility/USD/SP5
+NOTICE   [2019-Jan-27 13:57:57.654070] (todaysmarket.cpp:505)        : Adding EquityVol (SP5) with spec EquityVolatility/USD/SP5 to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.654091] (todaysmarket.cpp:579)        : Loading spec EquityVolatility/USD/SP5 done.
+NOTICE   [2019-Jan-27 13:57:57.654106] (todaysmarket.cpp:100)        : Loading spec Security/SECURITY_1
+NOTICE   [2019-Jan-27 13:57:57.654122] (todaysmarket.cpp:546)        : Adding Security (SECURITY_1) with spec Security/SECURITY_1 to configuration libor
+NOTICE   [2019-Jan-27 13:57:57.654139] (todaysmarket.cpp:579)        : Loading spec Security/SECURITY_1 done.
+NOTICE   [2019-Jan-27 13:57:57.654152] (todaysmarket.cpp:581)        : Loading 0 CurveSpecs done.
+NOTICE   [2019-Jan-27 13:57:57.661678] (enginefactory.cpp:30)        : Building EngineFactory
+NOTICE   [2019-Jan-27 13:57:57.661741] (enginefactory.cpp:38)        : EngineFactory regisering builder for model:DiscountedCashflows and engine:DiscountingSwapEngine
+NOTICE   [2019-Jan-27 13:57:57.661768] (enginefactory.cpp:38)        : EngineFactory regisering builder for model:DiscountedCashflows and engine:DiscountingSwapEngineOptimised
+NOTICE   [2019-Jan-27 13:57:57.661792] (enginefactory.cpp:38)        : EngineFactory regisering builder for model:DiscountedCashflows and engine:DiscountingCrossCurrencySwapEngine
+NOTICE   [2019-Jan-27 13:57:57.661814] (enginefactory.cpp:38)        : EngineFactory regisering builder for model:BlackBachelier and engine:BlackBachelierSwaptionEngine
+NOTICE   [2019-Jan-27 13:57:57.661835] (enginefactory.cpp:38)        : EngineFactory regisering builder for model:LGM and engine:Grid
+NOTICE   [2019-Jan-27 13:57:57.661855] (enginefactory.cpp:38)        : EngineFactory regisering builder for model:DiscountedCashflows and engine:DiscountingFxForwardEngine
+NOTICE   [2019-Jan-27 13:57:57.661875] (enginefactory.cpp:38)        : EngineFactory regisering builder for model:GarmanKohlhagen and engine:AnalyticEuropeanEngine
+NOTICE   [2019-Jan-27 13:57:57.661912] (enginefactory.cpp:38)        : EngineFactory regisering builder for model:IborCapModel and engine:IborCapEngine
+NOTICE   [2019-Jan-27 13:57:57.661935] (enginefactory.cpp:38)        : EngineFactory regisering builder for model:BlackOrBachelier and engine:BlackIborCouponPricer
+NOTICE   [2019-Jan-27 13:57:57.661958] (enginefactory.cpp:38)        : EngineFactory regisering builder for model:DiscountedCashflows and engine:DiscountingEquityForwardEngine
+NOTICE   [2019-Jan-27 13:57:57.661984] (enginefactory.cpp:38)        : EngineFactory regisering builder for model:BlackScholesMerton and engine:AnalyticEuropeanEngine
+NOTICE   [2019-Jan-27 13:57:57.662008] (enginefactory.cpp:38)        : EngineFactory regisering builder for model:DiscountedCashflows and engine:DiscountingRiskyBondEngine
+NOTICE   [2019-Jan-27 13:57:57.662034] (enginefactory.cpp:38)        : EngineFactory regisering builder for model:Hagan and engine:Analytic
+NOTICE   [2019-Jan-27 13:57:57.662057] (enginefactory.cpp:38)        : EngineFactory regisering builder for model:Hagan and engine:Numerical
+NOTICE   [2019-Jan-27 13:57:57.662081] (enginefactory.cpp:38)        : EngineFactory regisering builder for model:LinearTSR and engine:LinearTSRPricer
+NOTICE   [2019-Jan-27 13:57:57.662104] (enginefactory.cpp:38)        : EngineFactory regisering builder for model:DiscountedCashflows and engine:MidPointCdsEngine
+NOTICE   [2019-Jan-27 13:57:57.662225] (portfolio.cpp:44)            : Parsing XML Input/portfolio_swaption.xml
+NOTICE   [2019-Jan-27 13:57:57.662445] (portfolio.cpp:46)            : Loaded XML file
+NOTICE   [2019-Jan-27 13:57:57.662981] (portfolio.cpp:95)            : Finished Parsing XML doc
+NOTICE   [2019-Jan-27 13:57:57.663012] (portfolio.cpp:121)           : Building Portfolio of size 19
+NOTICE   [2019-Jan-27 13:57:57.663041] (swaption.cpp:78)             : Building European Swaption Swaption_1_19
+NOTICE   [2019-Jan-27 13:57:57.663565] (swaption.cpp:41)             : Build BachelierSwaptionEngine for currency EUR
+NOTICE   [2019-Jan-27 13:57:57.663634] (swaption.cpp:78)             : Building European Swaption Swaption_2_18
+NOTICE   [2019-Jan-27 13:57:57.663999] (swaption.cpp:78)             : Building European Swaption Swaption_3_17
+NOTICE   [2019-Jan-27 13:57:57.664356] (swaption.cpp:78)             : Building European Swaption Swaption_4_16
+NOTICE   [2019-Jan-27 13:57:57.664685] (swaption.cpp:78)             : Building European Swaption Swaption_5_15
+NOTICE   [2019-Jan-27 13:57:57.664984] (swaption.cpp:78)             : Building European Swaption Swaption_6_14
+NOTICE   [2019-Jan-27 13:57:57.665263] (swaption.cpp:78)             : Building European Swaption Swaption_7_13
+NOTICE   [2019-Jan-27 13:57:57.665540] (swaption.cpp:78)             : Building European Swaption Swaption_8_12
+NOTICE   [2019-Jan-27 13:57:57.665792] (swaption.cpp:78)             : Building European Swaption Swaption_9_11
+NOTICE   [2019-Jan-27 13:57:57.666063] (swaption.cpp:78)             : Building European Swaption Swaption_10_10
+NOTICE   [2019-Jan-27 13:57:57.666279] (swaption.cpp:78)             : Building European Swaption Swaption_11_9
+NOTICE   [2019-Jan-27 13:57:57.666465] (swaption.cpp:78)             : Building European Swaption Swaption_12_8
+NOTICE   [2019-Jan-27 13:57:57.666640] (swaption.cpp:78)             : Building European Swaption Swaption_13_7
+NOTICE   [2019-Jan-27 13:57:57.666796] (swaption.cpp:78)             : Building European Swaption Swaption_14_6
+NOTICE   [2019-Jan-27 13:57:57.666939] (swaption.cpp:78)             : Building European Swaption Swaption_15_5
+NOTICE   [2019-Jan-27 13:57:57.667068] (swaption.cpp:78)             : Building European Swaption Swaption_16_4
+NOTICE   [2019-Jan-27 13:57:57.667181] (swaption.cpp:78)             : Building European Swaption Swaption_17_3
+NOTICE   [2019-Jan-27 13:57:57.667284] (swaption.cpp:78)             : Building European Swaption Swaption_18_2
+NOTICE   [2019-Jan-27 13:57:57.667373] (swaption.cpp:78)             : Building European Swaption Swaption_19_1
+NOTICE   [2019-Jan-27 13:57:57.667449] (portfolio.cpp:132)           : Built Portfolio. Size now 19
+NOTICE   [2019-Jan-27 13:57:57.667497] (oreapp.cpp:414)              : skip curve report
+NOTICE   [2019-Jan-27 13:57:57.667592] (reportwriter.cpp:41)         : portfolio valuation
+NOTICE   [2019-Jan-27 13:57:57.672965] (reportwriter.cpp:94)         : NPV file written
+NOTICE   [2019-Jan-27 13:57:57.673028] (oreapp.cpp:443)              : skip cashflow generation
+NOTICE   [2019-Jan-27 13:57:57.673048] (oreapp.cpp:101)              : skip base scenario
+NOTICE   [2019-Jan-27 13:57:57.673062] (oreapp.cpp:111)              : skip sensitivity analysis
+NOTICE   [2019-Jan-27 13:57:57.673076] (oreapp.cpp:122)              : skip stress test
+NOTICE   [2019-Jan-27 13:57:57.673090] (oreapp.cpp:133)              : skip parametric var
+NOTICE   [2019-Jan-27 13:57:57.673104] (oreapp.cpp:145)              : skip simulation
+NOTICE   [2019-Jan-27 13:57:57.673118] (oreapp.cpp:184)              : skip XVA reports
+NOTICE   [2019-Jan-27 13:57:57.673206] (oreapp.cpp:202)              : ORE done.

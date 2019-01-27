@@ -49,33 +49,35 @@ namespace App.Controllers
             //string wd = string.Format("{0}\\{1}", root, "Examples\\Example_1");            
 
             // Linux
-            string root = "/home/anders/developer/git/ore/Engine"; 
+            //string root = "/home/anders/developer/git/ore/Engine";
+            string root = "/home/anders/developer/git/RiskWeb/Resources"; 
+            //string root = "/app/Resources/";
             string runFile = string.Format("{0}/{1}", root, "Examples/Example_1/run.py");            
             string wd = string.Format("{0}/{1}", root, "Examples/Example_1");            
 
-            // start.WorkingDirectory = wd;
-            // start.FileName = "python"; // Assumes path to python.exe in PATH-variable
-            // start.Arguments = string.Format("{0} {1}", runFile, "");
-            // start.UseShellExecute = false;
-            // start.RedirectStandardOutput = true;            
+            start.WorkingDirectory = wd;
+            start.FileName = "python"; // Assumes path to python.exe in PATH-variable
+            start.Arguments = string.Format("{0} {1}", runFile, "");
+            start.UseShellExecute = false;
+            start.RedirectStandardOutput = true;            
 
             // Console output
             AppConsole console = new AppConsole();
-            // StringBuilder sb = new StringBuilder();
-            // string str = "";
+            StringBuilder sb = new StringBuilder();
+            string str = "";
 
-            // using (Process process = Process.Start(start))
-            // {
-            //     string line;
-            //     while ((line = process.StandardOutput.ReadLine()) != null)
-            //     {
-            //         sb.AppendFormat(line, Environment.NewLine);
-            //         str += line + Environment.NewLine;
-            //     }                
-            // }
+            using (Process process = Process.Start(start))
+            {
+                string line;
+                while ((line = process.StandardOutput.ReadLine()) != null)
+                {
+                    sb.AppendFormat(line, Environment.NewLine);
+                    str += line + Environment.NewLine;
+                }                
+            }
 
-            //console.Text = str; 
-            console.Text = strTest; 
+            console.Text = str; 
+            //console.Text = strTest; 
 
             return View(console);
         }
@@ -90,7 +92,8 @@ namespace App.Controllers
             //string csv_name2 = string.Format("{0}\\{1}", root, "Examples\\Example_1\\Output\\swaption_npv.csv");       
             
             // Linux
-            string root = "/home/anders/developer/git/ore/Engine";            
+            //string root = "/home/anders/developer/git/ore/Engine";
+            string root = "/home/anders/developer/git/RiskWeb/Resources";            
             string csv_name1 = string.Format("{0}/{1}", root, "Examples/Example_1/Output/exposure_trade_Swap_20y.csv");
             string csv_name2 = string.Format("{0}/{1}", root, "Examples/Example_1/Output/swaption_npv.csv");       
             

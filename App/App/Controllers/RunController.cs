@@ -53,26 +53,26 @@ namespace App.Controllers
             string runFile = string.Format("{0}/{1}", root, "Examples/Example_1/run.py");            
             string wd = string.Format("{0}/{1}", root, "Examples/Example_1");            
 
-            start.WorkingDirectory = wd;
-            start.FileName = "python"; // Assumes path to python.exe in PATH-variable
-            start.Arguments = string.Format("{0} {1}", runFile, "");
-            start.UseShellExecute = false;
-            start.RedirectStandardOutput = true;            
+            // start.WorkingDirectory = wd;
+            // start.FileName = "python"; // Assumes path to python.exe in PATH-variable
+            // start.Arguments = string.Format("{0} {1}", runFile, "");
+            // start.UseShellExecute = false;
+            // start.RedirectStandardOutput = true;            
 
             // Console output
             AppConsole console = new AppConsole();
-            StringBuilder sb = new StringBuilder();
-            string str = "";
+            // StringBuilder sb = new StringBuilder();
+            // string str = "";
 
-            using (Process process = Process.Start(start))
-            {
-                string line;
-                while ((line = process.StandardOutput.ReadLine()) != null)
-                {
-                    sb.AppendFormat(line, Environment.NewLine);
-                    str += line + Environment.NewLine;
-                }                
-            }
+            // using (Process process = Process.Start(start))
+            // {
+            //     string line;
+            //     while ((line = process.StandardOutput.ReadLine()) != null)
+            //     {
+            //         sb.AppendFormat(line, Environment.NewLine);
+            //         str += line + Environment.NewLine;
+            //     }                
+            // }
 
             //console.Text = str; 
             console.Text = strTest; 
@@ -133,7 +133,12 @@ namespace App.Controllers
         private string Test(string root)
         {
             //string runFile = string.Format("{0}", "~/developer/git/Engine/Examples/Example_2/run.py");
-            string runFile = string.Format("{0}/{1}", root, "test.py");
+            //string runFile = string.Format("{0}/{1}", root, "test.py");
+
+            string webRootPath = _env.WebRootPath;
+            string contentRootPath = _env.ContentRootPath;
+
+            string runFile = string.Format("{0}/{1}", contentRootPath, "test.py");
 
             ProcessStartInfo start = new ProcessStartInfo();
             //start.WorkingDirectory = string.Format("{0}", "~/developer/git/Engine/Examples/Example_2");

@@ -164,7 +164,8 @@ namespace App.Controllers
                 }                
             }
 
-            return str; 
+            return runFile;
+            //return str; 
         }
     }
 }

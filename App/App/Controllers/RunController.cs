@@ -33,7 +33,7 @@ namespace App.Controllers
         {
             // Test python
             //string strTest = Test("/home/anders/developer/git/RiskWeb");
-            string strTest = Test("/app/");
+            string strTest = Test("/app");
 
             // TODO: Unable to read from launchSettings.json file when Docker is included.
             // With Docker enabled hosting environment path defaults to C:\ and environment to "Development"

@@ -133,12 +133,12 @@ namespace App.Controllers
         private string Test(string root)
         {
             //string runFile = string.Format("{0}", "~/developer/git/Engine/Examples/Example_2/run.py");
-            //string runFile = string.Format("{0}/{1}", root, "test.py");
+            string runFile = string.Format("{0}/{1}", root, "test.py");
 
             string webRootPath = _env.WebRootPath;
             string contentRootPath = _env.ContentRootPath;
 
-            string runFile = string.Format("{0}/{1}", contentRootPath, "test.py");
+            //string runFile = string.Format("{0}/{1}", contentRootPath, "test.py");
 
             ProcessStartInfo start = new ProcessStartInfo();
             //start.WorkingDirectory = string.Format("{0}", "~/developer/git/Engine/Examples/Example_2");
@@ -164,8 +164,8 @@ namespace App.Controllers
                 }                
             }
 
-            return runFile;
-            //return str; 
+            //return runFile;
+            return str; 
         }
     }
 }

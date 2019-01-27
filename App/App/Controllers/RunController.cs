@@ -33,7 +33,7 @@ namespace App.Controllers
         {
             // Test python
             //string strTest = Test("/home/anders/developer/git/RiskWeb");
-            string strTest = Test("/app");
+            //string strTest = Test("/app");
 
             // TODO: Unable to read from launchSettings.json file when Docker is included.
             // With Docker enabled hosting environment path defaults to C:\ and environment to "Development"
@@ -50,8 +50,8 @@ namespace App.Controllers
 
             // Linux
             //string root = "/home/anders/developer/git/ore/Engine";
-            string root = "/home/anders/developer/git/RiskWeb/Resources"; 
-            //string root = "/app/Resources/";
+            //string root = "/home/anders/developer/git/RiskWeb/Resources"; 
+            string root = "/app/Resources/";
             string runFile = string.Format("{0}/{1}", root, "Examples/Example_1/run.py");            
             string wd = string.Format("{0}/{1}", root, "Examples/Example_1");            
 
@@ -93,7 +93,8 @@ namespace App.Controllers
             
             // Linux
             //string root = "/home/anders/developer/git/ore/Engine";
-            string root = "/home/anders/developer/git/RiskWeb/Resources";            
+            string root = "/app/Resources/";
+            //string root = "/home/anders/developer/git/RiskWeb/Resources";                        
             string csv_name1 = string.Format("{0}/{1}", root, "Examples/Example_1/Output/exposure_trade_Swap_20y.csv");
             string csv_name2 = string.Format("{0}/{1}", root, "Examples/Example_1/Output/swaption_npv.csv");       
             

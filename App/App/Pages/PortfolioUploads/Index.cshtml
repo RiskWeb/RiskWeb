@@ -76,31 +76,32 @@
                             <tbody>
                                 @foreach (var item in Model.PortfolioUpload)
                                 {
-                                    <tr>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.Name)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.TradeCount)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.Agreements)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.UploadTime)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.FileName)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.LastRunTime)
-                                        </td>
-                                        <td>
-                                            <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
-                                            <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
-                                            <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
-                                        </td>
-                                    </tr>
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Name)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.TradeCount)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Agreements)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.UploadTime)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.FileName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.LastRunTime)
+                                    </td>
+                                    <td>
+                                        <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                                        <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                                        <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>|
+                                        <a asp-controller="PortfolioUploads" asp-action="ViewXmlPortfolio" asp-route-id="@item.Id">ViewXml</a>
+                                    </td>
+                                </tr>
                                 }
                             </tbody>
                         </table>

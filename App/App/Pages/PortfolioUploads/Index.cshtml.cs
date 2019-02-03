@@ -8,6 +8,8 @@ using System.IO;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Options;
 using Microsoft.Extensions.DependencyInjection;
+using App.Helpers.Xml;
+using App.Helpers.Extensions;
 
 namespace App.Pages.PortfolioUploads
 {
@@ -40,7 +42,6 @@ namespace App.Pages.PortfolioUploads
         private void syncUploadedPortfolios()
         {
             DirectoryInfo directoryInfo = new DirectoryInfo(@Path.Combine(_hostingEnvironment.WebRootPath, _config.Value.PortfolioUploadPath));
-
             FileInfo[] files = directoryInfo.GetFiles("*.xml");
 
             using (var context = new PortfolioUploadContext(_serviceProvider.GetRequiredService<DbContextOptions<PortfolioUploadContext>>()))
@@ -52,16 +53,30 @@ namespace App.Pages.PortfolioUploads
                 //Populate db
                 foreach (var file in files)
                 {
-                    context.PortfolioUpload.AddRange(
-                        new PortfolioUpload
+                    //fileter out non-portfolios
+                    using (var streamReader = new StreamReader(file.FullName))
+                    {
+                        dynamic portfolio = DynamicXml.Parse(streamReader.ReadToEnd());
+
+                        try
                         {
-                            Name = file.Name,
-                            TradeCount = 1,
-                            Agreements = "N",
-                            UploadTime = file.LastWriteTime,
-                            FileName = file.Name,
-                            LastRunTime = file.LastAccessTime
-                        });
+                            context.PortfolioUpload.AddRange(
+                            new PortfolioUpload
+                            {
+                                Name = file.Name,
+                                TradeCount = portfolio.Trade.Count,
+                                Agreements = "N",
+                                UploadTime = file.LastWriteTime,
+                                FileName = file.Name,
+                                LastRunTime = file.LastAccessTime
+                            });
+                        }
+                        catch
+                        {
+
+                        }
+
+                    }
                 }
                 context.SaveChanges();
             }

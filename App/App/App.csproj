@@ -14,9 +14,10 @@
 
   <ItemGroup>
     <PackageReference Include="bootstrap" Version="4.2.1" />
-    <PackageReference Include="dropzone" Version="4.2.0" />
+    <PackageReference Include="dropzone" Version="4.3.0" />
     <PackageReference Include="Microsoft.AspNetCore.All" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.1" />
+    <PackageReference Include="System.Dynamic.Runtime" Version="4.3.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,6 +31,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Views\Xml\" />
     <Folder Include="wwwroot\Uploads\TrashCan\Portfolios\" />
   </ItemGroup>
 

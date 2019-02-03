@@ -1,0 +1,61 @@
+NOTICE   [2019-Jan-27 19:47:15.074285] (oreapp.cpp:54)               : ORE starting
+NOTICE   [2019-Jan-27 19:47:15.074405] (parameters.cpp:104)          : Parameters:
+NOTICE   [2019-Jan-27 19:47:15.074423] (parameters.cpp:107)          : group = cashflow : active = Y
+NOTICE   [2019-Jan-27 19:47:15.074436] (parameters.cpp:107)          : group = cashflow : outputFileName = flows.csv
+NOTICE   [2019-Jan-27 19:47:15.074449] (parameters.cpp:107)          : group = curves : active = Y
+NOTICE   [2019-Jan-27 19:47:15.074460] (parameters.cpp:107)          : group = curves : configuration = default
+NOTICE   [2019-Jan-27 19:47:15.074471] (parameters.cpp:107)          : group = curves : grid = 240,1M
+NOTICE   [2019-Jan-27 19:47:15.074483] (parameters.cpp:107)          : group = curves : outputFileName = curves.csv
+NOTICE   [2019-Jan-27 19:47:15.074495] (parameters.cpp:107)          : group = initialMargin : active = N
+NOTICE   [2019-Jan-27 19:47:15.074507] (parameters.cpp:107)          : group = initialMargin : method = 
+NOTICE   [2019-Jan-27 19:47:15.074517] (parameters.cpp:107)          : group = markets : eqcalibration = libor
+NOTICE   [2019-Jan-27 19:47:15.074523] (parameters.cpp:107)          : group = markets : fxcalibration = libor
+NOTICE   [2019-Jan-27 19:47:15.074530] (parameters.cpp:107)          : group = markets : lgmcalibration = libor
+NOTICE   [2019-Jan-27 19:47:15.074536] (parameters.cpp:107)          : group = markets : pricing = libor
+NOTICE   [2019-Jan-27 19:47:15.074546] (parameters.cpp:107)          : group = markets : simulation = libor
+NOTICE   [2019-Jan-27 19:47:15.074559] (parameters.cpp:107)          : group = npv : active = Y
+NOTICE   [2019-Jan-27 19:47:15.074566] (parameters.cpp:107)          : group = npv : baseCurrency = EUR
+NOTICE   [2019-Jan-27 19:47:15.074573] (parameters.cpp:107)          : group = npv : outputFileName = npv.csv
+NOTICE   [2019-Jan-27 19:47:15.074581] (parameters.cpp:107)          : group = setup : asofDate = 2016-02-05
+NOTICE   [2019-Jan-27 19:47:15.074592] (parameters.cpp:107)          : group = setup : conventionsFile = ../../Input/conventions.xml
+NOTICE   [2019-Jan-27 19:47:15.074605] (parameters.cpp:107)          : group = setup : curveConfigFile = ../../Input/curveconfig.xml
+NOTICE   [2019-Jan-27 19:47:15.074612] (parameters.cpp:107)          : group = setup : fixingDataFile = ../../Input/fixings_20160205.txt
+NOTICE   [2019-Jan-27 19:47:15.074619] (parameters.cpp:107)          : group = setup : implyTodaysFixings = Y
+NOTICE   [2019-Jan-27 19:47:15.074625] (parameters.cpp:107)          : group = setup : inputPath = Input
+NOTICE   [2019-Jan-27 19:47:15.074631] (parameters.cpp:107)          : group = setup : logFile = log.txt
+NOTICE   [2019-Jan-27 19:47:15.074641] (parameters.cpp:107)          : group = setup : logMask = 31
+NOTICE   [2019-Jan-27 19:47:15.074653] (parameters.cpp:107)          : group = setup : marketConfigFile = ../../Input/todaysmarket.xml
+NOTICE   [2019-Jan-27 19:47:15.074660] (parameters.cpp:107)          : group = setup : marketDataFile = ../../Input/market_20160205_flat.txt
+NOTICE   [2019-Jan-27 19:47:15.074667] (parameters.cpp:107)          : group = setup : observationModel = None
+NOTICE   [2019-Jan-27 19:47:15.074673] (parameters.cpp:107)          : group = setup : outputPath = Output
+NOTICE   [2019-Jan-27 19:47:15.074680] (parameters.cpp:107)          : group = setup : portfolioFile = portfolio_swap.xml
+NOTICE   [2019-Jan-27 19:47:15.074693] (parameters.cpp:107)          : group = setup : pricingEnginesFile = ../../Input/pricingengine.xml
+NOTICE   [2019-Jan-27 19:47:15.074702] (parameters.cpp:107)          : group = simulation : active = Y
+NOTICE   [2019-Jan-27 19:47:15.074709] (parameters.cpp:107)          : group = simulation : aggregationScenarioDataFileName = scenariodata.dat
+NOTICE   [2019-Jan-27 19:47:15.074715] (parameters.cpp:107)          : group = simulation : baseCurrency = EUR
+NOTICE   [2019-Jan-27 19:47:15.074725] (parameters.cpp:107)          : group = simulation : cubeFile = cube.dat
+NOTICE   [2019-Jan-27 19:47:15.074737] (parameters.cpp:107)          : group = simulation : pricingEnginesFile = ../../Input/pricingengine.xml
+NOTICE   [2019-Jan-27 19:47:15.074749] (parameters.cpp:107)          : group = simulation : simulationConfigFile = simulation.xml
+NOTICE   [2019-Jan-27 19:47:15.074760] (parameters.cpp:107)          : group = xva : active = Y
+NOTICE   [2019-Jan-27 19:47:15.074771] (parameters.cpp:107)          : group = xva : allocationMethod = None
+NOTICE   [2019-Jan-27 19:47:15.074782] (parameters.cpp:107)          : group = xva : baseCurrency = EUR
+NOTICE   [2019-Jan-27 19:47:15.074794] (parameters.cpp:107)          : group = xva : calculationType = Symmetric
+NOTICE   [2019-Jan-27 19:47:15.074805] (parameters.cpp:107)          : group = xva : collateralFloor = N
+NOTICE   [2019-Jan-27 19:47:15.074816] (parameters.cpp:107)          : group = xva : colva = N
+NOTICE   [2019-Jan-27 19:47:15.074826] (parameters.cpp:107)          : group = xva : csaFile = netting.xml
+NOTICE   [2019-Jan-27 19:47:15.074836] (parameters.cpp:107)          : group = xva : cubeFile = cube.dat
+NOTICE   [2019-Jan-27 19:47:15.074846] (parameters.cpp:107)          : group = xva : cva = Y
+NOTICE   [2019-Jan-27 19:47:15.074856] (parameters.cpp:107)          : group = xva : dva = N
+NOTICE   [2019-Jan-27 19:47:15.074866] (parameters.cpp:107)          : group = xva : dvaName = BANK
+NOTICE   [2019-Jan-27 19:47:15.074877] (parameters.cpp:107)          : group = xva : exerciseNextBreak = N
+NOTICE   [2019-Jan-27 19:47:15.074888] (parameters.cpp:107)          : group = xva : exposureProfiles = Y
+NOTICE   [2019-Jan-27 19:47:15.074899] (parameters.cpp:107)          : group = xva : fva = N
+NOTICE   [2019-Jan-27 19:47:15.074910] (parameters.cpp:107)          : group = xva : fvaBorrowingCurve = BANK_EUR_BORROW
+NOTICE   [2019-Jan-27 19:47:15.074921] (parameters.cpp:107)          : group = xva : fvaLendingCurve = BANK_EUR_LEND
+NOTICE   [2019-Jan-27 19:47:15.074932] (parameters.cpp:107)          : group = xva : marginalAllocationLimit = 1.0
+NOTICE   [2019-Jan-27 19:47:15.074944] (parameters.cpp:107)          : group = xva : netCubeOutputFile = netcube.csv
+NOTICE   [2019-Jan-27 19:47:15.074955] (parameters.cpp:107)          : group = xva : quantile = 0.95
+NOTICE   [2019-Jan-27 19:47:15.074968] (parameters.cpp:107)          : group = xva : rawCubeOutputFile = rawcube.csv
+NOTICE   [2019-Jan-27 19:47:15.074980] (parameters.cpp:107)          : group = xva : scenarioFile = scenariodata.dat
+NOTICE   [2019-Jan-27 19:47:15.075011] (oreapp.cpp:213)              : Observation Mode is None
+ALERT    [2019-Jan-27 19:47:15.075189] (oreapp.cpp:194)              : Error: Failed to open file Input/../../Input/conventions.xml

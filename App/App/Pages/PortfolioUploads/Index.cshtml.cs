@@ -9,7 +9,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Options;
 using Microsoft.Extensions.DependencyInjection;
 using App.Helpers.Xml;
-using App.Helpers.Extensions;
+using System.Dynamic;
+using System.Xml.Linq;
+using System.Linq;
 
 namespace App.Pages.PortfolioUploads
 {
@@ -56,7 +58,13 @@ namespace App.Pages.PortfolioUploads
                     //fileter out non-portfolios
                     using (var streamReader = new StreamReader(file.FullName))
                     {
-                        dynamic portfolio = DynamicXml.Parse(streamReader.ReadToEnd());
+                        //read from file
+                        var xDoc = XDocument.Load(streamReader);
+                        dynamic portfolio = new ExpandoObject();
+
+                        XmlToDynamic.Parse(portfolio, xDoc.Elements().First());
+
+                        //dynamic portfolio = DynamicXml.Parse(streamReader.ReadToEnd());
 
                         try
                         {
@@ -64,7 +72,7 @@ namespace App.Pages.PortfolioUploads
                             new PortfolioUpload
                             {
                                 Name = file.Name,
-                                TradeCount = portfolio.Trade.Count,
+                                TradeCount = portfolio.Portfolio.Trade.Count,
                                 Agreements = "N",
                                 UploadTime = file.LastWriteTime,
                                 FileName = file.Name,

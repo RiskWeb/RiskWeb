@@ -1,17 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using App.Models;
 using System.IO;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Options;
-using Microsoft.Extensions.DependencyInjection;
 using App.Helpers.Xml;
-using App.Helpers.Extensions;
+using System.Dynamic;
+using System.Xml.Linq;
 
 namespace App.Controllers
 {
@@ -61,11 +58,15 @@ namespace App.Controllers
                                
                 using (var streamReader = new StreamReader(file.FullName))
                 {
-                    dynamic portfolio = DynamicXml.Parse(streamReader.ReadToEnd()).ToExpando();
+                    //read from file
+                    var xDoc = XDocument.Load(streamReader);
+                    dynamic root = new ExpandoObject();
+
+                    XmlToDynamic.Parse(root, xDoc.Elements().First());
 
                     try
                     {
-                        return View(portfolio);
+                        return View(root);
                     }
                     catch
                     {

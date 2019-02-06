@@ -11,7 +11,7 @@ services:
       #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_app$
     volumes:
       - C:\Development\GitShare\RiskWeb\App\App:C:\app
-      - C:\Users\Mikael\onecoremsvsmon\15.0.28307.271:C:\remote_debugger:ro
+      - C:\Users\Mikael\onecoremsvsmon:C:\remote_debugger:ro
 #$nuget_volume_mapping_app$
     entrypoint: C:\\remote_debugger\\x64\\msvsmon.exe /noauth /anyuser /silent /nostatus /noclrwarn /nosecuritywarn /nofirewallwarn /nowowwarn /timeout:2147483646
     labels:

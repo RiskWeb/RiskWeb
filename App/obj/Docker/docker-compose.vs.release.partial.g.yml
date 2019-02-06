@@ -3,7 +3,7 @@ version: '3.4'
 services:
   app:
     volumes:
-      - C:\Users\Mikael\onecoremsvsmon\15.0.28307.271:C:\remote_debugger:ro
+      - C:\Users\Mikael\onecoremsvsmon:C:\remote_debugger:ro
     entrypoint: C:\\remote_debugger\\x64\\msvsmon.exe /noauth /anyuser /silent /nostatus /noclrwarn /nosecuritywarn /nofirewallwarn /nowowwarn /fallbackloadremotemanagedpdbs /timeout:2147483646
     labels:
       com.microsoft.visualstudio.debuggee.program: "\"C:\\Program Files\\dotnet\\dotnet.exe\""

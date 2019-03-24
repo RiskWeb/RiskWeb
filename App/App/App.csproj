@@ -35,4 +35,8 @@
     <Folder Include="wwwroot\Uploads\TrashCan\Portfolios\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\DataLayer\DataLayer.csproj" />
+  </ItemGroup>
+
 </Project>

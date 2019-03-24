@@ -15,14 +15,16 @@ namespace App.Controllers
 {
     public class RunController : Controller
     {
-        private readonly IHostingEnvironment _env;
-        private readonly IOptions<Config> _config;        
+        private readonly IHostingEnvironment _env;         
+        private readonly IOptions<PathSettings> _config;   
+        private readonly IServiceProvider _serviceProvider;
+        private readonly IHostingEnvironment _hostingEnvironment;
 
-        public RunController(IHostingEnvironment env, IOptions<Config> config)
+        public RunController(IHostingEnvironment env, IOptions<PathSettings> config)
         {
             _env = env;
             _config = config;
-        }
+       }               
 
         public ActionResult Engine()
         {
@@ -31,6 +33,8 @@ namespace App.Controllers
 
         public ActionResult Console()
         {
+            // TODO: Align RiskWeb and ORE folders on local machines!
+
             // Test python
             //string strTest = Test("/home/anders/developer/git/RiskWeb");
             //string strTest = Test("/app");
@@ -44,14 +48,18 @@ namespace App.Controllers
             ProcessStartInfo start = new ProcessStartInfo();
 
             // Windows
-            //string root = "C:\\Development\\GitShare\\ore";            
+            //string root = "C:\\Development\\GitShare\\ore";    
+            //string root = "C:\\developer\\git\\ore\\Engine";
             //string runFile = string.Format("{0}\\{1}", root, "Examples\\Example_1\\run.py");            
             //string wd = string.Format("{0}\\{1}", root, "Examples\\Example_1");            
 
             // Linux
             //string root = "/home/anders/developer/git/ore/Engine";
             //string root = "/home/anders/developer/git/RiskWeb/Resources"; 
-            string root = "/app/Resources/";
+            //string root = "/app/Resources/";
+
+            string root = _config.Value.OreWindowsRoot;            
+
             string runFile = string.Format("{0}/{1}", root, "Examples/Example_1/run.py");            
             string wd = string.Format("{0}/{1}", root, "Examples/Example_1");            
 
@@ -83,20 +91,26 @@ namespace App.Controllers
         }
 
         public ActionResult LoadExposure()
-        {            
+        {
+            // TODO: Align RiskWeb and ORE folders on local machines!
+
             //string root = _config.Value.OrePath;
-            
-            // Windows
+
+            // Windows            
             //string root = "C:\\Development\\GitShare\\ore";
-            //string csv_name1 = string.Format("{0}\\{1}", root, "Examples\\Example_1\\Output\\exposure_trade_Swap_20y.csv");
-            //string csv_name2 = string.Format("{0}\\{1}", root, "Examples\\Example_1\\Output\\swaption_npv.csv");       
-            
+            //string root = "C:\\developer\\git\\ore\\Engine";
+
             // Linux
             //string root = "/home/anders/developer/git/ore/Engine";
-            string root = "/app/Resources/";
+            //string root = "/app/Resources/";
             //string root = "/home/anders/developer/git/RiskWeb/Resources";                        
-            string csv_name1 = string.Format("{0}/{1}", root, "Examples/Example_1/Output/exposure_trade_Swap_20y.csv");
-            string csv_name2 = string.Format("{0}/{1}", root, "Examples/Example_1/Output/swaption_npv.csv");       
+            //string csv_name1 = string.Format("{0}/{1}", root, "Examples/Example_1/Output/exposure_trade_Swap_20y.csv");
+            //string csv_name2 = string.Format("{0}/{1}", root, "Examples/Example_1/Output/swaption_npv.csv");   
+
+            string root = _config.Value.OreWindowsRoot;
+
+            string csv_name1 = string.Format("{0}\\{1}", root, "Examples\\Example_1\\Output\\exposure_trade_Swap_20y.csv");
+            string csv_name2 = string.Format("{0}\\{1}", root, "Examples\\Example_1\\Output\\swaption_npv.csv");                
             
             List<double> time = GetData(csv_name1, 2).Select(t => Math.Round(t, 1)).ToList();
             List<double> values1 = GetData(csv_name1, 3);

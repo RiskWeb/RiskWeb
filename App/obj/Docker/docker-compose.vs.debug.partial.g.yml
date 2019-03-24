@@ -10,10 +10,10 @@ services:
       - NUGET_PACKAGES=C:\.nuget\packages
       - NUGET_FALLBACK_PACKAGES=c:\.nuget\fallbackpackages
     volumes:
-      - C:\Development\GitShare\RiskWeb\App\App:C:\app
-      - C:\Users\Mikael\onecoremsvsmon\15.0.28307.271:C:\remote_debugger:ro
-      - C:\Users\Mikael\.nuget\packages\:c:\.nuget\packages:ro
-      - C:\Program Files\dotnet\sdk\NuGetFallbackFolder:c:\.nuget\fallbackpackages:ro
+      - C:\developer\git\RiskWeb\App\App:C:\app
+      - C:\Users\Admin\onecoremsvsmon\15.0.28307.271:C:\remote_debugger:ro
+      - C:\Users\Admin\.nuget\packages\:c:\.nuget\packages:ro
+      - C:\Program Files (x86)\dotnet\sdk\NuGetFallbackFolder:c:\.nuget\fallbackpackages:ro
     entrypoint: C:\\remote_debugger\\x64\\msvsmon.exe /noauth /anyuser /silent /nostatus /noclrwarn /nosecuritywarn /nofirewallwarn /nowowwarn /timeout:2147483646
     labels:
       com.microsoft.visualstudio.debuggee.program: "\"C:\\Program Files\\dotnet\\dotnet.exe\""

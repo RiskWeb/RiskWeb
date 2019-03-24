@@ -4,7 +4,7 @@ services:
   app:
     image: app:dev
     build:
-      target: base
+      target: build-env
     environment:
       - DOTNET_USE_POLLING_FILE_WATCHER=1
       - NUGET_PACKAGES=C:\.nuget\packages

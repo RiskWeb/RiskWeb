@@ -6,3 +6,9 @@ C:\Development\GitShare\RiskWeb\App\bin\Debug\App.pdb
 C:\Development\GitShare\RiskWeb\App\obj\Debug\docker-compose.dcprojAssemblyReference.cache
 C:\Development\GitShare\RiskWeb\App\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
 C:\Development\GitShare\RiskWeb\App\obj\Debug\docker-compose.dcproj.CopyComplete
+C:\developer\git\RiskWeb\App\bin\Debug\App.Views.dll
+C:\developer\git\RiskWeb\App\bin\Debug\App.Views.pdb
+C:\developer\git\RiskWeb\App\bin\Debug\App.dll
+C:\developer\git\RiskWeb\App\bin\Debug\App.pdb
+C:\developer\git\RiskWeb\App\obj\Debug\docker-compose.dcprojAssemblyReference.cache
+C:\developer\git\RiskWeb\App\obj\Debug\docker-compose.dcproj.CopyComplete

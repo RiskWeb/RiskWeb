@@ -1,20 +1,17 @@
-FROM microsoft/aspnetcore:2.0-nanoserver-1709 AS base
+FROM microsoft/dotnet:sdk AS build-env
 WORKDIR /app
-EXPOSE 80
 
-FROM microsoft/aspnetcore-build:2.0-nanoserver-1709 AS build
-WORKDIR /src
-COPY App.sln ./
-COPY App/App.csproj App/
-RUN dotnet restore -nowarn:msb3202,nu1503
-COPY . .
-WORKDIR /src/App
-RUN dotnet build -c Release -o /app
+# Copy csproj and restore as distinct layers
+COPY App.csproj ./
+RUN dotnet restore
 
-FROM build AS publish
-RUN dotnet publish -c Release -o /app
+# Copy everything else and build
+COPY . ./
+RUN dotnet publish -c Release App.csproj -o /app
 
-FROM base AS final
+# Build runtime image
+FROM microsoft/dotnet:aspnetcore-runtime
 WORKDIR /app
-COPY --from=publish /app .
+COPY --from=build-env /app .
 ENTRYPOINT ["dotnet", "App.dll"]
+

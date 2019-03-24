@@ -5,7 +5,7 @@ networks:
 services:
   app:
     build:
-      context: C:\Development\GitShare\RiskWeb\App
+      context: C:\developer\git\RiskWeb\App
       dockerfile: App\Dockerfile
     environment:
       ASPNETCORE_ENVIRONMENT: Development

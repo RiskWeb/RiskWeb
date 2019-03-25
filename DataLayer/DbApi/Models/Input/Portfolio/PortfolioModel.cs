@@ -10,25 +10,44 @@ namespace EFGetStarted.AspNetCore.NewDb.Models
             : base(options)
         { }
 
-        public DbSet<Blog> Blogs { get; set; }
-        public DbSet<Post> Posts { get; set; }
+        public DbSet<Portfolio> Blogs { get; set; }
+        public DbSet<Trade> Trades { get; set; }
+        public DbSet<Envelope> Envelopes { get; set; }
+        public DbSet<SwapData> SwapData { get; set; }
+        public DbSet<AdditionalFields> AdditionalFields { get; set; }
+
     }
 
-    public class Blog
+    public class Portfolio
     {
-        public int BlogId { get; set; }
-        public string Url { get; set; }
-
-        public ICollection<Post> Posts { get; set; }
+        public ICollection<Trade> Posts { get; set; }
     }
 
-    public class Post
+    public class Trade
     {
-        public int PostId { get; set; }
-        public string Title { get; set; }
-        public string Content { get; set; }
+        public string TradeId { get; set; }
+        public string TradeType { get; set; }
+        public Envelope Envelope { get; set; }
+        public SwapData SwapData { get; set; }
+    }
 
-        public int BlogId { get; set; }
-        public Blog Blog { get; set; }
+    public class Envelope
+    {
+        public string CounterPart { get; set; }
+        public string NettingSetId { get; set; }
+        public string PortfolioIds { get; set; }
+
+        public AdditionalFields AdditionalFields { get; set; }
+    }
+    public class AdditionalFields
+    {
+        public string Sector { get; set; }
+        public string Book { get; set; }
+        public string Rating { get; set; }
+    }
+
+    public class SwapData
+    {
+
     }
 }

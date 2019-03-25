@@ -40,19 +40,9 @@ namespace App.Controllers
             //string strTest = Test("/app");
 
             // TODO: Unable to read from launchSettings.json file when Docker is included.
-            // With Docker enabled hosting environment path defaults to C:\ and environment to "Development"
+            // With Docker enabled hosting environment path defaults to C:\ and environment to "Development"           
 
-            //string root = _config.Value.OrePath;
-            //string root = _env.ContentRootPath.ToString();
-
-            ProcessStartInfo start = new ProcessStartInfo();
-
-            // Windows
-            //string root = "C:\\Development\\GitShare\\ore";    
-            //string root = "C:\\developer\\git\\ore\\Engine";
-            //string runFile = string.Format("{0}\\{1}", root, "Examples\\Example_1\\run.py");            
-            //string wd = string.Format("{0}\\{1}", root, "Examples\\Example_1");            
-
+            ProcessStartInfo start = new ProcessStartInfo();               
             // Linux
             //string root = "/home/anders/developer/git/ore/Engine";
             //string root = "/home/anders/developer/git/RiskWeb/Resources"; 
@@ -84,8 +74,7 @@ namespace App.Controllers
                 }                
             }
 
-            console.Text = str; 
-            //console.Text = strTest; 
+            console.Text = str;           
 
             return View(console);
         }
@@ -93,25 +82,17 @@ namespace App.Controllers
         public ActionResult LoadExposure()
         {
             // TODO: Align RiskWeb and ORE folders on local machines!
-
-            //string root = _config.Value.OrePath;
-
-            // Windows            
-            //string root = "C:\\Development\\GitShare\\ore";
-            //string root = "C:\\developer\\git\\ore\\Engine";
-
+            
             // Linux
             //string root = "/home/anders/developer/git/ore/Engine";
             //string root = "/app/Resources/";
-            //string root = "/home/anders/developer/git/RiskWeb/Resources";                        
-            //string csv_name1 = string.Format("{0}/{1}", root, "Examples/Example_1/Output/exposure_trade_Swap_20y.csv");
-            //string csv_name2 = string.Format("{0}/{1}", root, "Examples/Example_1/Output/swaption_npv.csv");   
+            //string root = "/home/anders/developer/git/RiskWeb/Resources";                                    
 
             string root = _config.Value.OreWindowsRoot;
-
-            string csv_name1 = string.Format("{0}\\{1}", root, "Examples\\Example_1\\Output\\exposure_trade_Swap_20y.csv");
-            string csv_name2 = string.Format("{0}\\{1}", root, "Examples\\Example_1\\Output\\swaption_npv.csv");                
             
+            string csv_name1 = string.Format("{0}/{1}", root, "Examples/Example_1/Output/exposure_trade_Swap_20y.csv");
+            string csv_name2 = string.Format("{0}/{1}", root, "Examples/Example_1/Output/swaption_npv.csv");   
+
             List<double> time = GetData(csv_name1, 2).Select(t => Math.Round(t, 1)).ToList();
             List<double> values1 = GetData(csv_name1, 3);
             List<double> values2 = GetData(csv_name1, 4);
@@ -149,14 +130,11 @@ namespace App.Controllers
         }
 
         private string Test(string root)
-        {
-            //string runFile = string.Format("{0}", "~/developer/git/Engine/Examples/Example_2/run.py");
+        {            
             string runFile = string.Format("{0}/{1}", root, "test.py");
 
             string webRootPath = _env.WebRootPath;
-            string contentRootPath = _env.ContentRootPath;
-
-            //string runFile = string.Format("{0}/{1}", contentRootPath, "test.py");
+            string contentRootPath = _env.ContentRootPath;           
 
             ProcessStartInfo start = new ProcessStartInfo();
             //start.WorkingDirectory = string.Format("{0}", "~/developer/git/Engine/Examples/Example_2");
@@ -167,8 +145,7 @@ namespace App.Controllers
             start.RedirectStandardError = true; 
             start.RedirectStandardOutput = true;            
 
-            // Console output
-         
+            // Console output         
             StringBuilder sb = new StringBuilder();
             string str = "";
 
@@ -181,8 +158,7 @@ namespace App.Controllers
                     str += line + Environment.NewLine;
                 }                
             }
-
-            //return runFile;
+            
             return str; 
         }
     }
